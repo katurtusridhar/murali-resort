@@ -150,8 +150,46 @@ const DriftWall = ({
     [tilt, turn, roll, depth]
   );
 
+  const isVisibleRef = useRef(true);
+  const isScrollingRef = useRef(false);
+  const scrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const wake = () => {
+      if (rafRef.current === null && isVisibleRef.current && !isScrollingRef.current) {
+        lastTsRef.current = null;
+        rafRef.current = requestAnimationFrame(animate);
+      }
+    };
+
+    const io = new IntersectionObserver(([entry]) => {
+      isVisibleRef.current = entry.isIntersecting;
+      if (entry.isIntersecting) {
+        wake();
+      } else if (rafRef.current !== null) {
+        cancelAnimationFrame(rafRef.current);
+        rafRef.current = null;
+      }
+    });
+    io.observe(container);
+
+    const onScroll = () => {
+      isScrollingRef.current = true;
+      if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+      scrollTimeoutRef.current = setTimeout(() => {
+        isScrollingRef.current = false;
+        wake();
+      }, 100);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+
     const animate = (ts: number) => {
+      rafRef.current = null;
+      if (!isVisibleRef.current || isScrollingRef.current) return;
+
       if (lastTsRef.current === null) lastTsRef.current = ts;
       const dt = Math.min(0.05, Math.max(0, ts - lastTsRef.current) / 1000);
       lastTsRef.current = ts;
@@ -194,6 +232,9 @@ const DriftWall = ({
 
     rafRef.current = requestAnimationFrame(animate);
     return () => {
+      io.disconnect();
+      window.removeEventListener("scroll", onScroll);
+      if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
       rafRef.current = null;
       lastTsRef.current = null;
@@ -211,6 +252,8 @@ const DriftWall = ({
     setActiveId(null);
   }, []);
 
+  const lastHitCheckRef = useRef<number>(0);
+
   const handlePointerMove = useCallback(
     (e: React.PointerEvent<HTMLDivElement>) => {
       const rect = containerRef.current?.getBoundingClientRect();
@@ -221,6 +264,10 @@ const DriftWall = ({
           y: (e.clientY - rect.top) / rect.height - 0.5
         };
       }
+      const now = performance.now();
+      if (now - lastHitCheckRef.current < 40) return;
+      lastHitCheckRef.current = now;
+
       // Use document.elementFromPoint to find the element under the pointer
       const hit = document.elementFromPoint(e.clientX, e.clientY);
       const tile = hit && hit.closest ? hit.closest('[data-tile-id]') as HTMLElement : null;

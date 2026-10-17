@@ -171,11 +171,22 @@ export default function BorderGlow({
     return degrees;
   }, [getCenterOfElement]);
 
+  const rectRef = useRef<DOMRect | null>(null);
+
+  const handlePointerEnter = useCallback(() => {
+    if (cardRef.current) {
+      rectRef.current = cardRef.current.getBoundingClientRect();
+    }
+  }, []);
+
   const handlePointerMove = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
     const card = cardRef.current;
     if (!card) return;
 
-    const rect = card.getBoundingClientRect();
+    if (!rectRef.current) {
+      rectRef.current = card.getBoundingClientRect();
+    }
+    const rect = rectRef.current;
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
@@ -187,6 +198,7 @@ export default function BorderGlow({
   }, [getEdgeProximity, getCursorAngle]);
 
   const handlePointerLeave = useCallback(() => {
+    rectRef.current = null;
     const card = cardRef.current;
     if (!card) return;
     card.style.setProperty('--edge-proximity', '0');
@@ -251,6 +263,7 @@ export default function BorderGlow({
   return (
     <div
       ref={cardRef}
+      onPointerEnter={handlePointerEnter}
       onPointerMove={handlePointerMove}
       onPointerLeave={handlePointerLeave}
       className={`border-glow-card${lightSurface ? ' border-glow-card--light' : ''} ${className}`.trim()}

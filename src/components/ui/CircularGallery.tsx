@@ -893,11 +893,18 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
       if (!raf && visible && !(typeof document !== 'undefined' && document.hidden)) raf = requestAnimationFrame(frame);
     }
 
+    let containerRect: DOMRect | null = null;
+    const updateContainerRect = () => {
+      if (container) containerRect = container.getBoundingClientRect();
+    };
+
     const resize = () => {
       const s = settingsRef.current;
+      updateContainerRect();
       view.width = Math.max(1, container.clientWidth);
       view.height = Math.max(1, container.clientHeight);
-      view.ratio = Math.min(s.dpr || (typeof window !== 'undefined' ? window.devicePixelRatio : 1) || 1, 2);
+      const defaultMaxDpr = typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches ? 1.0 : 1.5;
+      view.ratio = Math.min(s.dpr || (typeof window !== 'undefined' ? window.devicePixelRatio : 1) || 1, defaultMaxDpr);
       canvas.width = Math.max(1, Math.round(view.width * view.ratio));
       canvas.height = Math.max(1, Math.round(view.height * view.ratio));
       const before = state.spacing;
@@ -911,7 +918,8 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
     };
 
     const point = (event: PointerEvent) => {
-      const rect = container.getBoundingClientRect();
+      if (!containerRect) updateContainerRect();
+      const rect = containerRect || container.getBoundingClientRect();
       return { x: event.clientX - rect.left - rect.width / 2, y: rect.height / 2 - (event.clientY - rect.top) };
     };
 
@@ -1036,8 +1044,17 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
     };
 
     const onWheel = (event: WheelEvent) => {
+      // Allow normal vertical page scrolling unless user holds shift, scrolls horizontally, or card is opened
+      const isHorizontalScroll = Math.abs(event.deltaX) > Math.abs(event.deltaY) * 1.2;
+      const isCardOpen = state.openTarget > 0.5;
+      const isShift = event.shiftKey;
+
+      if (!isHorizontalScroll && !isCardOpen && !isShift) {
+        return;
+      }
+
       const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? view.height : 1;
-      const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
+      const delta = isHorizontalScroll ? event.deltaX : event.deltaY;
       if (!delta) return;
       event.preventDefault();
       state.target += delta * unit * (settingsRef.current.scrollSpeed / 2);

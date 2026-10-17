@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useCallback, useSyncExternalStore } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "motion/react";
@@ -9,11 +9,38 @@ import { ChevronDown, Sparkles, Users, Building } from "lucide-react";
 const TOTAL_FRAMES = 300;
 const CONCURRENT_DOWNLOADS = 4;
 
+const subscribeHeroCapabilities = (callback: () => void) => {
+  if (typeof window === "undefined" || !window.matchMedia) return () => {};
+  const mediaTouch = window.matchMedia("(max-width: 1024px), (pointer: coarse), (hover: none)");
+  const mediaReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  mediaTouch.addEventListener("change", callback);
+  mediaReduced.addEventListener("change", callback);
+
+  return () => {
+    mediaTouch.removeEventListener("change", callback);
+    mediaReduced.removeEventListener("change", callback);
+  };
+};
+
+const getHeroCapabilitiesSnapshot = () => {
+  if (typeof window === "undefined") return false;
+  const mediaTouch = window.matchMedia("(max-width: 1024px), (pointer: coarse), (hover: none)").matches;
+  const mediaReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  return mediaTouch || mediaReduced;
+};
+
+const getHeroCapabilitiesServerSnapshot = () => false;
+
 export default function Home5Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  const [isMobileOrReduced, setIsMobileOrReduced] = useState(false);
+  const isMobileOrReduced = useSyncExternalStore(
+    subscribeHeroCapabilities,
+    getHeroCapabilitiesSnapshot,
+    getHeroCapabilitiesServerSnapshot
+  );
 
   // Progressive frame cache: Map index -> HTMLImageElement
   const frameCache = useRef<Map<number, HTMLImageElement>>(new Map());
@@ -34,27 +61,6 @@ export default function Home5Hero() {
   const heroOpacity = useTransform(scrollYProgress, [0.75, 1], [1, 0]);
   const heroPointerEvents = useTransform(scrollYProgress, (v) => (v >= 0.95 ? "none" : "auto"));
   const badgesY = useTransform(scrollYProgress, [0, 0.3], [10, 0]);
-
-  // Check device capabilities and reduced-motion preferences
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    const mediaMobile = window.matchMedia("(max-width: 768px)");
-    const mediaReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-    const updateCapabilities = () => {
-      setIsMobileOrReduced(mediaMobile.matches || mediaReduced.matches);
-    };
-
-    updateCapabilities();
-    mediaMobile.addEventListener("change", updateCapabilities);
-    mediaReduced.addEventListener("change", updateCapabilities);
-
-    return () => {
-      mediaMobile.removeEventListener("change", updateCapabilities);
-      mediaReduced.removeEventListener("change", updateCapabilities);
-    };
-  }, []);
 
   // Draw a frame onto the canvas
   const drawFrame = useCallback((frameIndex: number) => {
@@ -186,19 +192,26 @@ export default function Home5Hero() {
     return () => window.removeEventListener("resize", handleResize);
   }, [isMobileOrReduced, drawFrame]);
 
-  // Sync scroll position to frame playback
+  // Sync scroll position to frame playback with vsync throttling
   useEffect(() => {
     if (isMobileOrReduced) return;
 
+    let rafId = 0;
     const unsubscribe = scrollYProgress.on("change", (latest) => {
       const targetFrame = Math.min(
         TOTAL_FRAMES,
         Math.max(1, Math.round(latest * (TOTAL_FRAMES - 1)) + 1)
       );
-      drawFrame(targetFrame);
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        drawFrame(targetFrame);
+      });
     });
 
-    return () => unsubscribe();
+    return () => {
+      unsubscribe();
+      if (rafId) cancelAnimationFrame(rafId);
+    };
   }, [isMobileOrReduced, scrollYProgress, drawFrame]);
 
   // Accessible skip to content function

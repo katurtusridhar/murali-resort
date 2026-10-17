@@ -842,11 +842,18 @@ const GhostFibers: React.FC<GhostFibersProps> = ({
       return best;
     };
 
+    let containerRect: DOMRect | null = null;
+    const updateContainerRect = () => {
+      if (container) containerRect = container.getBoundingClientRect();
+    };
+
     const resize = () => {
       const s = settingsRef.current;
       const width = Math.max(1, container.clientWidth);
       const height = Math.max(1, container.clientHeight);
-      const baseDpr = Math.min(s.dpr || (typeof window !== 'undefined' ? window.devicePixelRatio : 1) || 1, 2);
+      updateContainerRect();
+      const defaultMaxDpr = typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches ? 1.0 : 1.5;
+      const baseDpr = Math.min(s.dpr || (typeof window !== 'undefined' ? window.devicePixelRatio : 1) || 1, defaultMaxDpr);
       const longest = Math.max(width, height) * baseDpr;
       const ratio = longest > MAX_RENDER_DIM ? (baseDpr * MAX_RENDER_DIM) / longest : baseDpr;
       const pixelWidth = Math.max(1, Math.round(width * ratio));
@@ -1019,9 +1026,20 @@ const GhostFibers: React.FC<GhostFibersProps> = ({
       gl.bindVertexArray(null);
     };
 
+    let isScrolling = false;
+    let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
+    const onScroll = () => {
+      isScrolling = true;
+      if (scrollTimeout) clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        isScrolling = false;
+        wake();
+      }, 100);
+    };
+
     const frame = (now: number) => {
       raf = 0;
-      if (!alive || !visible || (typeof document !== 'undefined' && document.hidden)) return;
+      if (!alive || !visible || isScrolling || (typeof document !== 'undefined' && document.hidden)) return;
       const s = settingsRef.current;
       const elapsed = last ? (now - last) / 1000 : 1 / 60;
       const dt = Math.min(0.05, elapsed);
@@ -1082,12 +1100,13 @@ const GhostFibers: React.FC<GhostFibersProps> = ({
     };
 
     const onPointerMove = (event: PointerEvent) => {
-      const rect = container.getBoundingClientRect();
-      const x = event.clientX - rect.left;
-      const y = event.clientY - rect.top;
+      if (!containerRect) updateContainerRect();
+      if (!containerRect) return;
+      const x = event.clientX - containerRect.left;
+      const y = event.clientY - containerRect.top;
       state.pointer.x = x;
       state.pointer.y = y;
-      state.pointer.inside = x >= 0 && y >= 0 && x <= rect.width && y <= rect.height;
+      state.pointer.inside = x >= 0 && y >= 0 && x <= containerRect.width && y <= containerRect.height;
       wake();
     };
 
@@ -1099,10 +1118,11 @@ const GhostFibers: React.FC<GhostFibersProps> = ({
         event.target.closest('a, button, input, textarea, select, label, [role="button"]')
       )
         return;
-      const rect = container.getBoundingClientRect();
-      const x = event.clientX - rect.left;
-      const y = event.clientY - rect.top;
-      if (x < 0 || y < 0 || x > rect.width || y > rect.height) return;
+      if (!containerRect) updateContainerRect();
+      if (!containerRect) return;
+      const x = event.clientX - containerRect.left;
+      const y = event.clientY - containerRect.top;
+      if (x < 0 || y < 0 || x > containerRect.width || y > containerRect.height) return;
       const near = nearestOnRibbon(s, x, y);
       if (near) state.pulse = { s: near.s, age: 0, strength: 1, ribbon: near.ribbon };
       wake();
@@ -1128,6 +1148,7 @@ const GhostFibers: React.FC<GhostFibersProps> = ({
       }
     });
     intersection.observe(container);
+    window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('pointermove', onPointerMove, { passive: true });
     window.addEventListener('pointerdown', onPointerDown);
     document.documentElement.addEventListener('pointerleave', onPointerLeave);
@@ -1143,9 +1164,11 @@ const GhostFibers: React.FC<GhostFibersProps> = ({
     return () => {
       alive = false;
       cancelAnimationFrame(raf);
+      if (scrollTimeout) clearTimeout(scrollTimeout);
       wakeRef.current = null;
       resizeObserver.disconnect();
       intersection.disconnect();
+      window.removeEventListener('scroll', onScroll);
       window.removeEventListener('pointermove', onPointerMove);
       window.removeEventListener('pointerdown', onPointerDown);
       document.documentElement.removeEventListener('pointerleave', onPointerLeave);

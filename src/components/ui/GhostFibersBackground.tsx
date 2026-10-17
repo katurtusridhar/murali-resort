@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useSyncExternalStore } from "react";
 import GhostFibers from "@/components/ui/GhostFibers";
 
 interface GhostFibersBackgroundProps {
@@ -11,6 +11,22 @@ interface GhostFibersBackgroundProps {
   className?: string;
 }
 
+const subscribeTier = (callback: () => void) => {
+  if (typeof window === "undefined") return () => {};
+  window.addEventListener("resize", callback, { passive: true });
+  return () => window.removeEventListener("resize", callback);
+};
+
+const getTierSnapshot = (): "mobile" | "tablet" | "desktop" => {
+  if (typeof window === "undefined") return "desktop";
+  const w = window.innerWidth;
+  if (w < 768) return "mobile";
+  if (w < 1024) return "tablet";
+  return "desktop";
+};
+
+const getTierServerSnapshot = () => "desktop" as const;
+
 export default function GhostFibersBackground({
   glowColor = "#7c3aed",
   secondaryColor = "#5b21b6",
@@ -18,6 +34,15 @@ export default function GhostFibersBackground({
   lightMode = true,
   className = "",
 }: GhostFibersBackgroundProps) {
+  const tier = useSyncExternalStore(subscribeTier, getTierSnapshot, getTierServerSnapshot);
+
+  const config =
+    tier === "mobile"
+      ? { threads: 24, layers: 1, density: 0.5, particles: 0, dpr: 1.0 }
+      : tier === "tablet"
+      ? { threads: 36, layers: 2, density: 0.7, particles: 0.2, dpr: 1.2 }
+      : { threads: 60, layers: 3, density: 0.85, particles: 0.4, dpr: 1.5 };
+
   return (
     <div
       aria-hidden="true"
@@ -28,21 +53,23 @@ export default function GhostFibersBackground({
         glowColor={glowColor}
         secondaryColor={secondaryColor}
         lineColor={lineColor}
-        layers={3}
+        layers={config.layers}
         twist={1.2}
-        threads={72}
+        threads={config.threads}
         fiberStyle="dots"
         depthOfField={0.85}
         hoverEffect="focus"
         intro={true}
-        mouseInteraction={true}
+        mouseInteraction={tier === "desktop"}
         lightMode={lightMode}
         speed={0.38}
         scale={1.1}
-        density={1}
+        density={config.density}
         thickness={1.0}
-        sparkle={0.5}
+        particles={config.particles}
+        sparkle={0.4}
         foldGlow={1.3}
+        dpr={config.dpr}
         className="w-full h-full"
       />
     </div>
