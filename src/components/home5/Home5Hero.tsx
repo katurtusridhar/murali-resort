@@ -311,7 +311,7 @@ export default function Home5Hero() {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 mb-3 sm:mb-5">
               <Sparkles size={13} className="text-[#C5A880]" />
-              <span className="text-xs sm:text-sm uppercase tracking-wider text-[#C5A880] font-semibold">
+              <span className="text-xs sm:text-sm tracking-wide text-[#C5A880] font-semibold">
                 Poranki, Vijayawada
               </span>
             </div>
@@ -330,13 +330,13 @@ export default function Home5Hero() {
             <div className="flex flex-wrap items-center gap-3 sm:gap-4">
               <Link
                 href="/contact"
-                className="px-7 sm:px-9 py-3 sm:py-4 rounded-full bg-white text-[#14171A] border border-white font-semibold text-xs sm:text-sm uppercase tracking-widest hover:bg-stone-200 active:scale-95 transition-all shadow-xl shrink-0"
+                className="btn-primary-light shrink-0"
               >
                 Plan Your Event
               </Link>
               <button
                 onClick={handleSkip}
-                className="px-7 sm:px-9 py-3 sm:py-4 rounded-full border border-white/40 text-white font-semibold text-xs sm:text-sm uppercase tracking-widest hover:border-white hover:bg-white/10 active:scale-95 transition-all backdrop-blur-md shrink-0"
+                className="btn-outline-light shrink-0"
               >
                 Explore Venue
               </button>
@@ -354,13 +354,13 @@ export default function Home5Hero() {
                 </div>
                 {/* Mobile: stacked 2-line micro-copy to prevent any cut-off or ellipses */}
                 <div className="flex flex-col justify-center min-w-0 sm:hidden">
-                  <span className="text-[11px] font-bold text-white leading-tight">2,000</span>
-                  <span className="text-[9px] text-stone-300 uppercase tracking-wide leading-tight">Capacity</span>
+                  <span className="text-xs font-bold text-white leading-tight">2,000</span>
+                  <span className="text-xs text-stone-300 uppercase tracking-wide leading-tight">Capacity</span>
                 </div>
                 {/* Desktop / Tablet: full rich specification */}
                 <div className="hidden sm:block min-w-0">
                   <div className="text-xs sm:text-sm text-white font-semibold whitespace-nowrap">2,000 Capacity</div>
-                  <div className="text-[10px] text-stone-300 uppercase tracking-wider whitespace-nowrap">Combined Venue</div>
+                  <div className="text-xs text-stone-300 uppercase tracking-wider whitespace-nowrap">Combined Venue</div>
                 </div>
               </div>
 
@@ -371,13 +371,13 @@ export default function Home5Hero() {
                 </div>
                 {/* Mobile: stacked 2-line micro-copy */}
                 <div className="flex flex-col justify-center min-w-0 sm:hidden">
-                  <span className="text-[11px] font-bold text-white leading-tight">800</span>
-                  <span className="text-[9px] text-stone-300 uppercase tracking-wide leading-tight">Seated</span>
+                  <span className="text-xs font-bold text-white leading-tight">800</span>
+                  <span className="text-xs text-stone-300 uppercase tracking-wide leading-tight">Seated</span>
                 </div>
                 {/* Desktop / Tablet: full rich specification */}
                 <div className="hidden sm:block min-w-0">
                   <div className="text-xs sm:text-sm text-white font-semibold whitespace-nowrap">800 Seated</div>
-                  <div className="text-[10px] text-stone-300 uppercase tracking-wider whitespace-nowrap">Grand Hall</div>
+                  <div className="text-xs text-stone-300 uppercase tracking-wider whitespace-nowrap">Grand Hall</div>
                 </div>
               </div>
 
@@ -388,13 +388,13 @@ export default function Home5Hero() {
                 </div>
                 {/* Mobile: stacked 2-line micro-copy */}
                 <div className="flex flex-col justify-center min-w-0 sm:hidden">
-                  <span className="text-[11px] font-bold text-white leading-tight">Lawns</span>
-                  <span className="text-[9px] text-stone-300 uppercase tracking-wide leading-tight">&amp; Suites</span>
+                  <span className="text-xs font-bold text-white leading-tight">Lawns</span>
+                  <span className="text-xs text-stone-300 uppercase tracking-wide leading-tight">&amp; Suites</span>
                 </div>
                 {/* Desktop / Tablet: full rich specification */}
                 <div className="hidden sm:block min-w-0">
                   <div className="text-xs sm:text-sm text-white font-semibold whitespace-nowrap">Lawns &amp; Suites</div>
-                  <div className="text-[10px] text-stone-300 uppercase tracking-wider whitespace-nowrap">Open-Air Spaces</div>
+                  <div className="text-xs text-stone-300 uppercase tracking-wider whitespace-nowrap">Open-Air Spaces</div>
                 </div>
               </div>
             </div>

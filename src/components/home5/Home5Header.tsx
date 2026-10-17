@@ -93,7 +93,7 @@ export default function Home5Header() {
                 Murali Resort
               </span>
               <span
-                className={`text-[10px] sm:text-xs tracking-wider text-stone-300 font-medium transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden ${
+                className={`text-xs tracking-wider text-stone-300 font-medium transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden ${
                   isScrolled || mobileMenuOpen ? "h-0 opacity-0" : "h-3.5 sm:h-4 opacity-100"
                 }`}
               >
@@ -154,7 +154,7 @@ export default function Home5Header() {
             {/* Enquire Now Button — crisp premium white */}
             <Link
               href="/contact"
-              className="px-6 py-2.5 rounded-full bg-white text-[#14171A] border border-white text-xs tracking-widest uppercase font-semibold hover:bg-stone-200 transition-all duration-300 shadow-sm hover:shadow-md shrink-0 whitespace-nowrap"
+              className="btn-primary-light shrink-0 whitespace-nowrap !py-2 !px-5"
             >
               Enquire Now
             </Link>
@@ -164,7 +164,7 @@ export default function Home5Header() {
           <div className="lg:hidden flex items-center gap-2 sm:gap-3 pr-0.5 sm:pr-1 shrink-0">
             <Link
               href="/contact"
-              className="px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full bg-white text-[#14171A] border border-white text-xs font-semibold uppercase tracking-wider hover:bg-stone-200 transition-colors shadow-sm whitespace-nowrap shrink-0"
+              className="btn-primary-light shrink-0 whitespace-nowrap !py-1.5 sm:!py-2 !px-3.5 sm:!px-4"
             >
               <span>Enquire</span>
               <span className="hidden sm:inline"> Now</span>

@@ -130,7 +130,7 @@ export default function Home5Reviews() {
               href="https://maps.app.goo.gl/yzuQ8TLbJ3FSdTcQ7"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 min-h-[44px] px-5 py-2.5 rounded-full bg-stone-100 hover:bg-stone-200 text-[#14171A] text-xs font-semibold uppercase tracking-wider transition-colors shrink-0"
+              className="btn-outline-dark shrink-0"
             >
               <span>View On Maps</span>
               <ExternalLink size={13} className="text-[#525A62]" />
@@ -259,7 +259,7 @@ export default function Home5Reviews() {
             href="https://maps.app.goo.gl/yzuQ8TLbJ3FSdTcQ7"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto min-h-[44px] px-7 py-3 rounded-full bg-[#14171A] hover:bg-stone-800 text-white text-xs uppercase tracking-widest font-semibold transition-all duration-300 inline-flex items-center justify-center gap-2 shrink-0 shadow-sm"
+            className="w-full sm:w-auto btn-primary-dark shrink-0"
           >
             <span>Write a Google Review</span>
             <ExternalLink size={13} />

@@ -73,7 +73,7 @@ export default function Home5Gallery() {
 
             <Link
               href="/gallery"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 min-h-[44px] px-7 py-3 rounded-full border border-stone-300 text-[#14171A] text-xs uppercase tracking-widest font-semibold hover:border-[#14171A] hover:bg-[#14171A] hover:text-white transition-all shadow-sm group"
+              className="w-full sm:w-auto btn-outline-dark group"
             >
               <span>View Full Gallery</span>
               <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />

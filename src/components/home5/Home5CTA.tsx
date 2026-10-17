@@ -33,7 +33,7 @@ export default function Home5CTA() {
           {/* 1. Primary Online Form */}
           <Link
             href="/contact"
-            className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white text-[#14171A] border border-white font-semibold text-xs uppercase tracking-widest hover:bg-stone-200 transition-all shadow-xl hover:shadow-2xl flex items-center justify-center gap-2"
+            className="w-full sm:w-auto btn-primary-light"
           >
             <span>Enquiry Now</span>
             <ArrowRight size={14} />
@@ -44,7 +44,7 @@ export default function Home5CTA() {
             href="https://wa.me/919502507999?text=Hello%20Murali%20Resort,%20I%20would%20like%20to%20enquire%20about%20booking%20an%20event."
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-7 py-3.5 rounded-full border border-white/30 bg-black/40 text-white font-semibold text-xs uppercase tracking-widest hover:bg-white hover:text-[#14171A] hover:border-white transition-all shadow-lg flex items-center justify-center gap-2"
+            className="w-full sm:w-auto btn-outline-light"
           >
             <WhatsAppIcon className="w-4 h-4 fill-current shrink-0" />
             <span>WhatsApp</span>
@@ -53,7 +53,7 @@ export default function Home5CTA() {
           {/* 3. Direct Phone Call */}
           <a
             href="tel:+919502507999"
-            className="w-full sm:w-auto px-7 py-3.5 rounded-full border border-white/30 bg-black/40 text-white font-semibold text-xs uppercase tracking-widest hover:bg-white hover:text-[#14171A] hover:border-white transition-all shadow-lg flex items-center justify-center gap-2"
+            className="w-full sm:w-auto btn-outline-light"
           >
             <Phone size={14} className="text-white" />
             <span>9502507999</span>

@@ -230,7 +230,7 @@ export default function Home5Spaces() {
                 {/* Direct Action Link */}
                 <Link
                   href={currentSpace.ctaHref}
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#14171A] text-white text-xs uppercase tracking-widest font-semibold hover:bg-stone-800 transition-colors shadow-md group w-full sm:w-auto min-h-[44px]"
+                  className="w-full sm:w-auto btn-primary-dark group"
                 >
                   <span>{currentSpace.ctaText}</span>
                   <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
