@@ -1015,15 +1015,6 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
       const card = hit(releasePoint) || hit(drag.p);
       const s = settingsRef.current;
       if (!card) {
-        // Fallback: If clean tap/click within gallery bounds, trigger active center card
-        if (!drag.moved) {
-          const activeIndex = wrap(state.active, s.items.length);
-          const activeItem = s.items[activeIndex];
-          if (activeItem) {
-            s.onItemClick?.(activeItem, activeIndex);
-            return;
-          }
-        }
         if (state.open > 0.5) close();
         return;
       }
@@ -1118,16 +1109,6 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
       wake();
     };
 
-    const onClick = (event: MouseEvent) => {
-      if ((event.target as HTMLElement).closest('[data-gallery-close]')) return;
-      const p = point(event);
-      const card = hit(p);
-      const s = settingsRef.current;
-      if (card) {
-        s.onItemClick?.(card.item, card.index);
-      }
-    };
-
     const resizeObserver = new ResizeObserver(resize);
     resizeObserver.observe(container);
     const intersection = new IntersectionObserver(entries => {
@@ -1141,7 +1122,6 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
     container.addEventListener('pointerdown', onPointerDown);
     container.addEventListener('pointermove', onPointerMove);
     container.addEventListener('pointerup', onPointerUp);
-    container.addEventListener('click', onClick);
     container.addEventListener('pointercancel', onPointerCancel);
     container.addEventListener('pointerleave', onPointerLeave);
     container.addEventListener('wheel', onWheel, { passive: false });
@@ -1180,7 +1160,6 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
       container.removeEventListener('pointerdown', onPointerDown);
       container.removeEventListener('pointermove', onPointerMove);
       container.removeEventListener('pointerup', onPointerUp);
-      container.removeEventListener('click', onClick);
       container.removeEventListener('pointercancel', onPointerCancel);
       container.removeEventListener('pointerleave', onPointerLeave);
       container.removeEventListener('wheel', onWheel);
@@ -1248,8 +1227,7 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
               aria-current={index === active ? 'true' : undefined}
               onFocus={() => engineRef.current?.focus(index)}
               onClick={() => {
-                settingsRef.current.onItemClick?.(item, index);
-                engineRef.current?.open(index);
+                engineRef.current?.focus(index);
               }}
             >
               {item.text || item.alt || `Image ${index + 1}`}
