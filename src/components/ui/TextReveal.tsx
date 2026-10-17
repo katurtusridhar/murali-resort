@@ -41,24 +41,27 @@ export default function TextReveal({ text, className = "", delay = 0 }: TextReve
       whileInView="visible"
       viewport={{ once: true, margin: "-10%" }}
       className={`flex flex-wrap ${className}`}
+      aria-label={text}
     >
-      {lines.map((line, lineIndex) => (
-        <span key={lineIndex} className="flex flex-wrap w-full">
-          {line.split(" ").map((word, wordIndex) => (
-            <span key={wordIndex} style={{ display: "inline-block", paddingRight: "0.25em", overflow: "hidden" }}>
-              {word.split("").map((char, charIndex) => (
-                <motion.span
-                  key={charIndex}
-                  variants={child}
-                  style={{ display: "inline-block", originY: 1 }}
-                >
-                  {char}
-                </motion.span>
-              ))}
-            </span>
-          ))}
-        </span>
-      ))}
+      <span aria-hidden="true" className="contents">
+        {lines.map((line, lineIndex) => (
+          <span key={lineIndex} className="flex flex-wrap w-full">
+            {line.split(" ").map((word, wordIndex) => (
+              <span key={wordIndex} style={{ display: "inline-block", paddingRight: "0.25em", overflow: "hidden" }}>
+                {word.split("").map((char, charIndex) => (
+                  <motion.span
+                    key={charIndex}
+                    variants={child}
+                    style={{ display: "inline-block", originY: 1 }}
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+              </span>
+            ))}
+          </span>
+        ))}
+      </span>
     </motion.h2>
   );
 }

@@ -6,7 +6,7 @@ import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 export default function Footer({ transparent = false }: { transparent?: boolean }) {
   return (
-    <footer className={`relative ${transparent ? "bg-transparent text-stone-400 border-t border-white/10" : "bg-premium-dark text-stone-300 border-t border-stone-800"} py-14 sm:py-16 md:py-24`}>
+    <footer className={`relative ${transparent ? "bg-transparent text-stone-300 border-t border-white/10" : "bg-premium-dark text-stone-300 border-t border-stone-800"} py-14 sm:py-16 md:py-24`}>
       <div className="container mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12">
         
         {/* Brand */}

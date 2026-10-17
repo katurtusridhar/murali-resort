@@ -41,24 +41,24 @@ export default function Navbar() {
           
           {/* Left: Brand Logo & Title */}
           <Link href="/home" className="flex items-center gap-3 group shrink-0">
-            <div className="relative w-8 h-8 md:w-9 md:h-9 shrink-0 flex items-center justify-center">
+            <div className="relative w-8 h-8 md:w-9 md:h-9 shrink-0 flex items-center justify-center isolate" aria-hidden="true">
               <Image
                 src="/images/logo.png"
-                alt="Murali Resort Logo"
+                alt=""
                 fill
                 sizes="36px"
                 className="object-contain group-hover:scale-105 transition-transform"
                 priority
               />
             </div>
-            <span className="text-white font-sans font-medium text-base md:text-lg tracking-tight">
+            <span className="text-white font-sans font-medium text-base md:text-lg tracking-tight isolate">
               Murali Resort
             </span>
           </Link>
 
           {/* Right: Desktop Navigation Links + Enquire Now Button */}
           <div className="hidden lg:flex items-center gap-7 shrink-0 pr-0.5">
-            <nav aria-label="Desktop Navigation" className="flex items-center gap-7 text-sm font-medium text-white">
+            <nav aria-label="Desktop Navigation" className="flex items-center gap-7 text-sm font-medium text-white isolate">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
@@ -67,7 +67,7 @@ export default function Navbar() {
                     href={link.href}
                     onClick={link.href === "/celebrations" ? (e) => e.preventDefault() : undefined}
                     className={clsx(
-                      "transition-colors drop-shadow-sm whitespace-nowrap",
+                      "transition-colors drop-shadow-sm whitespace-nowrap isolate",
                       isActive ? "text-accent font-semibold" : "text-white hover:text-stone-300"
                     )}
                   >
