@@ -96,7 +96,7 @@ export default function Home5Architecture() {
               viewport={{ once: true }}
               className="text-[#525A62] text-base sm:text-lg font-light leading-relaxed mb-8 max-w-[60ch]"
             >
-              Located on Poranki-Nidamanuru Road in Vijayawada, Murali Resort blends modern halls with green open lawns. We host grand indoor conferences and starlit wedding dinners with ease. Enjoy generous space and smooth movement for all your guests.
+              Located on Poranki Road in Vijayawada, Murali Resort pairs modern halls with green lawns. Host grand weddings and events with ease. Your guests will enjoy plenty of space to celebrate in comfort.
             </motion.p>
 
             {/* Verified Specifications Grid */}

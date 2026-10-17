@@ -23,7 +23,7 @@ export default function Home5Location() {
             </h2>
 
             <p className="text-[#525A62] text-base sm:text-lg font-light leading-relaxed mb-8 max-w-[62ch]">
-              Murali Resort is on Poranki Road in Vijayawada, with easy highway access. A wide circular driveway lets your guests arrive and leave smoothly.
+              Murali Resort sits on Poranki Road in Vijayawada, with easy highway access. A wide driveway lets your guests arrive and park with ease.
             </p>
 
             {/* Address & Verified Coordinates Card */}

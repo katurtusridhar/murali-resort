@@ -8,7 +8,7 @@ const celebrationItems: CircularGalleryItem[] = [
   {
     image: "/images/gallery/wedding-img-1.png",
     text: "Royal Floral Aisle",
-    description: "A beautiful wedding walkway with crystal chandeliers, fresh flower garlands, and a red carpet.",
+    description: "A grand wedding walkway with crystal lights, fresh flowers, and a red carpet.",
     alt: "Royal wedding aisle and floral mandap walkway at Murali Resort",
   },
   {
@@ -61,7 +61,7 @@ export default function Home5Gallery() {
               Real Celebrations Brought to Life.
             </h2>
             <p className="text-[#525A62] text-base sm:text-lg font-light leading-relaxed mt-4">
-              Browse authentic setups from weddings, receptions, and banquets hosted at Murali Resort. Drag or scroll to explore the celebration arc.
+              Browse real photos from weddings, receptions, and banquets at Murali Resort. Drag or scroll to explore the gallery.
             </p>
           </div>
 
