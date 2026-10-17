@@ -14,7 +14,7 @@ const inter = Inter({
 
 import SmoothScroll from "@/components/layout/SmoothScroll";
 
-import Preloader from "@/components/ui/Preloader";
+import MuraliLoader from "@/components/ui/MuraliLoader";
 import GhostFibersBackground from "@/components/ui/GhostFibersBackground";
 
 export const metadata: Metadata = {
@@ -32,7 +32,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-[#FBF9F5] text-stone-900 overflow-x-clip w-full max-w-full relative`}
       >
-        <Preloader />
+        <MuraliLoader />
         <GhostFibersBackground />
         <SmoothScroll>
           {children}
