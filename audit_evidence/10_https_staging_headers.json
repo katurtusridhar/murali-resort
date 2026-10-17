@@ -1,0 +1,33 @@
+{
+  "transport": "TLS/HTTPS",
+  "proxyPort": 3443,
+  "tlsProtocol": "TLSv1.3",
+  "tlsCipher": {
+    "name": "TLS_AES_256_GCM_SHA384",
+    "standardName": "TLS_AES_256_GCM_SHA384",
+    "version": "TLSv1.3"
+  },
+  "hstsDelivered": "max-age=31536000",
+  "browserLocationProtocol": "https:",
+  "fullHeaders": {
+    "x-dns-prefetch-control": "on",
+    "strict-transport-security": "max-age=31536000",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "permissions-policy": "camera=(), microphone=(), geolocation=(self)",
+    "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://images.unsplash.com https://*.tile.openstreetmap.org https://tile.openstreetmap.org; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://router.project-osrm.org https://*.tile.openstreetmap.org https://tile.openstreetmap.org; object-src 'none'; frame-ancestors 'self'; form-action 'self'; base-uri 'self'",
+    "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+    "x-nextjs-cache": "HIT",
+    "x-nextjs-prerender": "1, 1",
+    "x-nextjs-stale-time": "300",
+    "x-powered-by": "Next.js",
+    "cache-control": "s-maxage=31536000",
+    "etag": "\"7kzmxrx2wh2m4a\"",
+    "content-type": "text/html; charset=utf-8",
+    "content-length": "122086",
+    "date": "Sat, 17 Oct 2026 06:46:13 GMT",
+    "connection": "keep-alive",
+    "keep-alive": "timeout=5"
+  }
+}

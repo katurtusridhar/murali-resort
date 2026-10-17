@@ -1,0 +1,181 @@
+@import "tailwindcss";
+@source "../src";
+
+:root {
+  --background: #fafaf9; /* stone-50 */
+  --foreground: #1c1917; /* stone-900 */
+  --surface: #ffffff;
+  --surface-elevated: #fafaf9;
+
+  /* Consistent type scale - limited to 8 sizes */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;    /* 24px */
+  --text-3xl: 1.875rem;  /* 30px */
+  --text-4xl: 2.25rem;   /* 36px */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+
+  --color-premium-dark: #121212;
+  --color-premium-light: #fdfbf7;
+  --color-accent: #c4a984; /* Metallic/gold-inspired accent, used sparingly */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Custom Utilities for Premium Vibe */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .clip-path-reveal {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Liquid Button Hover Effect */
+  .btn-liquid {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.3s ease;
+  }
+  .btn-liquid::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-premium-dark);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+    z-index: -1;
+  }
+  .btn-liquid:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  .btn-liquid:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  .btn-liquid:hover::after {
+    transform: translateY(0);
+  }
+  .btn-liquid:hover {
+    color: white !important;
+  }
+
+  .btn-liquid-light::after {
+    background-color: white;
+  }
+  .btn-liquid-light:hover {
+    color: var(--color-premium-dark) !important;
+  }
+
+  /* Adaptive Liquid Button */
+  .btn-liquid-adaptive::after {
+    background-color: var(--foreground);
+  }
+  .btn-liquid-adaptive:hover {
+    color: var(--background) !important;
+  }
+
+  body.theme-dark .btn-liquid-adaptive::after {
+    background-color: var(--color-premium-light);
+  }
+  body.theme-dark .btn-liquid-adaptive:hover {
+    color: var(--color-premium-dark) !important;
+  }
+
+  /* Focus ring for accessibility — visible on keyboard only */
+  .focus-ring:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  /* Dynamic Theme Transition */
+  body {
+    transition: background-color 0.6s cubic-bezier(0.76, 0, 0.24, 1),
+                color 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+
+  body.theme-dark {
+    background-color: var(--color-premium-dark);
+    color: var(--color-premium-light);
+  }
+
+  /* Map Tile Inversion for Free Premium Dark Mode Maps */
+  .map-tiles {
+    filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+  }
+
+}
+
+/* Seamless Text Loop Marquee */
+@keyframes text-loop-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes text-loop-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-text-loop-left {
+  display: flex;
+  width: max-content;
+  animation: text-loop-left 42s linear infinite;
+  will-change: transform;
+}
+
+.animate-text-loop-right {
+  display: flex;
+  width: max-content;
+  animation: text-loop-right 46s linear infinite;
+  will-change: transform;
+}
+
+.animate-text-loop-left:hover,
+.animate-text-loop-right:hover {
+  animation-play-state: paused;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

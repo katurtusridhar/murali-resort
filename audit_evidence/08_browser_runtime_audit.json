@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Canonical Home (/home)",
+    "requestedUrl": "http://localhost:3000/home",
+    "dom": {
+      "currentUrl": "http://localhost:3000/home",
+      "title": "Murali Resort | Premium Resort & Convention Center — Vijayawada",
+      "hasHeader": true,
+      "hasMain": true,
+      "h1Text": "Murali Resort & Convention Center — Where Moments Become Memories.",
+      "scriptsCount": 19,
+      "imagesCount": 9,
+      "linksCount": 40,
+      "buttonsCount": 18
+    },
+    "consoleErrors": [],
+    "cspViolations": [],
+    "networkFailures": []
+  },
+  {
+    "name": "Facilities (/facilities)",
+    "requestedUrl": "http://localhost:3000/facilities",
+    "dom": {
+      "currentUrl": "http://localhost:3000/facilities",
+      "title": "Murali Resort | Premium Resort & Convention Center",
+      "hasHeader": true,
+      "hasMain": true,
+      "h1Text": "Facilities & Amenities",
+      "scriptsCount": 19,
+      "imagesCount": 14,
+      "linksCount": 21,
+      "buttonsCount": 2
+    },
+    "consoleErrors": [],
+    "cspViolations": [],
+    "networkFailures": []
+  },
+  {
+    "name": "Gallery (/gallery)",
+    "requestedUrl": "http://localhost:3000/gallery",
+    "dom": {
+      "currentUrl": "http://localhost:3000/gallery",
+      "title": "Murali Resort | Premium Resort & Convention Center",
+      "hasHeader": true,
+      "hasMain": true,
+      "h1Text": "Visual Journey",
+      "scriptsCount": 19,
+      "imagesCount": 58,
+      "linksCount": 21,
+      "buttonsCount": 2
+    },
+    "consoleErrors": [],
+    "cspViolations": [],
+    "networkFailures": []
+  },
+  {
+    "name": "Contact (/contact)",
+    "requestedUrl": "http://localhost:3000/contact",
+    "dom": {
+      "currentUrl": "http://localhost:3000/contact",
+      "title": "Murali Resort | Premium Resort & Convention Center",
+      "hasHeader": true,
+      "hasMain": true,
+      "h1Text": "Contact Information",
+      "scriptsCount": 20,
+      "imagesCount": 30,
+      "linksCount": 22,
+      "buttonsCount": 4
+    },
+    "consoleErrors": [],
+    "cspViolations": [],
+    "networkFailures": []
+  },
+  {
+    "name": "Root Apex Redirect (/ -> /home)",
+    "requestedUrl": "http://localhost:3000/",
+    "dom": {
+      "currentUrl": "http://localhost:3000/home",
+      "title": "Murali Resort | Premium Resort & Convention Center — Vijayawada",
+      "hasHeader": true,
+      "hasMain": true,
+      "h1Text": "Murali Resort & Convention Center — Where Moments Become Memories.",
+      "scriptsCount": 19,
+      "imagesCount": 9,
+      "linksCount": 40,
+      "buttonsCount": 18
+    },
+    "consoleErrors": [],
+    "cspViolations": [],
+    "networkFailures": []
+  }
+]

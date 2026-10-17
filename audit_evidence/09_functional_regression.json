@@ -1,0 +1,43 @@
+{
+  "test1_navigation": {
+    "action": "Click Navbar /facilities link on /home",
+    "clickResult": {
+      "clicked": true
+    },
+    "afterNav": {
+      "url": "http://localhost:3000/facilities",
+      "title": "Murali Resort | Premium Resort & Convention Center"
+    },
+    "passed": true
+  },
+  "test2_enquiryFlow": {
+    "action": "Fill Contact form and submit without backend provider",
+    "formSubmission": {
+      "submitted": true
+    },
+    "dispatchResult": {
+      "hasReadyNotice": true,
+      "hasSetupModeNotice": true,
+      "waLinkPresent": true,
+      "waHref": "https://wa.me/919502507999?text=Hello%20Murali%20Resort,%20I%20would%20like%20to%20enquire%20about%20booking%20an%20event."
+    },
+    "passed": true
+  },
+  "test3_galleryLightbox": {
+    "action": "Click DriftWall tile, verify modal opened and dismiss via Close button",
+    "tileClick": {
+      "clicked": true,
+      "label": "Event Details"
+    },
+    "modalOpened": {
+      "isOpen": true,
+      "hasCloseBtn": true,
+      "ariaLabel": "Photo view: Event Details"
+    },
+    "closeButtonClick": {
+      "clicked": true
+    },
+    "modalDismissed": true,
+    "passed": true
+  }
+}

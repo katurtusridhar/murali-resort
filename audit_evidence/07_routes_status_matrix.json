@@ -1,0 +1,226 @@
+[
+  {
+    "path": "/home",
+    "intendedPurpose": "Core Canonical Homepage",
+    "intendedPublic": true,
+    "statusCode": 200,
+    "redirectLocation": null,
+    "headers": {
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://images.unsplash.com https://*.tile.openstreetmap.org https://tile.openstreetmap.org; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://router.project-osrm.org https://*.tile.openstreetmap.org https://tile.openstreetmap.org; object-src 'none'; frame-ancestors 'self'; form-action 'self'; base-uri 'self'",
+      "strict-transport-security": "max-age=31536000",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(self)"
+    },
+    "bodyLength": 121978
+  },
+  {
+    "path": "/facilities",
+    "intendedPurpose": "Core Facilities & Amenities",
+    "intendedPublic": true,
+    "statusCode": 200,
+    "redirectLocation": null,
+    "headers": {
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://images.unsplash.com https://*.tile.openstreetmap.org https://tile.openstreetmap.org; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://router.project-osrm.org https://*.tile.openstreetmap.org https://tile.openstreetmap.org; object-src 'none'; frame-ancestors 'self'; form-action 'self'; base-uri 'self'",
+      "strict-transport-security": "max-age=31536000",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(self)"
+    },
+    "bodyLength": 67348
+  },
+  {
+    "path": "/gallery",
+    "intendedPurpose": "Core Visual Gallery",
+    "intendedPublic": true,
+    "statusCode": 200,
+    "redirectLocation": null,
+    "headers": {
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://images.unsplash.com https://*.tile.openstreetmap.org https://tile.openstreetmap.org; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://router.project-osrm.org https://*.tile.openstreetmap.org https://tile.openstreetmap.org; object-src 'none'; frame-ancestors 'self'; form-action 'self'; base-uri 'self'",
+      "strict-transport-security": "max-age=31536000",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(self)"
+    },
+    "bodyLength": 46266
+  },
+  {
+    "path": "/contact",
+    "intendedPurpose": "Core Contact & Concierge",
+    "intendedPublic": true,
+    "statusCode": 200,
+    "redirectLocation": null,
+    "headers": {
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://images.unsplash.com https://*.tile.openstreetmap.org https://tile.openstreetmap.org; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://router.project-osrm.org https://*.tile.openstreetmap.org https://tile.openstreetmap.org; object-src 'none'; frame-ancestors 'self'; form-action 'self'; base-uri 'self'",
+      "strict-transport-security": "max-age=31536000",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(self)"
+    },
+    "bodyLength": 46733
+  },
+  {
+    "path": "/",
+    "intendedPurpose": "Apex Domain Root",
+    "intendedPublic": false,
+    "statusCode": 308,
+    "redirectLocation": "/home",
+    "headers": {
+      "content-security-policy": null,
+      "strict-transport-security": null,
+      "x-frame-options": null,
+      "x-content-type-options": null,
+      "referrer-policy": null,
+      "permissions-policy": null
+    },
+    "bodyLength": 5
+  },
+  {
+    "path": "/home2",
+    "intendedPurpose": "Retired Homepage Variant",
+    "intendedPublic": false,
+    "statusCode": 308,
+    "redirectLocation": "/home",
+    "headers": {
+      "content-security-policy": null,
+      "strict-transport-security": null,
+      "x-frame-options": null,
+      "x-content-type-options": null,
+      "referrer-policy": null,
+      "permissions-policy": null
+    },
+    "bodyLength": 5
+  },
+  {
+    "path": "/home3",
+    "intendedPurpose": "Retired Homepage Variant",
+    "intendedPublic": false,
+    "statusCode": 308,
+    "redirectLocation": "/home",
+    "headers": {
+      "content-security-policy": null,
+      "strict-transport-security": null,
+      "x-frame-options": null,
+      "x-content-type-options": null,
+      "referrer-policy": null,
+      "permissions-policy": null
+    },
+    "bodyLength": 5
+  },
+  {
+    "path": "/home4",
+    "intendedPurpose": "Retired Homepage Variant",
+    "intendedPublic": false,
+    "statusCode": 308,
+    "redirectLocation": "/home",
+    "headers": {
+      "content-security-policy": null,
+      "strict-transport-security": null,
+      "x-frame-options": null,
+      "x-content-type-options": null,
+      "referrer-policy": null,
+      "permissions-policy": null
+    },
+    "bodyLength": 5
+  },
+  {
+    "path": "/home5",
+    "intendedPurpose": "Promoted Homepage Variant",
+    "intendedPublic": false,
+    "statusCode": 308,
+    "redirectLocation": "/home",
+    "headers": {
+      "content-security-policy": null,
+      "strict-transport-security": null,
+      "x-frame-options": null,
+      "x-content-type-options": null,
+      "referrer-policy": null,
+      "permissions-policy": null
+    },
+    "bodyLength": 5
+  },
+  {
+    "path": "/celebrations",
+    "intendedPurpose": "Temporary Booking Hold Route",
+    "intendedPublic": false,
+    "statusCode": 307,
+    "redirectLocation": "/home",
+    "headers": {
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://images.unsplash.com https://*.tile.openstreetmap.org https://tile.openstreetmap.org; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://router.project-osrm.org https://*.tile.openstreetmap.org https://tile.openstreetmap.org; object-src 'none'; frame-ancestors 'self'; form-action 'self'; base-uri 'self'",
+      "strict-transport-security": "max-age=31536000",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(self)"
+    },
+    "bodyLength": 7293
+  },
+  {
+    "path": "/accommodations",
+    "intendedPurpose": "Obsolete Prototype Route",
+    "intendedPublic": false,
+    "statusCode": 308,
+    "redirectLocation": "/facilities",
+    "headers": {
+      "content-security-policy": null,
+      "strict-transport-security": null,
+      "x-frame-options": null,
+      "x-content-type-options": null,
+      "referrer-policy": null,
+      "permissions-policy": null
+    },
+    "bodyLength": 11
+  },
+  {
+    "path": "/experience",
+    "intendedPurpose": "Obsolete Prototype Route",
+    "intendedPublic": false,
+    "statusCode": 308,
+    "redirectLocation": "/gallery",
+    "headers": {
+      "content-security-policy": null,
+      "strict-transport-security": null,
+      "x-frame-options": null,
+      "x-content-type-options": null,
+      "referrer-policy": null,
+      "permissions-policy": null
+    },
+    "bodyLength": 8
+  },
+  {
+    "path": "/unregistered-test-page",
+    "intendedPurpose": "Custom 404 Not Found Handler",
+    "intendedPublic": false,
+    "statusCode": 404,
+    "redirectLocation": null,
+    "headers": {
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://images.unsplash.com https://*.tile.openstreetmap.org https://tile.openstreetmap.org; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://router.project-osrm.org https://*.tile.openstreetmap.org https://tile.openstreetmap.org; object-src 'none'; frame-ancestors 'self'; form-action 'self'; base-uri 'self'",
+      "strict-transport-security": "max-age=31536000",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(self)"
+    },
+    "bodyLength": 10120
+  },
+  {
+    "path": "/sitemap.xml",
+    "intendedPurpose": "XML Sitemap Index",
+    "intendedPublic": true,
+    "statusCode": 200,
+    "redirectLocation": null,
+    "headers": {
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://images.unsplash.com https://*.tile.openstreetmap.org https://tile.openstreetmap.org; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://router.project-osrm.org https://*.tile.openstreetmap.org https://tile.openstreetmap.org; object-src 'none'; frame-ancestors 'self'; form-action 'self'; base-uri 'self'",
+      "strict-transport-security": "max-age=31536000",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(self)"
+    },
+    "bodyLength": 743
+  }
+]
