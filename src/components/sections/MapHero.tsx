@@ -158,7 +158,7 @@ export default function MapHero() {
               <MapPin className="text-accent w-5 h-5" strokeWidth={2} />
             </div>
             <div>
-              <h3 className="text-white font-serif text-xl mb-1">Murali Resort</h3>
+              <h2 className="text-white font-serif text-xl mb-1">Murali Resort</h2>
               <p className="text-stone-300 text-sm leading-relaxed">
                 Survey No - 134, Poranki-Nidamanuru,<br />Poranki, Vijayawada, AP 521137
               </p>

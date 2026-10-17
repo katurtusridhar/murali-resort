@@ -78,7 +78,7 @@ export default function Navbar() {
             </nav>
             <Link
               href="/contact"
-              className="px-6 py-2.5 rounded-full bg-white text-[#14171A] border border-white text-xs tracking-widest uppercase font-semibold hover:bg-stone-200 transition-all duration-300 shadow-sm hover:shadow-md shrink-0 whitespace-nowrap"
+              className="px-6 py-2.5 rounded-full bg-white text-[#14171A] border border-white text-xs tracking-widest uppercase font-semibold hover:bg-stone-200 transition-all duration-300 shadow-sm hover:shadow-md shrink-0 whitespace-nowrap isolate"
             >
               Enquire Now
             </Link>
@@ -88,7 +88,7 @@ export default function Navbar() {
           <div className="lg:hidden flex items-center gap-2 pr-1">
             <Link
               href="/contact"
-              className="px-4 py-1.5 rounded-full bg-white text-[#14171A] border border-white text-xs font-semibold uppercase tracking-widest hover:bg-stone-200 transition-colors shadow-sm"
+              className="px-4 py-1.5 rounded-full bg-white text-[#14171A] border border-white text-xs font-semibold uppercase tracking-widest hover:bg-stone-200 transition-colors shadow-sm isolate"
             >
               Enquire
             </Link>
