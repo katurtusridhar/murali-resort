@@ -309,7 +309,7 @@ export default function Home5Hero() {
         >
           {/* Top Section: Eyebrow & Value Proposition (Floating in open sky above facility) */}
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 mb-3 sm:mb-5">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0C0F12]/85 backdrop-blur-md border border-white/20 mb-3 sm:mb-5 isolate">
               <Sparkles size={13} className="text-[#C5A880]" />
               <span className="text-xs sm:text-sm tracking-wide text-[#C5A880] font-semibold">
                 Poranki, Vijayawada
@@ -348,7 +348,7 @@ export default function Home5Hero() {
             {/* Verified Capacities & Offerings Badges */}
             <div className="grid grid-cols-3 gap-1.5 sm:gap-6 w-full sm:w-auto">
               {/* Badge 1: 2,000 Capacity */}
-              <div className="flex items-center gap-1.5 sm:gap-3 bg-black/40 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none px-2 sm:px-0 py-2 sm:py-0 rounded-xl sm:rounded-none border border-white/20 sm:border-none">
+              <div className="flex items-center gap-1.5 sm:gap-3 bg-[#0C0F12]/85 sm:bg-[#0C0F12]/60 backdrop-blur-md px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl border border-white/20 isolate">
                 <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0 border border-white/25">
                   <Users size={12} className="text-[#C5A880] sm:w-3.5 sm:h-3.5" />
                 </div>
@@ -365,7 +365,7 @@ export default function Home5Hero() {
               </div>
 
               {/* Badge 2: 800 Seated */}
-              <div className="flex items-center gap-1.5 sm:gap-3 bg-black/40 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none px-2 sm:px-0 py-2 sm:py-0 rounded-xl sm:rounded-none border border-white/20 sm:border-none">
+              <div className="flex items-center gap-1.5 sm:gap-3 bg-[#0C0F12]/85 sm:bg-[#0C0F12]/60 backdrop-blur-md px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl border border-white/20 isolate">
                 <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0 border border-white/25">
                   <Building size={12} className="text-[#C5A880] sm:w-3.5 sm:h-3.5" />
                 </div>
@@ -382,7 +382,7 @@ export default function Home5Hero() {
               </div>
 
               {/* Badge 3: Lawns & Suites */}
-              <div className="flex items-center gap-1.5 sm:gap-3 bg-black/40 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none px-2 sm:px-0 py-2 sm:py-0 rounded-xl sm:rounded-none border border-white/20 sm:border-none">
+              <div className="flex items-center gap-1.5 sm:gap-3 bg-[#0C0F12]/85 sm:bg-[#0C0F12]/60 backdrop-blur-md px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl border border-white/20 isolate">
                 <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0 border border-white/25">
                   <Sparkles size={12} className="text-[#C5A880] sm:w-3.5 sm:h-3.5" />
                 </div>

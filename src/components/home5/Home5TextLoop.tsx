@@ -29,15 +29,26 @@ const momentsTrack = [
 ];
 
 export default function Home5TextLoop() {
+  const StarSeparator = ({ className = "w-3 h-3 sm:w-3.5 sm:h-3.5" }: { className?: string }) => (
+    <svg 
+      aria-hidden="true" 
+      focusable="false" 
+      viewBox="0 0 24 24" 
+      className={`${className} fill-[#8A622A] mx-6 sm:mx-9 shrink-0 select-none`}
+    >
+      <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
+    </svg>
+  );
+
   return (
     <section 
       aria-label="Venue Highlights and Celebrations Loop"
       className="relative w-full bg-[#FBF9F5] py-10 sm:py-14 overflow-hidden border-y border-stone-200/60 select-none"
+      style={{
+        maskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+        WebkitMaskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)"
+      }}
     >
-      {/* Left and Right Edge Vignette Fades for Seamless Soft Bleed */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-44 bg-gradient-to-r from-[#FBF9F5] via-[#FBF9F5]/60 to-transparent z-10" />
-      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-44 bg-gradient-to-l from-[#FBF9F5] via-[#FBF9F5]/60 to-transparent z-10" />
-
       <div className="flex flex-col gap-5 sm:gap-7 relative z-0">
         
         {/* Track 1: Curated Spaces (Scrolling Left) */}
@@ -53,9 +64,7 @@ export default function Home5TextLoop() {
                   >
                     {item}
                   </span>
-                  <span role="presentation" aria-hidden="true" className="text-[#8A622A] mx-6 sm:mx-9 text-sm sm:text-base select-none">
-                    ✦
-                  </span>
+                  <StarSeparator className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
               ))}
             </div>
@@ -70,9 +79,7 @@ export default function Home5TextLoop() {
                   >
                     {item}
                   </span>
-                  <span role="presentation" aria-hidden="true" className="text-[#8A622A] mx-6 sm:mx-9 text-sm sm:text-base select-none">
-                    ✦
-                  </span>
+                  <StarSeparator className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
               ))}
             </div>
@@ -92,9 +99,7 @@ export default function Home5TextLoop() {
                   >
                     {item}
                   </span>
-                  <span role="presentation" aria-hidden="true" className="text-[#8A622A] mx-6 sm:mx-9 text-xs sm:text-sm select-none">
-                    ✦
-                  </span>
+                  <StarSeparator className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                 </div>
               ))}
             </div>
@@ -109,9 +114,7 @@ export default function Home5TextLoop() {
                   >
                     {item}
                   </span>
-                  <span role="presentation" aria-hidden="true" className="text-[#8A622A] mx-6 sm:mx-9 text-xs sm:text-sm select-none">
-                    ✦
-                  </span>
+                  <StarSeparator className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                 </div>
               ))}
             </div>

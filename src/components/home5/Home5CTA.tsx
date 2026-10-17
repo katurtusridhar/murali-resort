@@ -6,11 +6,11 @@ import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 export default function Home5CTA() {
   return (
-    <section id="enquire" className="relative bg-transparent py-16 md:py-24 text-white overflow-hidden">
+    <section id="enquire" className="relative bg-[#0C0F12] py-16 md:py-24 text-white overflow-hidden">
       {/* Ambient Glow */}
       <div aria-hidden="true" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C5A880]/10 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="container mx-auto px-4 sm:px-6 md:px-12 max-w-5xl relative z-10 text-center flex flex-col items-center">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12 max-w-5xl relative z-10 isolate text-center flex flex-col items-center">
         
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 mb-6">
           <Sparkles size={13} className="text-[#C5A880]" />

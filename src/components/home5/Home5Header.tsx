@@ -64,7 +64,7 @@ export default function Home5Header() {
       >
         {/* Single Unified Capsule Container that morphs smoothly */}
         <div
-          className={`w-full relative flex items-center justify-between transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          className={`w-full relative isolate flex items-center justify-between transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
             isScrolled || mobileMenuOpen
               ? "max-w-5xl bg-black/65 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] rounded-full p-1.5 sm:p-2 pl-3 sm:pl-4 md:pl-6 pr-1.5 sm:pr-2 md:pr-2.5"
               : "max-w-7xl bg-transparent border-transparent shadow-none rounded-none py-0 px-0"
@@ -108,7 +108,7 @@ export default function Home5Header() {
           */}
           <nav
             aria-label="Primary Center Navigation"
-            className={`hidden lg:flex items-center gap-10 absolute left-1/2 -translate-x-1/2 text-xs uppercase tracking-[0.22em] font-medium text-stone-300 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            className={`hidden lg:flex items-center gap-10 absolute left-1/2 -translate-x-1/2 isolate text-xs uppercase tracking-[0.22em] font-medium text-stone-300 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
               isScrolled
                 ? "opacity-0 -translate-y-2 pointer-events-none scale-95"
                 : "opacity-100 translate-y-0 pointer-events-auto scale-100"
