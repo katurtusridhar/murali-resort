@@ -11,7 +11,7 @@ const facilities = [
     icon: Building2,
     title: "Conference Halls",
     shortDesc: "Modular seating for up to 800 guests.",
-    fullDesc: "Our state-of-the-art conference facilities are designed for maximum productivity and impact. Featuring column-free layouts, automated blackout blinds, and acoustically treated walls. The space can be divided into four separate breakout rooms or opened up entirely for keynote presentations.",
+    fullDesc: "Our modern conference halls are built for clear focus and great events. Enjoy open views with no pillars, quiet soundproof walls, and window blinds for screens. You can divide the hall into four rooms or open it up for large talks.",
     image: "/images/gallery/venue-img-1.png",
     features: ["800 Guest Capacity", "4 Breakout Rooms", "Acoustic Treatment", "Column-free design"]
   },
@@ -20,7 +20,7 @@ const facilities = [
     icon: TreePine,
     title: "Outdoor Terraces",
     shortDesc: "Open-air patios for receptions and ceremonies.",
-    fullDesc: "Immerse your guests in nature without sacrificing comfort. Our landscaped terraces wrap around the main venue, offering sunset views and mood lighting. Perfect for twilight cocktail hours, champagne receptions, or open-air dining under the stars.",
+    fullDesc: "Give your guests fresh air and natural views in total comfort. Our green terraces wrap around the main building with warm evening lights and sunset skies. They are great for welcome drinks, photo sessions, or open-air dinner under the stars.",
     image: "/images/gallery/venue-img-5.png",
     features: ["Sunset Views", "Built-in Heaters", "Mood Lighting", "Weather Canopies"]
   },
@@ -29,7 +29,7 @@ const facilities = [
     icon: UtensilsCrossed,
     title: "Culinary Excellence",
     shortDesc: "Curated menus tailored to every event.",
-    fullDesc: "Our on-site gourmet kitchen is helmed by award-winning chefs capable of executing diverse, globally-inspired menus. From intricate passed hors d'oeuvres to elaborate five-course plated dinners, every meal is treated as a centerpiece of the guest experience.",
+    fullDesc: "Our resort kitchen is led by skilled chefs who create fresh menus for every event. From light finger foods to full plated dinners, we tailor every dish to your taste. Your guests will enjoy great food and attentive service throughout the meal.",
     image: "/images/gallery/wedding-img-3.png",
     features: ["Custom Menus", "Dietary Specialists", "Sommelier Service", "Live Stations"]
   },
@@ -38,7 +38,7 @@ const facilities = [
     icon: ShieldCheck,
     title: "24/7 Concierge",
     shortDesc: "Round-the-clock premium hospitality.",
-    fullDesc: "Events are fluid, and needs change quickly. Our dedicated concierge team is available around the clock to handle everything from VIP guest arrivals and transportation logistics to last-minute technical requests and overnight accommodation changes.",
+    fullDesc: "Plans can change quickly during an event. Our on-site team is available 24 hours a day to help with every detail. We handle guest arrivals, travel rides, room bookings, and last-minute requests with ease.",
     image: "/images/gallery/venue-img-2.png",
     features: ["VIP Handling", "Transport Logistics", "On-call Support", "Guest Services"]
   },
@@ -47,7 +47,7 @@ const facilities = [
     icon: Wifi,
     title: "Seamless Tech",
     shortDesc: "Live-streaming and hybrid event support.",
-    fullDesc: "Enterprise-grade connectivity forms the backbone of our venue. We offer dedicated, redundant fiber internet, broadcast-quality PTZ cameras for live streaming, and concert-grade PA systems. Our in-house tech team ensures flawless execution.",
+    fullDesc: "Fast internet and modern tech power every event at our resort. We offer high-speed fiber Wi-Fi, HD video cameras for live streaming, and clear sound systems. Our on-site tech team helps make sure everything runs smoothly.",
     image: "/images/gallery/event-img-2.png",
     features: ["Redundant Fiber", "PTZ Cameras", "Hybrid Capable", "In-house Tech Team"]
   },
@@ -56,7 +56,7 @@ const facilities = [
     icon: Sparkles,
     title: "Décor & Styling",
     shortDesc: "In-house design team to transform any space.",
-    fullDesc: "The venue acts as a pristine blank canvas. Our in-house styling team works with industry-leading floral designers, lighting technicians, and furniture purveyors to transform the spaces to match your exact vision and brand identity.",
+    fullDesc: "Our venue is ready for your personal touch. Our design team works with top florists, lighting specialists, and decor partners to bring your vision to life. We style each room to match your event theme and colors.",
     image: "/images/gallery/wedding-img-1.png",
     features: ["Custom Lighting", "Floral Design", "Furniture Hire", "Brand Integration"]
   },
