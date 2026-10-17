@@ -1026,21 +1026,10 @@ const GhostFibers: React.FC<GhostFibersProps> = ({
       gl.bindVertexArray(null);
     };
 
-    let isScrolling = false;
-    let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
-    const onScroll = () => {
-      isScrolling = true;
-      if (scrollTimeout) clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        isScrolling = false;
-        wake();
-      }, 100);
-    };
-
     let lastRenderTime = 0;
     const frame = (now: number) => {
       raf = 0;
-      if (!alive || !visible || isScrolling || (typeof document !== 'undefined' && document.hidden)) return;
+      if (!alive || !visible || (typeof document !== 'undefined' && document.hidden)) return;
       const s = settingsRef.current;
 
       // Throttle rendering on mobile/tablets to 30 FPS and desktops to 60 FPS to prevent 120Hz GPU exhaustion
@@ -1159,7 +1148,6 @@ const GhostFibers: React.FC<GhostFibersProps> = ({
       }
     });
     intersection.observe(container);
-    window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('pointermove', onPointerMove, { passive: true });
     window.addEventListener('pointerdown', onPointerDown);
     document.documentElement.addEventListener('pointerleave', onPointerLeave);
@@ -1175,11 +1163,9 @@ const GhostFibers: React.FC<GhostFibersProps> = ({
     return () => {
       alive = false;
       cancelAnimationFrame(raf);
-      if (scrollTimeout) clearTimeout(scrollTimeout);
       wakeRef.current = null;
       resizeObserver.disconnect();
       intersection.disconnect();
-      window.removeEventListener('scroll', onScroll);
       window.removeEventListener('pointermove', onPointerMove);
       window.removeEventListener('pointerdown', onPointerDown);
       document.documentElement.removeEventListener('pointerleave', onPointerLeave);
