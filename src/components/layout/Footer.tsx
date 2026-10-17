@@ -70,11 +70,11 @@ export default function Footer({ transparent = false }: { transparent?: boolean 
         </div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 md:px-12 mt-12 sm:mt-16 pt-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-500 text-center sm:text-left">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12 mt-12 sm:mt-16 pt-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-400 text-center sm:text-left">
         <p>&copy; {new Date().getFullYear()} Murali Resort. All rights reserved.</p>
         <div className="flex flex-wrap items-center justify-center gap-6">
-          <Link href="#" className="hover:text-white transition-colors min-h-[36px] inline-flex items-center py-1">Privacy Policy</Link>
-          <Link href="#" className="hover:text-white transition-colors min-h-[36px] inline-flex items-center py-1">Terms of Service</Link>
+          <Link href="/privacy" className="hover:text-white transition-colors min-h-[36px] inline-flex items-center py-1">Privacy Policy</Link>
+          <Link href="/terms" className="hover:text-white transition-colors min-h-[36px] inline-flex items-center py-1">Terms of Service</Link>
         </div>
       </div>
     </footer>

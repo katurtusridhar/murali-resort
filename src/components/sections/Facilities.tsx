@@ -132,7 +132,7 @@ export default function Facilities() {
                 </p>
 
                 <div className="pt-5 border-t border-stone-100">
-                  <h3 className="text-xs uppercase tracking-widest text-stone-400 font-semibold mb-3">
+                  <h3 className="text-xs uppercase tracking-widest text-stone-600 font-semibold mb-3">
                     Key Features
                   </h3>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -184,7 +184,7 @@ export default function Facilities() {
                       </p>
 
                       <div className="pt-8 border-t border-stone-200">
-                        <h3 className="text-xs uppercase tracking-widest text-stone-400 font-semibold mb-6">
+                        <h3 className="text-xs uppercase tracking-widest text-stone-600 font-semibold mb-6">
                           Key Features
                         </h3>
                         <ul className="grid grid-cols-2 gap-y-4 gap-x-8">

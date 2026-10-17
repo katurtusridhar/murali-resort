@@ -37,7 +37,7 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed top-3 md:top-5 left-0 right-0 z-50 flex justify-center px-4">
-        <div className="w-full max-w-5xl bg-black/65 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] rounded-full p-2 pl-4 md:pl-6 pr-2 md:pr-2.5 flex items-center justify-between">
+        <div className="w-full max-w-5xl bg-black/65 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] rounded-full p-2 pl-4 md:pl-6 pr-2 md:pr-2.5 flex items-center justify-between isolate">
           
           {/* Left: Brand Logo & Title */}
           <Link href="/home" className="flex items-center gap-3 group shrink-0">

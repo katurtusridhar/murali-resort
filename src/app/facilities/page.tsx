@@ -13,14 +13,14 @@ export default function FacilitiesPage() {
       <div className="relative z-20">
         <Navbar />
 
-        <header className="pt-28 sm:pt-36 md:pt-48 pb-10 sm:pb-12 px-4 sm:px-6 md:px-12 flex flex-col items-center text-center">
-          <span className="text-accent uppercase tracking-[0.2em] text-xs font-bold mb-4 sm:mb-6">
+        <header className="pt-28 sm:pt-36 md:pt-48 pb-10 sm:pb-12 px-4 sm:px-6 md:px-12 flex flex-col items-center text-center bg-[#FBF9F5] isolate">
+          <span className="text-[#8A622A] uppercase tracking-[0.2em] text-xs font-bold mb-4 sm:mb-6">
             The Details
           </span>
           <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-serif text-premium-dark mb-6 sm:mb-8 max-w-5xl leading-[1.08] sm:leading-[1.05]">
             Facilities & Amenities
           </h1>
-          <p className="text-stone-500 text-base sm:text-lg md:text-xl max-w-2xl font-light leading-relaxed">
+          <p className="text-stone-600 text-base sm:text-lg md:text-xl max-w-2xl font-light leading-relaxed">
             Spaces that work as hard as they look, equipped with everything you need.
           </p>
         </header>

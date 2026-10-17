@@ -50,7 +50,7 @@ export default function CTABanner({
           <Link
             href={buttonHref}
             className={clsx(
-              "min-h-[48px] px-8 sm:px-10 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm uppercase tracking-wider font-semibold btn-liquid inline-flex items-center justify-center",
+              "min-h-[48px] px-8 sm:px-10 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm uppercase tracking-wider font-semibold btn-liquid inline-flex items-center justify-center isolate",
               isDark
                 ? "bg-white text-premium-dark btn-liquid-light shadow-lg"
                 : "border border-premium-dark text-premium-dark"
