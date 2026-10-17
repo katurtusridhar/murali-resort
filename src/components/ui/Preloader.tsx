@@ -1,26 +1,14 @@
 "use client";
 
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 
-const emptySubscribe = () => () => {};
-
 export default function Preloader() {
-  const isClient = useSyncExternalStore(
-    emptySubscribe,
-    () => true,
-    () => false
-  );
-
   const [progress, setProgress] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (!isClient) {
-      return;
-    }
-
     // Disable scroll while loading
     document.body.style.overflow = "hidden";
     window.scrollTo(0, 0);
@@ -53,11 +41,7 @@ export default function Preloader() {
       }
       document.body.style.overflow = "";
     };
-  }, [isClient]);
-
-  if (!isClient) {
-    return null;
-  }
+  }, []);
 
   return (
     <AnimatePresence>

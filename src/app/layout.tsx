@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-[#FBF9F5] text-stone-900 overflow-x-clip relative`}
+        className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-[#0C0F12] text-stone-900 overflow-x-hidden w-full max-w-full relative`}
       >
         <Preloader />
         <GhostFibersBackground />

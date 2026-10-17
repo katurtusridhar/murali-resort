@@ -195,10 +195,10 @@ export default function Home5Spaces() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="relative z-10 bg-white rounded-2xl grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center"
+              className="relative z-10 bg-white rounded-2xl grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-12 items-center"
             >
               {/* Left Column: Space Narrative & Features */}
-              <div className="lg:col-span-6 flex flex-col items-start order-2 lg:order-1">
+              <div className="md:col-span-6 flex flex-col items-start order-2 md:order-1">
                 <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#8A622A] mb-2">
                   {currentSpace.tagline}
                 </span>
@@ -238,7 +238,7 @@ export default function Home5Spaces() {
               </div>
 
               {/* Right Column: High-Res Verified Space Photo with Comet Effect */}
-              <div className="lg:col-span-6 order-1 lg:order-2">
+              <div className="md:col-span-6 order-1 md:order-2">
                 <CometCard
                   rotateDepth={14}
                   translateDepth={15}

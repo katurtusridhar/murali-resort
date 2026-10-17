@@ -225,23 +225,23 @@ export default function Home5Hero() {
   return (
     <section 
       ref={containerRef} 
-      className={`relative z-20 w-full ${isMobileOrReduced ? "h-screen" : "h-[180vh]"} bg-[#0C0F12]`}
+      className={`relative z-20 w-full ${isMobileOrReduced ? "h-[100dvh] min-h-[100dvh]" : "h-[180vh]"} bg-[#0C0F12] overflow-hidden`}
     >
       {/* STICKY CONTAINER FOR CANVAS OR STATIC FALLBACK */}
-      <div className="sticky top-0 w-full h-screen overflow-hidden">
+      <div className="sticky top-0 w-full h-full min-h-[100dvh] overflow-hidden">
         
         {/* Background Visual Layer */}
         {isMobileOrReduced ? (
-          // Fast, zero-lag static fallback for mobile & reduced motion
+          // Fast, zero-lag static fallback: Modern Facility Amid Vast Green Fields
           <div className="absolute inset-0 w-full h-full">
             <Image
-              src="/images/home4/landscape.jpg"
-              alt="Murali Resort Grounds and Architecture"
+              src="/images/home5/modern-facility-green-fields.jpg"
+              alt="Murali Resort - Modern Facility Amid Vast Green Fields"
               fill
               sizes="100vw"
               priority
-              quality={90}
-              className="object-cover object-center"
+              quality={92}
+              className="object-cover object-[center_60%] sm:object-center"
             />
           </div>
         ) : (
@@ -252,88 +252,88 @@ export default function Home5Hero() {
           />
         )}
 
-        {/* Ambient Vignette & Contrast Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0C0F12] via-[#0C0F12]/40 to-black/60 pointer-events-none" />
+        {/* Ambient Vignette & Contrast Overlay (Ensures text legibility while keeping the facility visible) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0C0F12] via-black/30 to-black/60 pointer-events-none" />
 
-        {/* Hero Content Overlay (Anchored & Legible) */}
+        {/* Hero Content Overlay (Anchored, Non-blocking & 100% visible on landing) */}
         <motion.div
           style={{
             scale: isMobileOrReduced ? 1 : headlineScale,
             opacity: isMobileOrReduced ? 1 : heroOpacity,
             pointerEvents: isMobileOrReduced ? "auto" : heroPointerEvents,
           }}
-          className="relative z-10 h-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col justify-between pt-20 sm:pt-24 lg:pt-28 pb-6 sm:pb-8"
+          className="relative z-10 h-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col justify-between pt-16 sm:pt-24 lg:pt-28 pb-3 sm:pb-6"
         >
           {/* Top Section: Eyebrow & Value Proposition */}
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 mb-3 sm:mb-5">
-              <Sparkles size={13} className="text-[#C5A880]" />
-              <span className="text-xs uppercase tracking-wider text-[#C5A880] font-semibold">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 mb-2 sm:mb-4">
+              <Sparkles size={12} className="text-[#C5A880]" />
+              <span className="text-[10px] sm:text-xs uppercase tracking-wider text-[#C5A880] font-semibold">
                 Poranki, Vijayawada
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif text-white leading-[1.1] tracking-tight mb-3 sm:mb-5 drop-shadow-lg">
+            <h1 className="text-2xl sm:text-4xl lg:text-6xl font-serif text-white leading-[1.1] tracking-tight mb-2 sm:mb-4 drop-shadow-md">
               <span className="sr-only">Murali Resort &amp; Convention Center — </span>
               Where Moments <br className="hidden sm:inline" />
-              <span className="italic font-normal text-stone-300">Become Memories.</span>
+              <span className="italic font-normal text-stone-200">Become Memories.</span>
             </h1>
 
-            <p className="text-sm sm:text-base lg:text-lg text-stone-300 font-light leading-relaxed max-w-2xl mb-5 sm:mb-7 drop-shadow">
+            <p className="text-xs sm:text-base lg:text-lg text-stone-200 font-light leading-relaxed max-w-xl mb-3.5 sm:mb-6 drop-shadow-sm">
               A scenic resort for weddings, parties, and business events on open green lawns.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+            <div className="flex flex-wrap items-center gap-2.5 sm:gap-4">
               <Link
                 href="/contact"
-                className="px-7 py-3.5 rounded-full bg-white text-[#14171A] border border-white font-semibold text-xs uppercase tracking-widest hover:bg-stone-200 transition-all shadow-lg hover:shadow-xl"
+                className="px-5 sm:px-7 py-2 sm:py-3.5 rounded-full bg-white text-[#14171A] border border-white font-semibold text-[11px] sm:text-xs uppercase tracking-wider sm:tracking-widest hover:bg-stone-200 transition-all shadow-lg hover:shadow-xl shrink-0"
               >
                 Plan Your Event
               </Link>
               <button
                 onClick={handleSkip}
-                className="px-7 py-3.5 rounded-full border border-white/25 text-white font-semibold text-xs uppercase tracking-widest hover:border-white hover:bg-white/10 transition-colors backdrop-blur-sm"
+                className="px-5 sm:px-7 py-2 sm:py-3.5 rounded-full border border-white/30 text-white font-semibold text-[11px] sm:text-xs uppercase tracking-wider sm:tracking-widest hover:border-white hover:bg-white/10 transition-colors backdrop-blur-sm shrink-0"
               >
                 Explore Venue
               </button>
             </div>
           </div>
 
-          {/* Bottom Section: Verified Specification Badges & Skip Prompt */}
+          {/* Bottom Section: Verified Specification Badges & Skip Prompt (Fits completely without cut-off) */}
           <motion.div 
             style={{ y: badgesY }}
-            className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 border-t border-white/15 pt-4 sm:pt-5"
+            className="flex flex-col sm:flex-row sm:items-end justify-between gap-2.5 sm:gap-4 border-t border-white/20 pt-2.5 sm:pt-4"
           >
             {/* Verified Capacities & Offerings Badges */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-8">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/15">
-                  <Users size={14} className="text-[#C5A880]" />
+            <div className="grid grid-cols-3 gap-1.5 sm:gap-6 w-full sm:w-auto">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white/15 flex items-center justify-center shrink-0 border border-white/20">
+                  <Users size={12} className="text-[#C5A880]" />
                 </div>
-                <div>
-                  <div className="text-xs text-stone-300 font-medium">Up to 2,000</div>
-                  <div className="text-xs text-stone-300 uppercase tracking-wider">Combined Capacity</div>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/15">
-                  <Building size={14} className="text-[#C5A880]" />
-                </div>
-                <div>
-                  <div className="text-xs text-stone-300 font-medium">800 Seated</div>
-                  <div className="text-xs text-stone-300 uppercase tracking-wider">Grand Indoor Hall</div>
+                <div className="min-w-0">
+                  <div className="text-[10px] sm:text-xs text-white font-semibold truncate">2,000 Capacity</div>
+                  <div className="text-[9px] sm:text-[10px] text-stone-300 uppercase tracking-wider hidden xs:block sm:block truncate">Combined Venue</div>
                 </div>
               </div>
 
-              <div className="col-span-2 sm:col-span-1 flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/15">
-                  <Sparkles size={14} className="text-[#C5A880]" />
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white/15 flex items-center justify-center shrink-0 border border-white/20">
+                  <Building size={12} className="text-[#C5A880]" />
                 </div>
-                <div>
-                  <div className="text-xs text-stone-300 font-medium">Indoor & Outdoor</div>
-                  <div className="text-xs text-stone-300 uppercase tracking-wider">Versatile Spaces</div>
+                <div className="min-w-0">
+                  <div className="text-[10px] sm:text-xs text-white font-semibold truncate">800 Seated</div>
+                  <div className="text-[9px] sm:text-[10px] text-stone-300 uppercase tracking-wider hidden xs:block sm:block truncate">Grand Hall</div>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white/15 flex items-center justify-center shrink-0 border border-white/20">
+                  <Sparkles size={12} className="text-[#C5A880]" />
+                </div>
+                <div className="min-w-0">
+                  <div className="text-[10px] sm:text-xs text-white font-semibold truncate">Lawns & Suites</div>
+                  <div className="text-[9px] sm:text-[10px] text-stone-300 uppercase tracking-wider hidden xs:block sm:block truncate">Open-Air Spaces</div>
                 </div>
               </div>
             </div>
@@ -341,7 +341,7 @@ export default function Home5Hero() {
             {/* Skip / Scroll Prompt */}
             <button
               onClick={handleSkip}
-              className="flex items-center gap-2 text-stone-300 text-xs tracking-widest uppercase hover:text-white transition-colors group self-start md:self-auto"
+              className="hidden sm:inline-flex items-center gap-1.5 text-stone-300 text-xs tracking-widest uppercase hover:text-white transition-colors group self-start sm:self-auto shrink-0"
               aria-label="Skip scroll animation and view venue details"
             >
               <span>Scroll to explore</span>

@@ -29,8 +29,17 @@
   --color-accent: #c4a984; /* Metallic/gold-inspired accent, used sparingly */
 }
 
+html {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
-  background: var(--background);
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: #0C0F12;
   color: var(--foreground);
 }
 

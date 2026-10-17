@@ -1037,10 +1037,21 @@ const GhostFibers: React.FC<GhostFibersProps> = ({
       }, 100);
     };
 
+    let lastRenderTime = 0;
     const frame = (now: number) => {
       raf = 0;
       if (!alive || !visible || isScrolling || (typeof document !== 'undefined' && document.hidden)) return;
       const s = settingsRef.current;
+
+      // Throttle rendering on mobile/tablets to 30 FPS and desktops to 60 FPS to prevent 120Hz GPU exhaustion
+      const isCoarse = typeof window !== 'undefined' && window.matchMedia('(pointer: coarse), (hover: none)').matches;
+      const minInterval = isCoarse ? 30 : 15;
+      if (lastRenderTime && (now - lastRenderTime) < minInterval) {
+        raf = requestAnimationFrame(frame);
+        return;
+      }
+      lastRenderTime = now;
+
       const elapsed = last ? (now - last) / 1000 : 1 / 60;
       const dt = Math.min(0.05, elapsed);
       last = now;

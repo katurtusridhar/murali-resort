@@ -58,21 +58,21 @@ export default function Home5Header() {
       <header
         className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           isScrolled || mobileMenuOpen
-            ? "top-3 md:top-5 px-4"
-            : "top-0 px-6 md:px-12 py-5"
+            ? "top-2.5 md:top-5 px-3 sm:px-4"
+            : "top-0 px-3.5 sm:px-6 md:px-12 py-3.5 sm:py-5"
         }`}
       >
         {/* Single Unified Capsule Container that morphs smoothly */}
         <div
           className={`w-full relative flex items-center justify-between transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
             isScrolled || mobileMenuOpen
-              ? "max-w-5xl bg-black/65 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] rounded-full p-2 pl-4 md:pl-6 pr-2 md:pr-2.5"
+              ? "max-w-5xl bg-black/65 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] rounded-full p-1.5 sm:p-2 pl-3 sm:pl-4 md:pl-6 pr-1.5 sm:pr-2 md:pr-2.5"
               : "max-w-7xl bg-transparent border-transparent shadow-none rounded-none py-0 px-0"
           }`}
         >
           {/* Left: Brand Logo & Title */}
-          <Link href="/home" className="flex items-center gap-3 group shrink-0">
-            <div className="relative w-8 h-8 md:w-9 md:h-9 shrink-0 flex items-center justify-center">
+          <Link href="/home" className="flex items-center gap-2 sm:gap-3 group shrink-0">
+            <div className="relative w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9 shrink-0 flex items-center justify-center">
               <Image
                 src="/images/logo.png"
                 alt="Murali Resort Emblem"
@@ -86,15 +86,15 @@ export default function Home5Header() {
               <span
                 className={`text-white transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                   isScrolled || mobileMenuOpen
-                    ? "font-sans font-medium text-base md:text-lg tracking-tight"
-                    : "font-serif text-lg font-normal tracking-[0.12em] uppercase group-hover:text-[#c5a880]"
+                    ? "font-sans font-medium text-xs sm:text-base md:text-lg tracking-tight"
+                    : "font-serif text-xs sm:text-base md:text-lg font-normal tracking-[0.06em] sm:tracking-[0.12em] uppercase group-hover:text-[#c5a880]"
                 }`}
               >
                 Murali Resort
               </span>
               <span
-                className={`text-xs tracking-wider text-stone-300 font-medium transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden ${
-                  isScrolled || mobileMenuOpen ? "h-0 opacity-0" : "h-3.5 opacity-100"
+                className={`text-[9px] sm:text-xs tracking-wider text-stone-300 font-medium transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden ${
+                  isScrolled || mobileMenuOpen ? "h-0 opacity-0" : "h-3 sm:h-3.5 opacity-100"
                 }`}
               >
                 Convention Center
@@ -161,10 +161,10 @@ export default function Home5Header() {
           </div>
 
           {/* Mobile & Tablet View Controls */}
-          <div className="lg:hidden flex items-center gap-2 pr-1">
+          <div className="lg:hidden flex items-center gap-1.5 sm:gap-2 pr-0.5 sm:pr-1 shrink-0">
             <Link
               href="/contact"
-              className="px-4 py-1.5 rounded-full bg-white text-[#14171A] border border-white text-xs font-semibold uppercase tracking-widest hover:bg-stone-200 transition-colors shadow-sm"
+              className="px-3 sm:px-4 py-1.5 rounded-full bg-white text-[#14171A] border border-white text-[11px] sm:text-xs font-semibold uppercase tracking-wider sm:tracking-widest hover:bg-stone-200 transition-colors shadow-sm whitespace-nowrap shrink-0"
             >
               Enquire
             </Link>

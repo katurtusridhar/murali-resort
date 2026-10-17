@@ -924,6 +924,7 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
     };
 
     const hit = ({ x, y }: { x: number; y: number }): CardLayout | null => {
+      const pad = typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches ? 24 : 8;
       for (let i = cards.length - 1; i >= 0; i--) {
         const card = cards[i];
         if (card.alpha < 0.05) continue;
@@ -933,7 +934,7 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
         const s = Math.sin(-card.angle);
         const lx = c * dx - s * dy;
         const ly = s * dx + c * dy;
-        if (Math.abs(lx) <= card.w / 2 && Math.abs(ly) <= card.h / 2) return card;
+        if (Math.abs(lx) <= card.w / 2 + pad && Math.abs(ly) <= card.h / 2 + pad) return card;
       }
       return null;
     };
@@ -976,7 +977,8 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
       if (drag && drag.id === event.pointerId) {
         const dx = event.clientX - drag.x0;
         const dy = event.clientY - drag.y0;
-        if (!drag.moved && Math.hypot(dx, dy) > 6) {
+        const moveThreshold = event.pointerType === 'mouse' ? 6 : 14;
+        if (!drag.moved && Math.hypot(dx, dy) > moveThreshold) {
           if (Math.abs(dy) > Math.abs(dx) && event.pointerType !== 'mouse') {
             state.drag = null;
             return;
@@ -1016,7 +1018,8 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
         snapNow();
         return;
       }
-      const card = hit(drag.p);
+      const releasePoint = point(event);
+      const card = hit(releasePoint) || hit(drag.p);
       const s = settingsRef.current;
       if (!card) {
         if (state.open > 0.5) close();
