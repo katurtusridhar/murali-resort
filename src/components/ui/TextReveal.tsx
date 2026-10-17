@@ -6,9 +6,10 @@ interface TextRevealProps {
   text: string;
   className?: string;
   delay?: number;
+  as?: "h1" | "h2" | "h3";
 }
 
-export default function TextReveal({ text, className = "", delay = 0 }: TextRevealProps) {
+export default function TextReveal({ text, className = "", delay = 0, as = "h2" }: TextRevealProps) {
   const lines = text.split("\n");
 
   const container: Variants = {
@@ -34,8 +35,10 @@ export default function TextReveal({ text, className = "", delay = 0 }: TextReve
     },
   };
 
+  const Component = as === "h1" ? motion.h1 : as === "h3" ? motion.h3 : motion.h2;
+
   return (
-    <motion.h2
+    <Component
       variants={container}
       initial="hidden"
       whileInView="visible"
@@ -62,6 +65,6 @@ export default function TextReveal({ text, className = "", delay = 0 }: TextReve
           </span>
         ))}
       </span>
-    </motion.h2>
+    </Component>
   );
 }

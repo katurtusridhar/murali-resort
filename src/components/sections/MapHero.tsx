@@ -128,8 +128,9 @@ export default function MapHero() {
           </motion.div>
 
           <TextReveal
+            as="h1"
             text="The Journey Begins Here."
-            className="text-3xl sm:text-4xl md:text-5xl font-serif text-white leading-[1.1] mb-4 sm:mb-6 drop-shadow-xl"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-white leading-[1.08] sm:leading-[1.05] mb-4 sm:mb-6 drop-shadow-xl"
             delay={0.1}
           />
 

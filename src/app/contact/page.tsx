@@ -20,7 +20,7 @@ export default function ContactPage() {
           <div className="lg:col-span-1 bg-white/95 backdrop-blur-md p-5 sm:p-8 md:p-10 rounded-2xl shadow-xl border border-stone-200/80 space-y-8 sm:space-y-10 relative z-20">
             <div>
               <span className="text-xs uppercase tracking-[0.2em] font-semibold text-stone-400 block mb-2 sm:mb-3">Concierge Desk</span>
-              <h1 className="text-2xl sm:text-3xl font-serif text-premium-dark mb-3 sm:mb-4">Contact Information</h1>
+              <h2 className="text-2xl sm:text-3xl font-serif text-premium-dark mb-3 sm:mb-4">Contact Information</h2>
               <p className="text-stone-600 text-sm leading-relaxed font-light">
                 Whether you are ready to book or exploring bespoke options, our dedicated events team is here to assist you.
               </p>
@@ -32,7 +32,7 @@ export default function ContactPage() {
                   <MapPin size={18} className="text-stone-900" />
                 </div>
                 <div>
-                  <h2 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-premium-dark mb-1">Location</h2>
+                  <h3 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-premium-dark mb-1">Location</h3>
                   <p className="text-stone-500 text-xs leading-relaxed">Survey No - 134, Poranki-Nidamanuru<br />Poranki, Vijayawada, AP 521137</p>
                 </div>
               </div>
@@ -42,7 +42,7 @@ export default function ContactPage() {
                   <Phone size={18} className="text-stone-900" />
                 </div>
                 <div>
-                  <h2 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-premium-dark mb-1">Direct Lines</h2>
+                  <h3 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-premium-dark mb-1">Direct Lines</h3>
                   <p className="text-stone-500 text-xs leading-relaxed">+91 9502507999<br />+91 9440883636</p>
                 </div>
               </div>
@@ -52,7 +52,7 @@ export default function ContactPage() {
                   <WhatsAppIcon className="w-5 h-5 text-[#25D366]" />
                 </div>
                 <div>
-                  <h2 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-premium-dark mb-1">WhatsApp</h2>
+                  <h3 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-premium-dark mb-1">WhatsApp</h3>
                   <a 
                     href="https://wa.me/919502507999?text=Hello%20Murali%20Resort,%20I%20would%20like%20to%20enquire%20about%20booking%20an%20event."
                     target="_blank"
@@ -69,7 +69,7 @@ export default function ContactPage() {
                   <Mail size={18} className="text-stone-900" />
                 </div>
                 <div>
-                  <h2 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-premium-dark mb-1">Email</h2>
+                  <h3 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-premium-dark mb-1">Email</h3>
                   <p className="text-stone-500 text-xs leading-relaxed">info@muraliresort.com<br />events@muraliresort.com</p>
                 </div>
               </div>
@@ -79,7 +79,7 @@ export default function ContactPage() {
                   <Clock size={18} className="text-stone-900" />
                 </div>
                 <div>
-                  <h2 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-premium-dark mb-1">Operating Hours</h2>
+                  <h3 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-premium-dark mb-1">Operating Hours</h3>
                   <p className="text-stone-500 text-xs leading-relaxed">Mon - Sun: 9:00 AM - 8:00 PM</p>
                 </div>
               </div>
