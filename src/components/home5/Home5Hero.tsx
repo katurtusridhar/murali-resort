@@ -11,23 +11,23 @@ const CONCURRENT_DOWNLOADS = 4;
 
 const subscribeHeroCapabilities = (callback: () => void) => {
   if (typeof window === "undefined" || !window.matchMedia) return () => {};
-  const mediaTouch = window.matchMedia("(max-width: 1024px), (pointer: coarse), (hover: none)");
+  const mediaQuery = window.matchMedia("(max-width: 1024px)");
   const mediaReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-  mediaTouch.addEventListener("change", callback);
+  mediaQuery.addEventListener("change", callback);
   mediaReduced.addEventListener("change", callback);
 
   return () => {
-    mediaTouch.removeEventListener("change", callback);
+    mediaQuery.removeEventListener("change", callback);
     mediaReduced.removeEventListener("change", callback);
   };
 };
 
 const getHeroCapabilitiesSnapshot = () => {
   if (typeof window === "undefined") return false;
-  const mediaTouch = window.matchMedia("(max-width: 1024px), (pointer: coarse), (hover: none)").matches;
-  const mediaReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  return mediaTouch || mediaReduced;
+  const isMobileOrTablet = window.innerWidth <= 1024;
+  const isReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  return isMobileOrTablet || isReduced;
 };
 
 const getHeroCapabilitiesServerSnapshot = () => false;
@@ -225,10 +225,10 @@ export default function Home5Hero() {
   return (
     <section 
       ref={containerRef} 
-      className={`relative z-20 w-full ${isMobileOrReduced ? "h-[100dvh] min-h-[100dvh]" : "h-[180vh]"} bg-[#0C0F12] overflow-hidden`}
+      className={isMobileOrReduced ? "relative z-20 w-full h-[100dvh] min-h-[100dvh] bg-[#0C0F12] overflow-hidden" : "relative z-20 w-full h-[180vh] bg-[#0C0F12]"}
     >
       {/* STICKY CONTAINER FOR CANVAS OR STATIC FALLBACK */}
-      <div className="sticky top-0 w-full h-full min-h-[100dvh] overflow-hidden">
+      <div className={`sticky top-0 w-full ${isMobileOrReduced ? "h-[100dvh]" : "h-screen"} overflow-hidden`}>
         
         {/* Background Visual Layer */}
         {isMobileOrReduced ? (

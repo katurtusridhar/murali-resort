@@ -71,13 +71,13 @@ export default function Home5Header() {
           }`}
         >
           {/* Left: Brand Logo & Title */}
-          <Link href="/home" className="flex items-center gap-2 sm:gap-3 group shrink-0">
-            <div className="relative w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9 shrink-0 flex items-center justify-center">
+          <Link href="/home" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+            <div className="relative w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 shrink-0 flex items-center justify-center">
               <Image
                 src="/images/logo.png"
                 alt="Murali Resort Emblem"
                 fill
-                sizes="36px"
+                sizes="(max-width: 768px) 36px, 44px"
                 className="object-contain group-hover:scale-105 transition-transform"
                 priority
               />
@@ -86,15 +86,15 @@ export default function Home5Header() {
               <span
                 className={`text-white transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                   isScrolled || mobileMenuOpen
-                    ? "font-sans font-medium text-xs sm:text-base md:text-lg tracking-tight"
-                    : "font-serif text-xs sm:text-base md:text-lg font-normal tracking-[0.06em] sm:tracking-[0.12em] uppercase group-hover:text-[#c5a880]"
+                    ? "font-sans font-semibold text-sm sm:text-base md:text-lg tracking-tight"
+                    : "font-serif text-sm sm:text-base md:text-xl font-medium tracking-[0.06em] sm:tracking-[0.1em] uppercase group-hover:text-[#c5a880]"
                 }`}
               >
                 Murali Resort
               </span>
               <span
-                className={`text-[9px] sm:text-xs tracking-wider text-stone-300 font-medium transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden ${
-                  isScrolled || mobileMenuOpen ? "h-0 opacity-0" : "h-3 sm:h-3.5 opacity-100"
+                className={`text-[10px] sm:text-xs tracking-wider text-stone-300 font-medium transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden ${
+                  isScrolled || mobileMenuOpen ? "h-0 opacity-0" : "h-3.5 sm:h-4 opacity-100"
                 }`}
               >
                 Convention Center
@@ -161,12 +161,13 @@ export default function Home5Header() {
           </div>
 
           {/* Mobile & Tablet View Controls */}
-          <div className="lg:hidden flex items-center gap-1.5 sm:gap-2 pr-0.5 sm:pr-1 shrink-0">
+          <div className="lg:hidden flex items-center gap-2 sm:gap-3 pr-0.5 sm:pr-1 shrink-0">
             <Link
               href="/contact"
-              className="px-3 sm:px-4 py-1.5 rounded-full bg-white text-[#14171A] border border-white text-[11px] sm:text-xs font-semibold uppercase tracking-wider sm:tracking-widest hover:bg-stone-200 transition-colors shadow-sm whitespace-nowrap shrink-0"
+              className="px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full bg-white text-[#14171A] border border-white text-xs font-semibold uppercase tracking-wider hover:bg-stone-200 transition-colors shadow-sm whitespace-nowrap shrink-0"
             >
-              Enquire
+              <span>Enquire</span>
+              <span className="hidden sm:inline"> Now</span>
             </Link>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

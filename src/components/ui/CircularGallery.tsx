@@ -893,14 +893,8 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
       if (!raf && visible && !(typeof document !== 'undefined' && document.hidden)) raf = requestAnimationFrame(frame);
     }
 
-    let containerRect: DOMRect | null = null;
-    const updateContainerRect = () => {
-      if (container) containerRect = container.getBoundingClientRect();
-    };
-
     const resize = () => {
       const s = settingsRef.current;
-      updateContainerRect();
       view.width = Math.max(1, container.clientWidth);
       view.height = Math.max(1, container.clientHeight);
       const defaultMaxDpr = typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches ? 1.0 : 1.5;
@@ -917,14 +911,13 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
       wake();
     };
 
-    const point = (event: PointerEvent) => {
-      if (!containerRect) updateContainerRect();
-      const rect = containerRect || container.getBoundingClientRect();
+    const point = (event: PointerEvent | MouseEvent) => {
+      const rect = container.getBoundingClientRect();
       return { x: event.clientX - rect.left - rect.width / 2, y: rect.height / 2 - (event.clientY - rect.top) };
     };
 
     const hit = ({ x, y }: { x: number; y: number }): CardLayout | null => {
-      const pad = typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches ? 24 : 8;
+      const pad = typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches ? 32 : 16;
       for (let i = cards.length - 1; i >= 0; i--) {
         const card = cards[i];
         if (card.alpha < 0.05) continue;
@@ -1022,6 +1015,15 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
       const card = hit(releasePoint) || hit(drag.p);
       const s = settingsRef.current;
       if (!card) {
+        // Fallback: If clean tap/click within gallery bounds, trigger active center card
+        if (!drag.moved) {
+          const activeIndex = wrap(state.active, s.items.length);
+          const activeItem = s.items[activeIndex];
+          if (activeItem) {
+            s.onItemClick?.(activeItem, activeIndex);
+            return;
+          }
+        }
         if (state.open > 0.5) close();
         return;
       }
@@ -1116,6 +1118,16 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
       wake();
     };
 
+    const onClick = (event: MouseEvent) => {
+      if ((event.target as HTMLElement).closest('[data-gallery-close]')) return;
+      const p = point(event);
+      const card = hit(p);
+      const s = settingsRef.current;
+      if (card) {
+        s.onItemClick?.(card.item, card.index);
+      }
+    };
+
     const resizeObserver = new ResizeObserver(resize);
     resizeObserver.observe(container);
     const intersection = new IntersectionObserver(entries => {
@@ -1129,6 +1141,7 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
     container.addEventListener('pointerdown', onPointerDown);
     container.addEventListener('pointermove', onPointerMove);
     container.addEventListener('pointerup', onPointerUp);
+    container.addEventListener('click', onClick);
     container.addEventListener('pointercancel', onPointerCancel);
     container.addEventListener('pointerleave', onPointerLeave);
     container.addEventListener('wheel', onWheel, { passive: false });
@@ -1167,6 +1180,7 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
       container.removeEventListener('pointerdown', onPointerDown);
       container.removeEventListener('pointermove', onPointerMove);
       container.removeEventListener('pointerup', onPointerUp);
+      container.removeEventListener('click', onClick);
       container.removeEventListener('pointercancel', onPointerCancel);
       container.removeEventListener('pointerleave', onPointerLeave);
       container.removeEventListener('wheel', onWheel);
@@ -1233,7 +1247,10 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
               aria-label={`${item.text || item.alt || 'Image'}, ${index + 1} of ${count}`}
               aria-current={index === active ? 'true' : undefined}
               onFocus={() => engineRef.current?.focus(index)}
-              onClick={() => engineRef.current?.open(index)}
+              onClick={() => {
+                settingsRef.current.onItemClick?.(item, index);
+                engineRef.current?.open(index);
+              }}
             >
               {item.text || item.alt || `Image ${index + 1}`}
             </button>

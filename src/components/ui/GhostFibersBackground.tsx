@@ -38,9 +38,9 @@ export default function GhostFibersBackground({
 
   const config =
     tier === "mobile"
-      ? { threads: 24, layers: 1, density: 0.5, particles: 0, dpr: 1.0 }
+      ? { threads: 36, layers: 3, density: 0.6, particles: 0.2, dpr: 1.0 }
       : tier === "tablet"
-      ? { threads: 36, layers: 2, density: 0.7, particles: 0.2, dpr: 1.2 }
+      ? { threads: 48, layers: 3, density: 0.75, particles: 0.3, dpr: 1.2 }
       : { threads: 60, layers: 3, density: 0.85, particles: 0.4, dpr: 1.5 };
 
   return (
