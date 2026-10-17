@@ -14,7 +14,7 @@ import Home5Footer from "@/components/home5/Home5Footer";
 
 export default function Home5ClientPage() {
   return (
-    <main className="relative w-full max-w-full overflow-x-hidden min-h-screen bg-transparent text-stone-900 selection:bg-[#C5A880]/30 selection:text-stone-900">
+    <main className="relative w-full max-w-full overflow-x-clip min-h-screen bg-transparent text-stone-900 selection:bg-[#C5A880]/30 selection:text-stone-900">
       {/* 1. Header Navigation */}
       <Home5Header />
 

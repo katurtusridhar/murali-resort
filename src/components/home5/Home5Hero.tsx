@@ -3,7 +3,6 @@
 import { useEffect, useRef, useCallback, useSyncExternalStore } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "motion/react";
 import { ChevronDown, Sparkles, Users, Building } from "lucide-react";
 
 const TOTAL_FRAMES = 300;
@@ -49,33 +48,20 @@ export default function Home5Hero() {
   const currentRenderedFrame = useRef<number>(1);
   const processQueueRef = useRef<() => void>(() => {});
 
-  // Scroll tracking for editorial choreography
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
-
-  // Staged editorial reveals: hero content stays fully visible during hero view,
-  // gently scaling and only fading when user transitions to the next section.
-  const headlineScale = useTransform(scrollYProgress, [0, 0.7, 1], [1, 0.98, 0.94]);
-  const heroOpacity = useTransform(scrollYProgress, [0.88, 1], [1, 0]);
-  const heroPointerEvents = useTransform(scrollYProgress, (v) => (v >= 0.95 ? "none" : "auto"));
-  const badgesY = useTransform(scrollYProgress, [0, 0.3], [10, 0]);
-
   // Draw a frame onto the canvas
   const drawFrame = useCallback((frameIndex: number) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d", { alpha: false });
+    const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
     // Find the closest loaded frame if exact target isn't ready yet
     let img = frameCache.current.get(frameIndex);
-    if (!img || !img.complete) {
+    if (!img || !img.complete || img.naturalWidth === 0) {
       let closestDiff = Infinity;
       let closestFrame = 1;
       frameCache.current.forEach((cachedImg, idx) => {
-        if (cachedImg && cachedImg.complete) {
+        if (cachedImg && cachedImg.complete && cachedImg.naturalWidth > 0) {
           const diff = Math.abs(idx - frameIndex);
           if (diff < closestDiff) {
             closestDiff = diff;
@@ -86,10 +72,12 @@ export default function Home5Hero() {
       img = frameCache.current.get(closestFrame);
     }
 
-    if (!img || !img.complete) return;
+    if (!img || !img.complete || img.naturalWidth === 0) return;
 
     const canvasWidth = canvas.width;
     const canvasHeight = canvas.height;
+    if (canvasWidth === 0 || canvasHeight === 0) return;
+
     const imgWidth = img.naturalWidth || 1920;
     const imgHeight = img.naturalHeight || 1080;
 
@@ -136,7 +124,7 @@ export default function Home5Hero() {
         processQueueRef.current();
       };
 
-      if (img.complete) {
+      if (img.complete && img.naturalWidth > 0) {
         onLoad();
       } else {
         img.onload = onLoad;
@@ -152,6 +140,27 @@ export default function Home5Hero() {
     processQueueRef.current = processQueue;
   }, [processQueue]);
 
+  // Helper to dynamically prioritize fetching frames around the user's scroll position
+  const prioritizeFrames = useCallback((centerFrame: number) => {
+    const urgent: number[] = [];
+    for (let offset = 0; offset <= 8; offset++) {
+      const fForward = centerFrame + offset;
+      if (fForward <= TOTAL_FRAMES && !frameCache.current.has(fForward) && !queue.current.includes(fForward)) {
+        urgent.push(fForward);
+      }
+      if (offset > 0) {
+        const fBack = centerFrame - offset;
+        if (fBack >= 1 && !frameCache.current.has(fBack) && !queue.current.includes(fBack)) {
+          urgent.push(fBack);
+        }
+      }
+    }
+    if (urgent.length > 0) {
+      queue.current = [...urgent, ...queue.current];
+      processQueue();
+    }
+  }, [processQueue]);
+
   // Progressive frame loader: Frame 1 immediately, key anchors next, then full sequence
   useEffect(() => {
     if (isMobileOrReduced) return;
@@ -164,13 +173,13 @@ export default function Home5Hero() {
       drawFrame(1);
     };
 
-    if (frame1.complete) {
+    if (frame1.complete && frame1.naturalWidth > 0) {
       onFrame1Load();
     } else {
       frame1.onload = onFrame1Load;
     }
 
-    // 2. Queue key anchor frames first (every 5th frame for ultra-fast responsiveness), then fill remainder
+    // 2. Queue key anchor frames first (every 5th frame for fast responsiveness), then fill remainder
     const prioritizedQueue: number[] = [];
     for (let i = 5; i <= TOTAL_FRAMES; i += 5) {
       prioritizedQueue.push(i);
@@ -205,27 +214,38 @@ export default function Home5Hero() {
     return () => window.removeEventListener("resize", handleResize);
   }, [isMobileOrReduced, drawFrame]);
 
-  // Sync scroll position to frame playback with vsync throttling
+  // Direct, bulletproof scroll listener for canvas scrubbing on PC (vsync throttled)
   useEffect(() => {
     if (isMobileOrReduced) return;
 
     let rafId = 0;
-    const unsubscribe = scrollYProgress.on("change", (latest) => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const totalScrollable = rect.height - window.innerHeight;
+      if (totalScrollable <= 0) return;
+
+      const progress = Math.max(0, Math.min(1, -rect.top / totalScrollable));
       const targetFrame = Math.min(
         TOTAL_FRAMES,
-        Math.max(1, Math.round(latest * (TOTAL_FRAMES - 1)) + 1)
+        Math.max(1, Math.round(progress * (TOTAL_FRAMES - 1)) + 1)
       );
+
       if (rafId) cancelAnimationFrame(rafId);
       rafId = requestAnimationFrame(() => {
         drawFrame(targetFrame);
+        prioritizeFrames(targetFrame);
       });
-    });
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      unsubscribe();
+      window.removeEventListener("scroll", handleScroll);
       if (rafId) cancelAnimationFrame(rafId);
     };
-  }, [isMobileOrReduced, scrollYProgress, drawFrame]);
+  }, [isMobileOrReduced, drawFrame, prioritizeFrames]);
 
   // Accessible skip to content function
   const handleSkip = () => {
@@ -279,13 +299,8 @@ export default function Home5Hero() {
         {/* Ambient Vignette & Contrast Overlay — balanced so aerial sequence stays bright & clear */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-black/50 pointer-events-none" />
 
-        {/* Hero Content Overlay (Positioned above building on mobile/tablet, fully legible on PC) */}
-        <motion.div
-          style={{
-            scale: isMobileOrReduced ? 1 : headlineScale,
-            opacity: isMobileOrReduced ? 1 : heroOpacity,
-            pointerEvents: isMobileOrReduced ? "auto" : heroPointerEvents,
-          }}
+        {/* Hero Content Overlay: Always 100% visible on PC, tablet, and mobile */}
+        <div
           className={`relative z-10 h-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col justify-between ${
             isMobileOrReduced 
               ? "pt-28 sm:pt-36 md:pt-40 pb-6 sm:pb-8" 
@@ -328,40 +343,58 @@ export default function Home5Hero() {
             </div>
           </div>
 
-          {/* Bottom Section: Verified Specification Badges & Skip Prompt */}
-          <motion.div 
-            style={{ y: badgesY }}
-            className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 sm:gap-4 border-t border-white/20 pt-3 sm:pt-4"
-          >
+          {/* Bottom Section: Verified Specification Badges & Skip Prompt (100% complete across all screens) */}
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 sm:gap-4 border-t border-white/20 pt-3 sm:pt-4">
             {/* Verified Capacities & Offerings Badges */}
-            <div className="grid grid-cols-3 gap-2 sm:gap-6 w-full sm:w-auto">
-              <div className="flex items-center gap-2 sm:gap-3 bg-black/35 sm:bg-transparent backdrop-blur-sm sm:backdrop-blur-none px-2.5 sm:px-0 py-2 sm:py-0 rounded-xl sm:rounded-none border border-white/15 sm:border-none">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0 border border-white/25">
-                  <Users size={13} className="text-[#C5A880]" />
+            <div className="grid grid-cols-3 gap-1.5 sm:gap-6 w-full sm:w-auto">
+              {/* Badge 1: 2,000 Capacity */}
+              <div className="flex items-center gap-1.5 sm:gap-3 bg-black/40 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none px-2 sm:px-0 py-2 sm:py-0 rounded-xl sm:rounded-none border border-white/20 sm:border-none">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0 border border-white/25">
+                  <Users size={12} className="text-[#C5A880] sm:w-3.5 sm:h-3.5" />
                 </div>
-                <div className="min-w-0">
-                  <div className="text-xs sm:text-sm text-white font-semibold truncate">2,000 Capacity</div>
-                  <div className="text-[10px] text-stone-300 uppercase tracking-wider hidden xs:block sm:block truncate">Combined Venue</div>
+                {/* Mobile: stacked 2-line micro-copy to prevent any cut-off or ellipses */}
+                <div className="flex flex-col justify-center min-w-0 sm:hidden">
+                  <span className="text-[11px] font-bold text-white leading-tight">2,000</span>
+                  <span className="text-[9px] text-stone-300 uppercase tracking-wide leading-tight">Capacity</span>
                 </div>
-              </div>
-
-              <div className="flex items-center gap-2 sm:gap-3 bg-black/35 sm:bg-transparent backdrop-blur-sm sm:backdrop-blur-none px-2.5 sm:px-0 py-2 sm:py-0 rounded-xl sm:rounded-none border border-white/15 sm:border-none">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0 border border-white/25">
-                  <Building size={13} className="text-[#C5A880]" />
-                </div>
-                <div className="min-w-0">
-                  <div className="text-xs sm:text-sm text-white font-semibold truncate">800 Seated</div>
-                  <div className="text-[10px] text-stone-300 uppercase tracking-wider hidden xs:block sm:block truncate">Grand Hall</div>
+                {/* Desktop / Tablet: full rich specification */}
+                <div className="hidden sm:block min-w-0">
+                  <div className="text-xs sm:text-sm text-white font-semibold whitespace-nowrap">2,000 Capacity</div>
+                  <div className="text-[10px] text-stone-300 uppercase tracking-wider whitespace-nowrap">Combined Venue</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 sm:gap-3 bg-black/35 sm:bg-transparent backdrop-blur-sm sm:backdrop-blur-none px-2.5 sm:px-0 py-2 sm:py-0 rounded-xl sm:rounded-none border border-white/15 sm:border-none">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0 border border-white/25">
-                  <Sparkles size={13} className="text-[#C5A880]" />
+              {/* Badge 2: 800 Seated */}
+              <div className="flex items-center gap-1.5 sm:gap-3 bg-black/40 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none px-2 sm:px-0 py-2 sm:py-0 rounded-xl sm:rounded-none border border-white/20 sm:border-none">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0 border border-white/25">
+                  <Building size={12} className="text-[#C5A880] sm:w-3.5 sm:h-3.5" />
                 </div>
-                <div className="min-w-0">
-                  <div className="text-xs sm:text-sm text-white font-semibold truncate">Lawns & Suites</div>
-                  <div className="text-[10px] text-stone-300 uppercase tracking-wider hidden xs:block sm:block truncate">Open-Air Spaces</div>
+                {/* Mobile: stacked 2-line micro-copy */}
+                <div className="flex flex-col justify-center min-w-0 sm:hidden">
+                  <span className="text-[11px] font-bold text-white leading-tight">800</span>
+                  <span className="text-[9px] text-stone-300 uppercase tracking-wide leading-tight">Seated</span>
+                </div>
+                {/* Desktop / Tablet: full rich specification */}
+                <div className="hidden sm:block min-w-0">
+                  <div className="text-xs sm:text-sm text-white font-semibold whitespace-nowrap">800 Seated</div>
+                  <div className="text-[10px] text-stone-300 uppercase tracking-wider whitespace-nowrap">Grand Hall</div>
+                </div>
+              </div>
+
+              {/* Badge 3: Lawns & Suites */}
+              <div className="flex items-center gap-1.5 sm:gap-3 bg-black/40 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none px-2 sm:px-0 py-2 sm:py-0 rounded-xl sm:rounded-none border border-white/20 sm:border-none">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0 border border-white/25">
+                  <Sparkles size={12} className="text-[#C5A880] sm:w-3.5 sm:h-3.5" />
+                </div>
+                {/* Mobile: stacked 2-line micro-copy */}
+                <div className="flex flex-col justify-center min-w-0 sm:hidden">
+                  <span className="text-[11px] font-bold text-white leading-tight">Lawns</span>
+                  <span className="text-[9px] text-stone-300 uppercase tracking-wide leading-tight">&amp; Suites</span>
+                </div>
+                {/* Desktop / Tablet: full rich specification */}
+                <div className="hidden sm:block min-w-0">
+                  <div className="text-xs sm:text-sm text-white font-semibold whitespace-nowrap">Lawns &amp; Suites</div>
+                  <div className="text-[10px] text-stone-300 uppercase tracking-wider whitespace-nowrap">Open-Air Spaces</div>
                 </div>
               </div>
             </div>
@@ -375,8 +408,8 @@ export default function Home5Hero() {
               <span>Scroll to explore</span>
               <ChevronDown size={14} className="group-hover:translate-y-0.5 transition-transform" />
             </button>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );
