@@ -1,0 +1,136 @@
+{
+  "facilitiesKeyboardCheck": {
+    "totalSlides": 6,
+    "slides": [
+      {
+        "index": 0,
+        "h2": "Conference Halls",
+        "opacity": "1",
+        "isAriaHidden": "false",
+        "isInert": false,
+        "focusableCount": 0
+      },
+      {
+        "index": 1,
+        "h2": "Outdoor Terraces",
+        "opacity": "0",
+        "isAriaHidden": "true",
+        "isInert": true,
+        "focusableCount": 0
+      },
+      {
+        "index": 2,
+        "h2": "Culinary Excellence",
+        "opacity": "0",
+        "isAriaHidden": "true",
+        "isInert": true,
+        "focusableCount": 0
+      },
+      {
+        "index": 3,
+        "h2": "24/7 Concierge",
+        "opacity": "0",
+        "isAriaHidden": "true",
+        "isInert": true,
+        "focusableCount": 0
+      },
+      {
+        "index": 4,
+        "h2": "Seamless Tech",
+        "opacity": "0",
+        "isAriaHidden": "true",
+        "isInert": true,
+        "focusableCount": 0
+      },
+      {
+        "index": 5,
+        "h2": "Décor & Styling",
+        "opacity": "0",
+        "isAriaHidden": "true",
+        "isInert": true,
+        "focusableCount": 0
+      }
+    ]
+  },
+  "keyboardTrappedInHidden": [],
+  "accessibleNames": {
+    "scrollBtn": {
+      "visibleText": "Scroll to explore",
+      "ariaLabel": null,
+      "matchesPrefix": true
+    },
+    "tabMore": {
+      "visibleText": "View All Spaces",
+      "ariaLabel": null,
+      "matchesPrefix": true
+    }
+  },
+  "navMeasurements": {
+    "activeLinkText": "Facilities",
+    "width": 60,
+    "height": 40,
+    "computedColor": "rgb(245, 235, 224)",
+    "capsuleBg": "oklab(0 0 0 / 0.65)"
+  },
+  "contactTargets": {
+    "marker": {
+      "width": 48,
+      "height": 48
+    },
+    "phoneLinks": [
+      {
+        "text": "+91 9502507999",
+        "width": 101,
+        "height": 32
+      },
+      {
+        "text": "+91 9440883636",
+        "width": 101,
+        "height": 32
+      },
+      {
+        "text": "+91 9502507999",
+        "width": 110,
+        "height": 36
+      }
+    ],
+    "emailLinks": [
+      {
+        "text": "info@muraliresort.com",
+        "width": 145,
+        "height": 32
+      },
+      {
+        "text": "events@muraliresort.com",
+        "width": 145,
+        "height": 32
+      }
+    ],
+    "waLink": {
+      "width": 97,
+      "height": 32
+    }
+  },
+  "submissionState": {
+    "heading": "Enquiry Details Ready",
+    "paragraph": "Your enquiry has been prepared and is ready to send. To receive an immediate response and confirm available dates, connect directly with our reservation concierge via WhatsApp or phone:",
+    "waHref": "https://wa.me/919502507999?text=Hello%20Murali%20Resort%2C%20I%20would%20like%20to%20enquire%20about%20hosting%20an%20event%3A%0A%E2%80%A2%20Name%3A%20Lakshmi%20Narayana%0A%E2%80%A2%20Phone%3A%20%2B91%209876543210%0A%E2%80%A2%20Email%3A%20lakshmi.n%40example.com%0A%E2%80%A2%20Event%20Type%3A%20wedding%0A%E2%80%A2%20Details%3A%20Looking%20for%20wedding%20banquet%20booking%20in%20December%202026%20for%20600%20guests.",
+    "mailtoHref": "mailto:info@muraliresort.com?subject=Event%20Enquiry%20-%20Lakshmi%20Narayana&body=Hello%20Murali%20Resort%2C%20I%20would%20like%20to%20enquire%20about%20hosting%20an%20event%3A%0A%E2%80%A2%20Name%3A%20Lakshmi%20Narayana%0A%E2%80%A2%20Phone%3A%20%2B91%209876543210%0A%E2%80%A2%20Email%3A%20lakshmi.n%40example.com%0A%E2%80%A2%20Event%20Type%3A%20wedding%0A%E2%80%A2%20Details%3A%20Looking%20for%20wedding%20banquet%20booking%20in%20December%202026%20for%20600%20guests.",
+    "hasResetBtn": true
+  },
+  "decodedWaMessage": "Hello Murali Resort, I would like to enquire about hosting an event:\n• Name: Lakshmi Narayana\n• Phone: +91 9876543210\n• Email: lakshmi.n@example.com\n• Event Type: wedding\n• Details: Looking for wedding banquet booking in December 2026 for 600 guests.",
+  "celebrationsNavigation": {
+    "urlFromFacilities": "http://localhost:3000/home#moments",
+    "momentsExists": true,
+    "scrollY": 4206,
+    "urlFromHome": "http://localhost:3000/home#moments",
+    "scrollAfterSamePageClick": {
+      "scrollY": 3914,
+      "momentsTop": 292
+    }
+  },
+  "mobileCelebrationsNavigation": {
+    "url": "http://localhost:3000/home#moments",
+    "drawerClosed": true
+  }
+}

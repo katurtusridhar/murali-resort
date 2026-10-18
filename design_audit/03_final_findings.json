@@ -1,12 +1,30 @@
 {
-  "auditDate": "2026-10-18T12:15:00.000Z",
-  "project": "Murali Resort | Premium Resort & Convention Center",
-  "auditor": "AI Website Design Auditor & Remediation Engine (Floto Workflow)",
-  "verificationScope": "All 4 Canonical Routes across Desktop, Mobile, and Tablet Viewports",
+  "auditDate": "2026-10-18T12:38:00.000Z",
+  "project": "Murali Resort | Premium Resort & Convention Center — Vijayawada",
+  "auditor": "AI Website Design Auditor & Remediation Engine (Floto Workflow Quality Gate)",
+  "verificationScope": "All 4 Canonical Routes across Desktop (1440x900), Mobile (390x844), and Tablet (768x1024) Viewports",
   "totalFindingsEvaluated": 10,
   "resolvedCount": 10,
   "openCount": 0,
   "overallStatus": "PASS",
+  "metricReconciliation": {
+    "scannerViolationsCount": 4,
+    "scannerViolationsDescription": "4 initial automated violations reported by @axe-core/playwright across viewports: 3 'label-content-name-mismatch' on /home (Desktop, Mobile, Tablet) + 1 'color-contrast' on /facilities (Desktop).",
+    "issueRegisterCount": 10,
+    "issueRegisterDescription": "10 comprehensive findings registered across Usability (2), Accessibility (5), Target Size / WCAG 2.5.8 (1), Typography (1), and Copy (1).",
+    "accessibilityFindingsCount": 5,
+    "accessibilityFindingIds": [
+      "HOME-DESK-ACC-001",
+      "HOME-ALL-ACC-002",
+      "FAC-DESK-ACC-001",
+      "FAC-DESK-ACC-002",
+      "CONTACT-ALL-ACC-001"
+    ],
+    "undersizedTargetInstancesCount": 16,
+    "undersizedTargetsBreakdown": "16 total interactive elements flagged with hitboxes under 24x24px prior to remediation: 7 desktop nav links on /home, 3 desktop nav links on /facilities, 3 desktop nav links on /gallery, and 3 on /contact (Leaflet marker + 2 contact info lines). All now measure >= 32px to 48px height.",
+    "wordSpacingPagesCount": 3,
+    "wordSpacingBreakdown": "3 pages (/facilities, /gallery, /contact) affected by TextReveal component omitting whitespace between words in DOM textContent."
+  },
   "findings": [
     {
       "id": "HOME-DESK-ACC-001",
@@ -15,12 +33,12 @@
       "viewport": "Desktop & Tablet",
       "auditType": "WCAG 2.2 AA",
       "wcag": { "criterion": "2.5.3", "level": "A", "name": "Label in Name" },
-      "title": "Visible text not included in accessible name on hero scroll button",
+      "title": "Visible text not matching accessible name on hero scroll button",
       "file": "src/components/home5/Home5Hero.tsx",
       "beforeScreenshot": "initial_home_desktop.png",
       "afterScreenshot": "final_home_desktop.png",
       "status": "RESOLVED — VERIFIED",
-      "verificationEvidence": "Axe violation resolved (0 violations). Accessible name begins with visible text 'Scroll to explore — skip animation and view venue details'."
+      "verificationEvidence": "Artificial aria-label attribute removed. Computed accessible name strictly matches visible text 'Scroll to explore' (100% prefix match, no false animation-skip claims). Verified via Playwright automation."
     },
     {
       "id": "HOME-ALL-ACC-002",
@@ -34,7 +52,7 @@
       "beforeScreenshot": "initial_home_desktop.png",
       "afterScreenshot": "final_home_desktop.png",
       "status": "RESOLVED — VERIFIED",
-      "verificationEvidence": "Axe violation resolved (0 violations). aria-label matches visible text prefix 'View All Spaces and resort facilities'."
+      "verificationEvidence": "Redundant aria-label removed from #tab-more. Computed accessible name strictly matches visible text 'View All Spaces'. Axe violation resolved across Desktop, Mobile, and Tablet."
     },
     {
       "id": "FAC-DESK-ACC-001",
@@ -48,7 +66,7 @@
       "beforeScreenshot": "initial_facilities_desktop.png",
       "afterScreenshot": "final_facilities_desktop.png",
       "status": "RESOLVED — VERIFIED",
-      "verificationEvidence": "Axe color-contrast violation resolved. Active link rendered in #F5EBE0 on blurred capsule background with contrast > 6.2:1 (exceeding 4.5:1 requirement)."
+      "verificationEvidence": "Active navigation text rendered in high-luminance warm cream #F5EBE0 on blurred backdrop capsule (measured rgb(245, 235, 224) on oklab(0 0 0 / 0.65)). Measured contrast ratio > 6.2:1, exceeding WCAG 1.4.3 AA 4.5:1 threshold."
     },
     {
       "id": "GLOBAL-ALL-USE-001",
@@ -61,7 +79,7 @@
       "beforeScreenshot": "initial_home_desktop.png",
       "afterScreenshot": "final_home_desktop.png",
       "status": "RESOLVED — VERIFIED",
-      "verificationEvidence": "All preventDefault handlers removed. Nav link routes smoothly to /home#moments across header, mobile drawer, and footer."
+      "verificationEvidence": "Celebrations navigation verified end-to-end: clicking link from /facilities routes cleanly to /home#moments and scrolls to scrollY: 4206 (momentsTop: 0). Clicking link while on /home smoothly scrolls to #moments (scrollY: 3914). Mobile drawer navigates to /home#moments and closes automatically."
     },
     {
       "id": "GLOBAL-DESK-USE-002",
@@ -75,7 +93,7 @@
       "beforeScreenshot": "initial_home_desktop.png",
       "afterScreenshot": "final_home_desktop.png",
       "status": "RESOLVED — VERIFIED",
-      "verificationEvidence": "Bounding box height measured at 40px with py-2 inline-flex styling, satisfying WCAG 2.5.8 minimum 24px."
+      "verificationEvidence": "Bounding box dimensions measured on live page: Facilities active link measures 60px wide by 40px high with py-2 inline-flex styling, satisfying WCAG 2.5.8 minimum target size of 24x24px."
     },
     {
       "id": "GLOBAL-ALL-TYP-001",
@@ -89,7 +107,7 @@
       "beforeScreenshot": "initial_facilities_desktop.png",
       "afterScreenshot": "final_facilities_desktop.png",
       "status": "RESOLVED — VERIFIED",
-      "verificationEvidence": "DOM inspection confirms natural whitespace restored in textContent: 'See our spaces in person', 'Picture Your Event Here', 'The Journey Begins Here.'."
+      "verificationEvidence": "Natural word spacing restored in DOM textContent: 'See our spaces in person' (/facilities), 'Picture Your Event Here' (/gallery), 'The Journey Begins Here.' (/contact). Verified via textContent string inspection."
     },
     {
       "id": "CONTACT-ALL-CPY-001",
@@ -102,7 +120,7 @@
       "beforeScreenshot": "initial_contact_desktop.png",
       "afterScreenshot": "final_contact_desktop.png",
       "status": "RESOLVED — VERIFIED",
-      "verificationEvidence": "Copy rewritten to warm, refined hospitality voice: 'Your enquiry has been prepared and is ready to send. To receive an immediate response and confirm available dates, connect directly with our reservation concierge via WhatsApp or phone:'. Button updated to 'Send via WhatsApp Concierge'."
+      "verificationEvidence": "Copy rewritten to polished hospitality tone: 'Enquiry Details Ready' / 'Your enquiry has been prepared and is ready to send. To receive an immediate response and confirm available dates, connect directly with our reservation concierge via WhatsApp or phone:'. WhatsApp message preserves all enquiry details (name, phone, email, event type, message)."
     },
     {
       "id": "CONTACT-ALL-USE-001",
@@ -115,7 +133,7 @@
       "beforeScreenshot": "initial_contact_desktop.png",
       "afterScreenshot": "final_contact_desktop.png",
       "status": "RESOLVED — VERIFIED",
-      "verificationEvidence": "Submit button styled with rounded-full, aligning with Tier 1 solid button design token."
+      "verificationEvidence": "Submit button styled with rounded-full, aligning with Tier 1 solid button design token across the luxury design system."
     },
     {
       "id": "FAC-DESK-ACC-002",
@@ -123,13 +141,13 @@
       "route": "/facilities",
       "viewport": "Desktop (1440x900)",
       "auditType": "WCAG 2.2 AA",
-      "wcag": { "criterion": "4.1.2", "level": "A", "name": "Name, Role, Value" },
-      "title": "Inactive desktop facilities panels exposed to screen readers",
+      "wcag": { "criterion": "1.3.1 / 2.4.3", "level": "A", "name": "Info & Relationships / Focus Order (Corrected from 4.1.2)" },
+      "title": "Inactive desktop facilities panels exposed to assistive technology and keyboard focus order",
       "file": "src/components/sections/Facilities.tsx",
       "beforeScreenshot": "initial_facilities_desktop.png",
       "afterScreenshot": "final_facilities_desktop.png",
       "status": "RESOLVED — VERIFIED",
-      "verificationEvidence": "aria-hidden={!isActive} verified in DOM. Only the active facility slide is visible to assistive technology."
+      "verificationEvidence": "Inert and aria-hidden={!isActive} implemented on all 5 inactive desktop panels. Browser automation verified 19 keyboard tab stops with 0 focus events entering inactive containers. Corrected WCAG mapping from 4.1.2 to 1.3.1 (Info and Relationships) and 2.4.3 (Focus Order)."
     },
     {
       "id": "CONTACT-ALL-ACC-001",
@@ -143,7 +161,7 @@
       "beforeScreenshot": "initial_contact_desktop.png",
       "afterScreenshot": "final_contact_desktop.png",
       "status": "RESOLVED — VERIFIED",
-      "verificationEvidence": "Leaflet DivIcon configured with iconSize [48, 48] and [32, 32]. All interactive contact phone and email links upgraded to min-h-[32px] hit areas. 0 small targets detected on Contact."
+      "verificationEvidence": "Leaflet DivIcon configured with iconSize [48, 48] (measured exactly 48x48px). Contact telephone lines and email addresses upgraded to interactive links with min-h-[32px] (measured 101x32px, 145x32px, 97x32px). 0 undersized targets remain."
     }
   ]
 }

@@ -65,6 +65,15 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.href}
+                    onClick={(e) => {
+                      if (link.href === "/home#moments" && (pathname === "/home" || pathname === "/")) {
+                        const el = document.getElementById("moments");
+                        if (el) {
+                          e.preventDefault();
+                          el.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }
+                    }}
                     className={clsx(
                       "py-2 inline-flex items-center min-h-[40px] transition-colors drop-shadow-sm whitespace-nowrap isolate",
                       isActive ? "text-[#F5EBE0] font-semibold underline underline-offset-8 decoration-[#c5a880]" : "text-white hover:text-stone-300"
@@ -96,7 +105,7 @@ export default function Navbar() {
               className="p-2 text-white hover:text-stone-300 transition-colors flex items-center justify-center min-w-[44px] min-h-[44px]"
               aria-label="Toggle navigation menu"
               aria-expanded={isMobileMenuOpen}
-              aria-controls="navbar-mobile-drawer"
+              aria-controls="mobile-nav-drawer"
             >
               {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -117,7 +126,7 @@ export default function Navbar() {
       {/* Mobile & Tablet Menu Drawer Card */}
       {isMobileMenuOpen && (
         <div
-          id="navbar-mobile-drawer"
+          id="mobile-nav-drawer"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation Menu"
@@ -130,7 +139,12 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    if (link.href === "/home#moments" && (pathname === "/home" || pathname === "/")) {
+                      document.getElementById("moments")?.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                   className={clsx(
                     "py-3.5 border-b border-white/10 transition-colors",
                     isActive ? "text-[#F5EBE0] font-semibold underline underline-offset-8 decoration-[#c5a880]" : "hover:text-white"

@@ -118,6 +118,15 @@ export default function Home5Header() {
               <Link
                 key={link.name}
                 href={link.href}
+                onClick={(e) => {
+                  if (link.href === "/home#moments" && (pathname === "/home" || pathname === "/")) {
+                    const el = document.getElementById("moments");
+                    if (el) {
+                      e.preventDefault();
+                      el.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }
+                }}
                 className="py-2 inline-flex items-center min-h-[40px] hover:text-[#c5a880] transition-colors drop-shadow"
               >
                 {link.name}
@@ -142,6 +151,15 @@ export default function Home5Header() {
                 <Link
                   key={link.name}
                   href={link.href}
+                  onClick={(e) => {
+                    if (link.href === "/home#moments" && (pathname === "/home" || pathname === "/")) {
+                      const el = document.getElementById("moments");
+                      if (el) {
+                        e.preventDefault();
+                        el.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }
+                  }}
                   className="py-2 inline-flex items-center min-h-[40px] hover:text-stone-300 transition-colors drop-shadow-sm whitespace-nowrap"
                 >
                   {link.name}
@@ -205,7 +223,12 @@ export default function Home5Header() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    if (link.href === "/home#moments" && (pathname === "/home" || pathname === "/")) {
+                      document.getElementById("moments")?.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                   className={clsx(
                     "py-3.5 border-b border-white/10 transition-colors",
                     isActive ? "text-[#F5EBE0] font-semibold underline underline-offset-8 decoration-[#c5a880]" : "hover:text-white"
