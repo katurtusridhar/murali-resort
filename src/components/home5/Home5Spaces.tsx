@@ -160,7 +160,7 @@ export default function Home5Spaces() {
             <Link
               href="/facilities"
               id="tab-more"
-              aria-label="View all resort spaces and facilities"
+              aria-label="View All Spaces and resort facilities"
               className="btn-pill btn-pill-inactive group"
             >
               <span>View All Spaces</span>

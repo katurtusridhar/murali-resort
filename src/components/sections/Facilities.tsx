@@ -170,6 +170,7 @@ export default function Facilities() {
                       }}
                       transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                       className="absolute inset-0 flex flex-col justify-center w-full"
+                      aria-hidden={!isActive}
                     >
                       <div className="w-16 h-16 rounded-full bg-white shadow-sm border border-stone-100 flex items-center justify-center mb-8">
                         <fac.icon size={28} className="text-accent" strokeWidth={1.5} />

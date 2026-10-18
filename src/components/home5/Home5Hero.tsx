@@ -402,8 +402,8 @@ export default function Home5Hero() {
             {/* Skip / Scroll Prompt */}
             <button
               onClick={handleSkip}
-              className="hidden sm:inline-flex items-center gap-1.5 text-stone-200 text-xs tracking-widest uppercase hover:text-white transition-colors group self-start sm:self-auto shrink-0"
-              aria-label="Skip scroll animation and view venue details"
+              className="hidden sm:inline-flex items-center gap-1.5 text-stone-200 text-xs tracking-widest uppercase hover:text-white transition-colors group self-start sm:self-auto shrink-0 min-h-[32px] py-1"
+              aria-label="Scroll to explore — skip animation and view venue details"
             >
               <span>Scroll to explore</span>
               <ChevronDown size={14} className="group-hover:translate-y-0.5 transition-transform" />

@@ -29,7 +29,7 @@ export default function Navbar() {
   }, [isMobileMenuOpen]);
 
   const navLinks = [
-    { name: "Celebrations", href: "/celebrations" },
+    { name: "Celebrations", href: "/home#moments" },
     { name: "Facilities", href: "/facilities" },
     { name: "Gallery", href: "/gallery" },
   ];
@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="w-full max-w-5xl bg-black/65 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] rounded-full p-2 pl-4 md:pl-6 pr-2 md:pr-2.5 flex items-center justify-between isolate">
           
           {/* Left: Brand Logo & Title */}
-          <Link href="/home" className="flex items-center gap-3 group shrink-0">
+          <Link href="/home" className="flex items-center gap-3 group shrink-0 py-1 min-h-[40px]">
             <div className="relative w-8 h-8 md:w-9 md:h-9 shrink-0 flex items-center justify-center isolate" aria-hidden="true">
               <Image
                 src="/images/logo.png"
@@ -65,10 +65,9 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    onClick={link.href === "/celebrations" ? (e) => e.preventDefault() : undefined}
                     className={clsx(
-                      "transition-colors drop-shadow-sm whitespace-nowrap isolate",
-                      isActive ? "text-accent font-semibold" : "text-white hover:text-stone-300"
+                      "py-2 inline-flex items-center min-h-[40px] transition-colors drop-shadow-sm whitespace-nowrap isolate",
+                      isActive ? "text-[#F5EBE0] font-semibold underline underline-offset-8 decoration-[#c5a880]" : "text-white hover:text-stone-300"
                     )}
                   >
                     {link.name}
@@ -131,15 +130,10 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  onClick={(e) => {
-                    if (link.href === "/celebrations") {
-                      e.preventDefault();
-                    }
-                    setIsMobileMenuOpen(false);
-                  }}
+                  onClick={() => setIsMobileMenuOpen(false)}
                   className={clsx(
                     "py-3.5 border-b border-white/10 transition-colors",
-                    isActive ? "text-accent font-semibold" : "hover:text-white"
+                    isActive ? "text-[#F5EBE0] font-semibold underline underline-offset-8 decoration-[#c5a880]" : "hover:text-white"
                   )}
                 >
                   {link.name}

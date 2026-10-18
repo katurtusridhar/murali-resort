@@ -43,7 +43,10 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-premium-dark mb-1">Direct Lines</h3>
-                  <p className="text-stone-500 text-xs leading-relaxed">+91 9502507999<br />+91 9440883636</p>
+                  <div className="flex flex-col text-stone-500 text-xs">
+                    <a href="tel:+919502507999" className="py-1 inline-flex items-center min-h-[32px] hover:text-stone-900 transition-colors">+91 9502507999</a>
+                    <a href="tel:+919440883636" className="py-1 inline-flex items-center min-h-[32px] hover:text-stone-900 transition-colors">+91 9440883636</a>
+                  </div>
                 </div>
               </div>
 
@@ -57,7 +60,7 @@ export default function ContactPage() {
                     href="https://wa.me/919502507999?text=Hello%20Murali%20Resort,%20I%20would%20like%20to%20enquire%20about%20booking%20an%20event."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-stone-500 text-xs leading-relaxed hover:text-[#25D366] transition-colors"
+                    className="py-1 inline-flex items-center min-h-[32px] text-stone-500 text-xs leading-relaxed hover:text-[#25D366] transition-colors"
                   >
                     +91 9502507999
                   </a>
@@ -70,7 +73,10 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-premium-dark mb-1">Email</h3>
-                  <p className="text-stone-500 text-xs leading-relaxed">info@muraliresort.com<br />events@muraliresort.com</p>
+                  <div className="flex flex-col text-stone-500 text-xs">
+                    <a href="mailto:info@muraliresort.com" className="py-1 inline-flex items-center min-h-[32px] hover:text-stone-900 transition-colors">info@muraliresort.com</a>
+                    <a href="mailto:events@muraliresort.com" className="py-1 inline-flex items-center min-h-[32px] hover:text-stone-900 transition-colors">events@muraliresort.com</a>
+                  </div>
                 </div>
               </div>
 

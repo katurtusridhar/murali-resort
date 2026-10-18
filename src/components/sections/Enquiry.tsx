@@ -94,8 +94,7 @@ export default function Enquiry({ standalone = true }: { standalone?: boolean })
             </h3>
 
             <p className="text-stone-600 text-sm sm:text-base max-w-xl mb-6 font-light leading-relaxed">
-              Automated background email delivery is currently in setup mode (missing server-side SMTP/CRM provider). 
-              To guarantee your dates are locked in without delay, transmit your enquiry directly to our reservation concierge:
+              Your enquiry has been prepared and is ready to send. To receive an immediate response and confirm available dates, connect directly with our reservation concierge via WhatsApp or phone:
             </p>
 
             <div className="w-full max-w-lg space-y-3 mb-8">
@@ -106,7 +105,7 @@ export default function Enquiry({ standalone = true }: { standalone?: boolean })
                 className="w-full min-h-[48px] py-3.5 px-6 rounded-full bg-[#25D366] text-white font-medium text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-3 hover:bg-[#20ba5a] transition-all shadow-md hover:shadow-lg"
               >
                 <WhatsAppIcon className="w-5 h-5 text-white" />
-                <span>Transmit via WhatsApp Concierge</span>
+                <span>Send via WhatsApp Concierge</span>
                 <ArrowRight size={16} />
               </a>
 
@@ -230,7 +229,7 @@ export default function Enquiry({ standalone = true }: { standalone?: boolean })
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="w-full sm:w-auto min-h-[48px] px-10 py-3.5 bg-premium-dark text-white uppercase tracking-wider text-xs sm:text-sm inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-accent disabled:opacity-50 transition-colors hover:bg-black"
+                  className="w-full sm:w-auto min-h-[48px] px-10 py-3.5 rounded-full bg-premium-dark text-white uppercase tracking-wider text-xs sm:text-sm font-semibold inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-accent disabled:opacity-50 transition-colors hover:bg-black shadow-md"
                 >
                   {status === "submitting" ? "Preparing..." : "Submit Enquiry"}
                 </button>

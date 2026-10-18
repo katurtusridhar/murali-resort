@@ -1,0 +1,3083 @@
+[
+  {
+    "phase": "initial",
+    "page": {
+      "key": "home",
+      "path": "/home",
+      "name": "Home"
+    },
+    "viewport": {
+      "key": "desktop",
+      "width": 1440,
+      "height": 900,
+      "isMobile": false,
+      "hasTouch": false
+    },
+    "screenshot": "initial_home_desktop.png",
+    "consoleErrors": [],
+    "failedRequests": [],
+    "axeViolations": [
+      {
+        "id": "label-content-name-mismatch",
+        "impact": "serious",
+        "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+        "help": "Elements must have their visible text as part of their accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=playwright",
+        "tags": [
+          "cat.semantics",
+          "wcag21a",
+          "wcag253",
+          "EN-301-549",
+          "EN-9.2.5.3",
+          "RGAAv4",
+          "RGAA-6.1.5"
+        ],
+        "nodes": [
+          {
+            "html": "<button class=\"hidden sm:inline-flex items-center gap-1.5 text-stone-200 text-xs tracking-widest uppercase hover:text-white transition-colors group self-start sm:self-auto shrink-0\" aria-label=\"Skip scroll animation and view venue details\">",
+            "target": [
+              ".sm\\:inline-flex"
+            ],
+            "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+            "any": [
+              {
+                "id": "label-content-name-mismatch",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Text inside the element is not included in the accessible name"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "html": "<a id=\"tab-more\" aria-label=\"View all resort spaces and facilities\" class=\"btn-pill btn-pill-inactive group\" href=\"/facilities\">",
+            "target": [
+              "#tab-more"
+            ],
+            "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+            "any": [
+              {
+                "id": "label-content-name-mismatch",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Text inside the element is not included in the accessible name"
+              }
+            ],
+            "all": [],
+            "none": []
+          }
+        ]
+      }
+    ],
+    "axePassesCount": 28,
+    "domEvaluation": {
+      "issues": [],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Murali Resort & Convention Center — Where Moments Become Memories.",
+          "fontSize": "60px",
+          "fontWeight": "400",
+          "lineHeight": "67.2px"
+        },
+        {
+          "tag": "h2",
+          "text": "A Destination Designed for Scale & Elegance.",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "53.76px"
+        },
+        {
+          "tag": "h2",
+          "text": "Tailored Venues for Every Occasion.",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "55.2px"
+        },
+        {
+          "tag": "h3",
+          "text": "The Grand Convention Hall",
+          "fontSize": "36px",
+          "fontWeight": "400",
+          "lineHeight": "40px"
+        },
+        {
+          "tag": "h2",
+          "text": "Real Celebrations Brought to Life.",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "55.2px"
+        },
+        {
+          "tag": "h2",
+          "text": "Accessible Location, Seamless Arrival.",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "55.2px"
+        },
+        {
+          "tag": "h3",
+          "text": "Murali Resort & Convention Center",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h3",
+          "text": "Direct Highway Access",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h3",
+          "text": "Dedicated Circular Drop-Off",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h3",
+          "text": "Event Staging Logistics",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h2",
+          "text": "Real Experiences from Google Maps.",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "54.72px"
+        },
+        {
+          "tag": "h3",
+          "text": "Pemmaraju Mohan",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h3",
+          "text": "Triveni Velaga",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h3",
+          "text": "pandu",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h3",
+          "text": "Medapati Sai Krishna Reddy",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h4",
+          "text": "Celebrated your milestone event at Murali Resort?",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h2",
+          "text": "Plan Your Event at Murali Resort.",
+          "fontSize": "60px",
+          "fontWeight": "400",
+          "lineHeight": "66px"
+        },
+        {
+          "tag": "h3",
+          "text": "Navigation",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "lineHeight": "20px"
+        },
+        {
+          "tag": "h3",
+          "text": "Contact & Location",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "lineHeight": "20px"
+        }
+      ],
+      "smallTargets": [
+        {
+          "selector": "a.hover:text-[#c5a880].transition-colors",
+          "text": "Celebrations",
+          "width": 122,
+          "height": 16
+        },
+        {
+          "selector": "a.hover:text-[#c5a880].transition-colors",
+          "text": "Facilities",
+          "width": 89,
+          "height": 16
+        },
+        {
+          "selector": "a.hover:text-[#c5a880].transition-colors",
+          "text": "Gallery",
+          "width": 72,
+          "height": 16
+        },
+        {
+          "selector": "a.hover:text-stone-300.transition-colors",
+          "text": "Celebrations",
+          "width": 85,
+          "height": 20
+        },
+        {
+          "selector": "a.hover:text-stone-300.transition-colors",
+          "text": "Facilities",
+          "width": 59,
+          "height": 20
+        },
+        {
+          "selector": "a.hover:text-stone-300.transition-colors",
+          "text": "Gallery",
+          "width": 47,
+          "height": 20
+        },
+        {
+          "selector": "button.hidden.sm:inline-flex",
+          "text": "Scroll to explore",
+          "width": 164,
+          "height": 16
+        }
+      ],
+      "buttonStylesCount": 8,
+      "longAllCaps": [
+        {
+          "selector": "span",
+          "text": "Scroll to explore",
+          "length": 17
+        },
+        {
+          "selector": "span.text-[#8A622A].uppercase",
+          "text": "Celebration Moments",
+          "length": 19
+        },
+        {
+          "selector": "span",
+          "text": "View Full Gallery",
+          "length": 17
+        },
+        {
+          "selector": "span.text-[#8A622A].uppercase",
+          "text": "Connectivity & Arrival",
+          "length": 22
+        },
+        {
+          "selector": "span",
+          "text": "Open in Google Maps",
+          "length": 19
+        },
+        {
+          "selector": "span",
+          "text": "Calculate Live Route",
+          "length": 20
+        },
+        {
+          "selector": "span.text-[#8A622A].uppercase",
+          "text": "Guest Impressions",
+          "length": 17
+        },
+        {
+          "selector": "span",
+          "text": "Write a Google Review",
+          "length": 21
+        },
+        {
+          "selector": "span.text-xs.uppercase",
+          "text": "Reservations & Enquiries",
+          "length": 24
+        },
+        {
+          "selector": "span.text-xs.text-[#C5A880]",
+          "text": "Poranki, Vijayawada • Andhra Pradesh",
+          "length": 36
+        }
+      ],
+      "paragraphs": [
+        {
+          "text": "A scenic resort for weddings, parties, and business events on open green lawns.",
+          "selector": "p.text-sm.sm:text-base"
+        },
+        {
+          "text": "Located on Poranki Road in Vijayawada, Murali Resort pairs modern halls with green lawns. Host grand weddings and events with ease. Your guests will enjoy plenty of space to celebrate in comfort.",
+          "selector": "p.text-[#525A62].text-base"
+        },
+        {
+          "text": "Find the right space for your wedding, business conference, or relaxing stay.",
+          "selector": "p.text-[#525A62].text-base"
+        },
+        {
+          "text": "A spacious indoor hall with clear views, crystal lighting, and quality sound. Perfect for banquets and large meetings.",
+          "selector": "p.text-[#525A62].text-sm"
+        },
+        {
+          "text": "Browse real photos from weddings, receptions, and banquets at Murali Resort. Drag or scroll to explore the gallery.",
+          "selector": "p.text-[#525A62].text-base"
+        },
+        {
+          "text": "A grand wedding walkway with crystal lights, fresh flowers, and a red carpet.",
+          "selector": "p.circular-gallery-caption-text"
+        },
+        {
+          "text": "Murali Resort sits on Poranki Road in Vijayawada, with easy highway access. A wide driveway lets your guests arrive and park with ease.",
+          "selector": "p.text-[#525A62].text-base"
+        },
+        {
+          "text": "Survey No - 134, Poranki-Nidamanuru Road,Poranki, Vijayawada, Andhra Pradesh 521137",
+          "selector": "p.text-sm.text-[#525A62]"
+        },
+        {
+          "text": "Direct access from Poranki Road links you quickly to the city center and main highways.",
+          "selector": "p.text-sm.text-[#525A62]"
+        },
+        {
+          "text": "A covered porch and circular driveway let guests drive right up to the main hall with no traffic delays.",
+          "selector": "p.text-sm.text-[#525A62]"
+        },
+        {
+          "text": "Separate service gates keep catering and decor teams away from guests, so events run quietly and smoothly.",
+          "selector": "p.text-sm.text-[#525A62]"
+        },
+        {
+          "text": "Real reviews from guests who hosted weddings, parties, and meetings at Murali Resort.",
+          "selector": "p.text-[#525A62].text-base"
+        },
+        {
+          "text": "Verified Google Rating · 1,300+ reviews",
+          "selector": "p.text-xs.text-[#525A62]"
+        },
+        {
+          "text": "“Very spacious place for conducting marriage and other big functions. Big car parking and sufficient for good number of gathering.”",
+          "selector": "blockquote.text-[#525A62].text-sm"
+        },
+        {
+          "text": "“Very good and big convention halls and huge parking area”",
+          "selector": "blockquote.text-[#525A62].text-sm"
+        },
+        {
+          "text": "“Wow Murali resort is the best option for function Hall. And also it's best option for meetings. I enjoyed meetings here I attended two times here in murali resorts. I thoroughly enjoyed with my family especially my kids spent good time here. Waiting to visit again when I get the opertunity...”",
+          "selector": "blockquote.text-[#525A62].text-sm"
+        },
+        {
+          "text": "“One of the best convention halls for functions. It easily holds up to 1,500 people, and the service is great. The resort is located in a peaceful area away from the busy city. Everything was well designed.”",
+          "selector": "blockquote.text-[#525A62].text-sm"
+        },
+        {
+          "text": "Join our community of hosts by sharing your honest experience on Google Maps.",
+          "selector": "p.text-xs.sm:text-sm"
+        },
+        {
+          "text": "Talk to our team to check open dates, discuss hall setups, and plan catering or guest rooms.",
+          "selector": "p.text-stone-300.text-base"
+        },
+        {
+          "text": "A premier venue for weddings, family parties, and corporate events in Vijayawada. We offer an indoor hall for 800 seated guests, open lawns, and on-site guest rooms.",
+          "selector": "p.text-sm.text-stone-300"
+        },
+        {
+          "text": "© 2026 Murali Resort. All rights reserved.",
+          "selector": "p"
+        }
+      ],
+      "links": [
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        },
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        }
+      ],
+      "pageTitle": "Murali Resort | Premium Resort & Convention Center — Vijayawada"
+    },
+    "interactiveTestResults": {}
+  },
+  {
+    "phase": "initial",
+    "page": {
+      "key": "home",
+      "path": "/home",
+      "name": "Home"
+    },
+    "viewport": {
+      "key": "mobile",
+      "width": 390,
+      "height": 844,
+      "isMobile": true,
+      "hasTouch": true
+    },
+    "screenshot": "initial_home_mobile.png",
+    "consoleErrors": [],
+    "failedRequests": [],
+    "axeViolations": [
+      {
+        "id": "label-content-name-mismatch",
+        "impact": "serious",
+        "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+        "help": "Elements must have their visible text as part of their accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=playwright",
+        "tags": [
+          "cat.semantics",
+          "wcag21a",
+          "wcag253",
+          "EN-301-549",
+          "EN-9.2.5.3",
+          "RGAAv4",
+          "RGAA-6.1.5"
+        ],
+        "nodes": [
+          {
+            "html": "<a id=\"tab-more\" aria-label=\"View all resort spaces and facilities\" class=\"btn-pill btn-pill-inactive group\" href=\"/facilities\">",
+            "target": [
+              "#tab-more"
+            ],
+            "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+            "any": [
+              {
+                "id": "label-content-name-mismatch",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Text inside the element is not included in the accessible name"
+              }
+            ],
+            "all": [],
+            "none": []
+          }
+        ]
+      }
+    ],
+    "axePassesCount": 29,
+    "domEvaluation": {
+      "issues": [],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Murali Resort & Convention Center — Where Moments Become Memories.",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "33.6px"
+        },
+        {
+          "tag": "h2",
+          "text": "A Destination Designed for Scale & Elegance.",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "33.6px"
+        },
+        {
+          "tag": "h2",
+          "text": "Tailored Venues for Every Occasion.",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "34.5px"
+        },
+        {
+          "tag": "h3",
+          "text": "The Grand Convention Hall",
+          "fontSize": "24px",
+          "fontWeight": "400",
+          "lineHeight": "32px"
+        },
+        {
+          "tag": "h2",
+          "text": "Real Celebrations Brought to Life.",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "34.5px"
+        },
+        {
+          "tag": "h2",
+          "text": "Accessible Location, Seamless Arrival.",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "34.5px"
+        },
+        {
+          "tag": "h3",
+          "text": "Murali Resort & Convention Center",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h3",
+          "text": "Direct Highway Access",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h3",
+          "text": "Dedicated Circular Drop-Off",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h3",
+          "text": "Event Staging Logistics",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h2",
+          "text": "Real Experiences from Google Maps.",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "34.2px"
+        },
+        {
+          "tag": "h3",
+          "text": "Pemmaraju Mohan",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h3",
+          "text": "Triveni Velaga",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h3",
+          "text": "pandu",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h3",
+          "text": "Medapati Sai Krishna Reddy",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h4",
+          "text": "Celebrated your milestone event at Murali Resort?",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "lineHeight": "24px"
+        },
+        {
+          "tag": "h2",
+          "text": "Plan Your Event at Murali Resort.",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "33px"
+        },
+        {
+          "tag": "h3",
+          "text": "Navigation",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "lineHeight": "20px"
+        },
+        {
+          "tag": "h3",
+          "text": "Contact & Location",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "lineHeight": "20px"
+        }
+      ],
+      "smallTargets": [],
+      "buttonStylesCount": 7,
+      "longAllCaps": [
+        {
+          "selector": "span",
+          "text": "Scroll to explore",
+          "length": 17
+        },
+        {
+          "selector": "span.text-[#8A622A].uppercase",
+          "text": "Celebration Moments",
+          "length": 19
+        },
+        {
+          "selector": "span",
+          "text": "View Full Gallery",
+          "length": 17
+        },
+        {
+          "selector": "span.text-[#8A622A].uppercase",
+          "text": "Connectivity & Arrival",
+          "length": 22
+        },
+        {
+          "selector": "span",
+          "text": "Open in Google Maps",
+          "length": 19
+        },
+        {
+          "selector": "span",
+          "text": "Calculate Live Route",
+          "length": 20
+        },
+        {
+          "selector": "span.text-[#8A622A].uppercase",
+          "text": "Guest Impressions",
+          "length": 17
+        },
+        {
+          "selector": "span",
+          "text": "Write a Google Review",
+          "length": 21
+        },
+        {
+          "selector": "span.text-xs.uppercase",
+          "text": "Reservations & Enquiries",
+          "length": 24
+        },
+        {
+          "selector": "span.text-xs.text-[#C5A880]",
+          "text": "Poranki, Vijayawada • Andhra Pradesh",
+          "length": 36
+        }
+      ],
+      "paragraphs": [
+        {
+          "text": "A scenic resort for weddings, parties, and business events on open green lawns.",
+          "selector": "p.text-sm.sm:text-base"
+        },
+        {
+          "text": "Located on Poranki Road in Vijayawada, Murali Resort pairs modern halls with green lawns. Host grand weddings and events with ease. Your guests will enjoy plenty of space to celebrate in comfort.",
+          "selector": "p.text-[#525A62].text-base"
+        },
+        {
+          "text": "Find the right space for your wedding, business conference, or relaxing stay.",
+          "selector": "p.text-[#525A62].text-base"
+        },
+        {
+          "text": "A spacious indoor hall with clear views, crystal lighting, and quality sound. Perfect for banquets and large meetings.",
+          "selector": "p.text-[#525A62].text-sm"
+        },
+        {
+          "text": "Browse real photos from weddings, receptions, and banquets at Murali Resort. Drag or scroll to explore the gallery.",
+          "selector": "p.text-[#525A62].text-base"
+        },
+        {
+          "text": "A grand wedding walkway with crystal lights, fresh flowers, and a red carpet.",
+          "selector": "p.circular-gallery-caption-text"
+        },
+        {
+          "text": "Murali Resort sits on Poranki Road in Vijayawada, with easy highway access. A wide driveway lets your guests arrive and park with ease.",
+          "selector": "p.text-[#525A62].text-base"
+        },
+        {
+          "text": "Survey No - 134, Poranki-Nidamanuru Road,Poranki, Vijayawada, Andhra Pradesh 521137",
+          "selector": "p.text-sm.text-[#525A62]"
+        },
+        {
+          "text": "Direct access from Poranki Road links you quickly to the city center and main highways.",
+          "selector": "p.text-sm.text-[#525A62]"
+        },
+        {
+          "text": "A covered porch and circular driveway let guests drive right up to the main hall with no traffic delays.",
+          "selector": "p.text-sm.text-[#525A62]"
+        },
+        {
+          "text": "Separate service gates keep catering and decor teams away from guests, so events run quietly and smoothly.",
+          "selector": "p.text-sm.text-[#525A62]"
+        },
+        {
+          "text": "Real reviews from guests who hosted weddings, parties, and meetings at Murali Resort.",
+          "selector": "p.text-[#525A62].text-base"
+        },
+        {
+          "text": "Verified Google Rating · 1,300+ reviews",
+          "selector": "p.text-xs.text-[#525A62]"
+        },
+        {
+          "text": "“Very spacious place for conducting marriage and other big functions. Big car parking and sufficient for good number of gathering.”",
+          "selector": "blockquote.text-[#525A62].text-sm"
+        },
+        {
+          "text": "“Very good and big convention halls and huge parking area”",
+          "selector": "blockquote.text-[#525A62].text-sm"
+        },
+        {
+          "text": "“Wow Murali resort is the best option for function Hall. And also it's best option for meetings. I enjoyed meetings here I attended two times here in murali resorts. I thoroughly enjoyed with my family especially my kids spent good time here. Waiting to visit again when I get the opertunity...”",
+          "selector": "blockquote.text-[#525A62].text-sm"
+        },
+        {
+          "text": "“One of the best convention halls for functions. It easily holds up to 1,500 people, and the service is great. The resort is located in a peaceful area away from the busy city. Everything was well designed.”",
+          "selector": "blockquote.text-[#525A62].text-sm"
+        },
+        {
+          "text": "Join our community of hosts by sharing your honest experience on Google Maps.",
+          "selector": "p.text-xs.sm:text-sm"
+        },
+        {
+          "text": "Talk to our team to check open dates, discuss hall setups, and plan catering or guest rooms.",
+          "selector": "p.text-stone-300.text-base"
+        },
+        {
+          "text": "A premier venue for weddings, family parties, and corporate events in Vijayawada. We offer an indoor hall for 800 seated guests, open lawns, and on-site guest rooms.",
+          "selector": "p.text-sm.text-stone-300"
+        },
+        {
+          "text": "© 2026 Murali Resort. All rights reserved.",
+          "selector": "p"
+        }
+      ],
+      "links": [
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        },
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        }
+      ],
+      "pageTitle": "Murali Resort | Premium Resort & Convention Center — Vijayawada"
+    },
+    "interactiveTestResults": {
+      "mobileMenu": {
+        "opened": true,
+        "ariaExpanded": "true"
+      },
+      "mobileMenuEscapeCloses": true
+    }
+  },
+  {
+    "phase": "initial",
+    "page": {
+      "key": "home",
+      "path": "/home",
+      "name": "Home"
+    },
+    "viewport": {
+      "key": "tablet",
+      "width": 768,
+      "height": 1024,
+      "isMobile": false,
+      "hasTouch": true
+    },
+    "screenshot": "initial_home_tablet.png",
+    "consoleErrors": [],
+    "failedRequests": [],
+    "axeViolations": [
+      {
+        "id": "label-content-name-mismatch",
+        "impact": "serious",
+        "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+        "help": "Elements must have their visible text as part of their accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=playwright",
+        "tags": [
+          "cat.semantics",
+          "wcag21a",
+          "wcag253",
+          "EN-301-549",
+          "EN-9.2.5.3",
+          "RGAAv4",
+          "RGAA-6.1.5"
+        ],
+        "nodes": [
+          {
+            "html": "<button class=\"hidden sm:inline-flex items-center gap-1.5 text-stone-200 text-xs tracking-widest uppercase hover:text-white transition-colors group self-start sm:self-auto shrink-0\" aria-label=\"Skip scroll animation and view venue details\">",
+            "target": [
+              ".sm\\:inline-flex"
+            ],
+            "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+            "any": [
+              {
+                "id": "label-content-name-mismatch",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Text inside the element is not included in the accessible name"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "html": "<a id=\"tab-more\" aria-label=\"View all resort spaces and facilities\" class=\"btn-pill btn-pill-inactive group\" href=\"/facilities\">",
+            "target": [
+              "#tab-more"
+            ],
+            "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+            "any": [
+              {
+                "id": "label-content-name-mismatch",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Text inside the element is not included in the accessible name"
+              }
+            ],
+            "all": [],
+            "none": []
+          }
+        ]
+      }
+    ],
+    "axePassesCount": 28,
+    "domEvaluation": {
+      "issues": [],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Murali Resort & Convention Center — Where Moments Become Memories.",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "53.76px"
+        },
+        {
+          "tag": "h2",
+          "text": "A Destination Designed for Scale & Elegance.",
+          "fontSize": "36px",
+          "fontWeight": "400",
+          "lineHeight": "40.32px"
+        },
+        {
+          "tag": "h2",
+          "text": "Tailored Venues for Every Occasion.",
+          "fontSize": "36px",
+          "fontWeight": "400",
+          "lineHeight": "41.4px"
+        },
+        {
+          "tag": "h3",
+          "text": "The Grand Convention Hall",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "36px"
+        },
+        {
+          "tag": "h2",
+          "text": "Real Celebrations Brought to Life.",
+          "fontSize": "36px",
+          "fontWeight": "400",
+          "lineHeight": "41.4px"
+        },
+        {
+          "tag": "h2",
+          "text": "Accessible Location, Seamless Arrival.",
+          "fontSize": "36px",
+          "fontWeight": "400",
+          "lineHeight": "41.4px"
+        },
+        {
+          "tag": "h3",
+          "text": "Murali Resort & Convention Center",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h3",
+          "text": "Direct Highway Access",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h3",
+          "text": "Dedicated Circular Drop-Off",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h3",
+          "text": "Event Staging Logistics",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h2",
+          "text": "Real Experiences from Google Maps.",
+          "fontSize": "36px",
+          "fontWeight": "400",
+          "lineHeight": "41.04px"
+        },
+        {
+          "tag": "h3",
+          "text": "Pemmaraju Mohan",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h3",
+          "text": "Triveni Velaga",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h3",
+          "text": "pandu",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h3",
+          "text": "Medapati Sai Krishna Reddy",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h4",
+          "text": "Celebrated your milestone event at Murali Resort?",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h2",
+          "text": "Plan Your Event at Murali Resort.",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "52.8px"
+        },
+        {
+          "tag": "h3",
+          "text": "Navigation",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "lineHeight": "20px"
+        },
+        {
+          "tag": "h3",
+          "text": "Contact & Location",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "lineHeight": "20px"
+        }
+      ],
+      "smallTargets": [
+        {
+          "selector": "button.hidden.sm:inline-flex",
+          "text": "Scroll to explore",
+          "width": 164,
+          "height": 16
+        }
+      ],
+      "buttonStylesCount": 8,
+      "longAllCaps": [
+        {
+          "selector": "span",
+          "text": "Scroll to explore",
+          "length": 17
+        },
+        {
+          "selector": "span.text-[#8A622A].uppercase",
+          "text": "Celebration Moments",
+          "length": 19
+        },
+        {
+          "selector": "span",
+          "text": "View Full Gallery",
+          "length": 17
+        },
+        {
+          "selector": "span.text-[#8A622A].uppercase",
+          "text": "Connectivity & Arrival",
+          "length": 22
+        },
+        {
+          "selector": "span",
+          "text": "Open in Google Maps",
+          "length": 19
+        },
+        {
+          "selector": "span",
+          "text": "Calculate Live Route",
+          "length": 20
+        },
+        {
+          "selector": "span.text-[#8A622A].uppercase",
+          "text": "Guest Impressions",
+          "length": 17
+        },
+        {
+          "selector": "span",
+          "text": "Write a Google Review",
+          "length": 21
+        },
+        {
+          "selector": "span.text-xs.uppercase",
+          "text": "Reservations & Enquiries",
+          "length": 24
+        },
+        {
+          "selector": "span.text-xs.text-[#C5A880]",
+          "text": "Poranki, Vijayawada • Andhra Pradesh",
+          "length": 36
+        }
+      ],
+      "paragraphs": [
+        {
+          "text": "A scenic resort for weddings, parties, and business events on open green lawns.",
+          "selector": "p.text-sm.sm:text-base"
+        },
+        {
+          "text": "Located on Poranki Road in Vijayawada, Murali Resort pairs modern halls with green lawns. Host grand weddings and events with ease. Your guests will enjoy plenty of space to celebrate in comfort.",
+          "selector": "p.text-[#525A62].text-base"
+        },
+        {
+          "text": "Find the right space for your wedding, business conference, or relaxing stay.",
+          "selector": "p.text-[#525A62].text-base"
+        },
+        {
+          "text": "A spacious indoor hall with clear views, crystal lighting, and quality sound. Perfect for banquets and large meetings.",
+          "selector": "p.text-[#525A62].text-sm"
+        },
+        {
+          "text": "Browse real photos from weddings, receptions, and banquets at Murali Resort. Drag or scroll to explore the gallery.",
+          "selector": "p.text-[#525A62].text-base"
+        },
+        {
+          "text": "A grand wedding walkway with crystal lights, fresh flowers, and a red carpet.",
+          "selector": "p.circular-gallery-caption-text"
+        },
+        {
+          "text": "Murali Resort sits on Poranki Road in Vijayawada, with easy highway access. A wide driveway lets your guests arrive and park with ease.",
+          "selector": "p.text-[#525A62].text-base"
+        },
+        {
+          "text": "Survey No - 134, Poranki-Nidamanuru Road,Poranki, Vijayawada, Andhra Pradesh 521137",
+          "selector": "p.text-sm.text-[#525A62]"
+        },
+        {
+          "text": "Direct access from Poranki Road links you quickly to the city center and main highways.",
+          "selector": "p.text-sm.text-[#525A62]"
+        },
+        {
+          "text": "A covered porch and circular driveway let guests drive right up to the main hall with no traffic delays.",
+          "selector": "p.text-sm.text-[#525A62]"
+        },
+        {
+          "text": "Separate service gates keep catering and decor teams away from guests, so events run quietly and smoothly.",
+          "selector": "p.text-sm.text-[#525A62]"
+        },
+        {
+          "text": "Real reviews from guests who hosted weddings, parties, and meetings at Murali Resort.",
+          "selector": "p.text-[#525A62].text-base"
+        },
+        {
+          "text": "Verified Google Rating · 1,300+ reviews",
+          "selector": "p.text-xs.text-[#525A62]"
+        },
+        {
+          "text": "“Very spacious place for conducting marriage and other big functions. Big car parking and sufficient for good number of gathering.”",
+          "selector": "blockquote.text-[#525A62].text-sm"
+        },
+        {
+          "text": "“Very good and big convention halls and huge parking area”",
+          "selector": "blockquote.text-[#525A62].text-sm"
+        },
+        {
+          "text": "“Wow Murali resort is the best option for function Hall. And also it's best option for meetings. I enjoyed meetings here I attended two times here in murali resorts. I thoroughly enjoyed with my family especially my kids spent good time here. Waiting to visit again when I get the opertunity...”",
+          "selector": "blockquote.text-[#525A62].text-sm"
+        },
+        {
+          "text": "“One of the best convention halls for functions. It easily holds up to 1,500 people, and the service is great. The resort is located in a peaceful area away from the busy city. Everything was well designed.”",
+          "selector": "blockquote.text-[#525A62].text-sm"
+        },
+        {
+          "text": "Join our community of hosts by sharing your honest experience on Google Maps.",
+          "selector": "p.text-xs.sm:text-sm"
+        },
+        {
+          "text": "Talk to our team to check open dates, discuss hall setups, and plan catering or guest rooms.",
+          "selector": "p.text-stone-300.text-base"
+        },
+        {
+          "text": "A premier venue for weddings, family parties, and corporate events in Vijayawada. We offer an indoor hall for 800 seated guests, open lawns, and on-site guest rooms.",
+          "selector": "p.text-sm.text-stone-300"
+        },
+        {
+          "text": "© 2026 Murali Resort. All rights reserved.",
+          "selector": "p"
+        }
+      ],
+      "links": [
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        },
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        }
+      ],
+      "pageTitle": "Murali Resort | Premium Resort & Convention Center — Vijayawada"
+    },
+    "interactiveTestResults": {
+      "mobileMenu": {
+        "opened": true,
+        "ariaExpanded": "true"
+      },
+      "mobileMenuEscapeCloses": true
+    }
+  },
+  {
+    "phase": "initial",
+    "page": {
+      "key": "facilities",
+      "path": "/facilities",
+      "name": "Facilities"
+    },
+    "viewport": {
+      "key": "desktop",
+      "width": 1440,
+      "height": 900,
+      "isMobile": false,
+      "hasTouch": false
+    },
+    "screenshot": "initial_facilities_desktop.png",
+    "consoleErrors": [],
+    "failedRequests": [],
+    "axeViolations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "nodes": [
+          {
+            "html": "<a class=\"transition-colors drop-shadow-sm whitespace-nowrap isolate text-accent font-semibold\" href=\"/facilities\">Facilities</a>",
+            "target": [
+              ".drop-shadow-sm.whitespace-nowrap[href$=\"facilities\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.21 (foreground color: #c4a984, background color: #585756, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#c4a984",
+                  "bgColor": "#585756",
+                  "contrastRatio": 3.21,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<div class=\"w-full max-w-5xl bg-black/65 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] rounded-full p-2 pl-4 md:pl-6 pr-2 md:pr-2.5 flex items-center justify-between isolate\">",
+                    "target": [
+                      ".bg-black\\/65"
+                    ]
+                  },
+                  {
+                    "html": "<header class=\"pt-28 sm:pt-36 md:pt-48 pb-10 sm:pb-12 px-4 sm:px-6 md:px-12 flex flex-col items-center text-center bg-[#FBF9F5] isolate\">",
+                    "target": [
+                      ".pt-28"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.21 (foreground color: #c4a984, background color: #585756, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+              }
+            ],
+            "all": [],
+            "none": []
+          }
+        ]
+      }
+    ],
+    "axePassesCount": 23,
+    "domEvaluation": {
+      "issues": [],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Facilities & Amenities",
+          "fontSize": "96px",
+          "fontWeight": "400",
+          "lineHeight": "100.8px"
+        },
+        {
+          "tag": "h2",
+          "text": "Conference Halls",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "36px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Outdoor Terraces",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "36px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Culinary Excellence",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "36px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "24/7 Concierge",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "36px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Seamless Tech",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "36px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Décor & Styling",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "36px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Conference Halls",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Outdoor Terraces",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Culinary Excellence",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "24/7 Concierge",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Seamless Tech",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Décor & Styling",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Seeourspacesinperson",
+          "fontSize": "60px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Explore",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Contact",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Ready to plan?",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        }
+      ],
+      "smallTargets": [
+        {
+          "selector": "a.transition-colors.drop-shadow-sm",
+          "text": "Celebrations",
+          "width": 85,
+          "height": 20
+        },
+        {
+          "selector": "a.transition-colors.drop-shadow-sm",
+          "text": "Facilities",
+          "width": 60,
+          "height": 20
+        },
+        {
+          "selector": "a.transition-colors.drop-shadow-sm",
+          "text": "Gallery",
+          "width": 47,
+          "height": 20
+        }
+      ],
+      "buttonStylesCount": 1,
+      "longAllCaps": [],
+      "paragraphs": [
+        {
+          "text": "Spaces that work as hard as they look, equipped with everything you need.",
+          "selector": "p.text-stone-600.text-base"
+        },
+        {
+          "text": "Our modern conference halls are built for clear focus and great events. Enjoy open views with no pillars, quiet soundproof walls, and window blinds for screens. You can divide the hall into four rooms or open it up for large talks.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Give your guests fresh air and natural views in total comfort. Our green terraces wrap around the main building with warm evening lights and sunset skies. They are great for welcome drinks, photo sessions, or open-air dinner under the stars.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Our resort kitchen is led by skilled chefs who create fresh menus for every event. From light finger foods to full plated dinners, we tailor every dish to your taste. Your guests will enjoy great food and attentive service throughout the meal.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Plans can change quickly during an event. Our on-site team is available 24 hours a day to help with every detail. We handle guest arrivals, travel rides, room bookings, and last-minute requests with ease.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Fast internet and modern tech power every event at our resort. We offer high-speed fiber Wi-Fi, HD video cameras for live streaming, and clear sound systems. Our on-site tech team helps make sure everything runs smoothly.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Our venue is ready for your personal touch. Our design team works with top florists, lighting specialists, and decor partners to bring your vision to life. We style each room to match your event theme and colors.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Our modern conference halls are built for clear focus and great events. Enjoy open views with no pillars, quiet soundproof walls, and window blinds for screens. You can divide the hall into four rooms or open it up for large talks.",
+          "selector": "p.text-stone-600.text-lg"
+        },
+        {
+          "text": "Give your guests fresh air and natural views in total comfort. Our green terraces wrap around the main building with warm evening lights and sunset skies. They are great for welcome drinks, photo sessions, or open-air dinner under the stars.",
+          "selector": "p.text-stone-600.text-lg"
+        },
+        {
+          "text": "Our resort kitchen is led by skilled chefs who create fresh menus for every event. From light finger foods to full plated dinners, we tailor every dish to your taste. Your guests will enjoy great food and attentive service throughout the meal.",
+          "selector": "p.text-stone-600.text-lg"
+        },
+        {
+          "text": "Plans can change quickly during an event. Our on-site team is available 24 hours a day to help with every detail. We handle guest arrivals, travel rides, room bookings, and last-minute requests with ease.",
+          "selector": "p.text-stone-600.text-lg"
+        },
+        {
+          "text": "Fast internet and modern tech power every event at our resort. We offer high-speed fiber Wi-Fi, HD video cameras for live streaming, and clear sound systems. Our on-site tech team helps make sure everything runs smoothly.",
+          "selector": "p.text-stone-600.text-lg"
+        },
+        {
+          "text": "Our venue is ready for your personal touch. Our design team works with top florists, lighting specialists, and decor partners to bring your vision to life. We style each room to match your event theme and colors.",
+          "selector": "p.text-stone-600.text-lg"
+        },
+        {
+          "text": "Schedule a guided tour of our facilities with our event team.",
+          "selector": "p.text-base.sm:text-lg"
+        },
+        {
+          "text": "A premium destination for weddings, celebrations, corporate events, and unforgettable gatherings.",
+          "selector": "p.text-sm.leading-relaxed"
+        },
+        {
+          "text": "© 2026 Murali Resort. All rights reserved.",
+          "selector": "p"
+        }
+      ],
+      "links": [
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        },
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        }
+      ],
+      "pageTitle": "Murali Resort | Premium Resort & Convention Center"
+    },
+    "interactiveTestResults": {}
+  },
+  {
+    "phase": "initial",
+    "page": {
+      "key": "facilities",
+      "path": "/facilities",
+      "name": "Facilities"
+    },
+    "viewport": {
+      "key": "mobile",
+      "width": 390,
+      "height": 844,
+      "isMobile": true,
+      "hasTouch": true
+    },
+    "screenshot": "initial_facilities_mobile.png",
+    "consoleErrors": [],
+    "failedRequests": [],
+    "axeViolations": [],
+    "axePassesCount": 24,
+    "domEvaluation": {
+      "issues": [],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Facilities & Amenities",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "32.4px"
+        },
+        {
+          "tag": "h2",
+          "text": "Conference Halls",
+          "fontSize": "24px",
+          "fontWeight": "400",
+          "lineHeight": "32px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Outdoor Terraces",
+          "fontSize": "24px",
+          "fontWeight": "400",
+          "lineHeight": "32px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Culinary Excellence",
+          "fontSize": "24px",
+          "fontWeight": "400",
+          "lineHeight": "32px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "24/7 Concierge",
+          "fontSize": "24px",
+          "fontWeight": "400",
+          "lineHeight": "32px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Seamless Tech",
+          "fontSize": "24px",
+          "fontWeight": "400",
+          "lineHeight": "32px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Décor & Styling",
+          "fontSize": "24px",
+          "fontWeight": "400",
+          "lineHeight": "32px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Conference Halls",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Outdoor Terraces",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Culinary Excellence",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "24/7 Concierge",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Seamless Tech",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Décor & Styling",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Seeourspacesinperson",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "36px"
+        },
+        {
+          "tag": "h3",
+          "text": "Explore",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Contact",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Ready to plan?",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        }
+      ],
+      "smallTargets": [],
+      "buttonStylesCount": 1,
+      "longAllCaps": [],
+      "paragraphs": [
+        {
+          "text": "Spaces that work as hard as they look, equipped with everything you need.",
+          "selector": "p.text-stone-600.text-base"
+        },
+        {
+          "text": "Our modern conference halls are built for clear focus and great events. Enjoy open views with no pillars, quiet soundproof walls, and window blinds for screens. You can divide the hall into four rooms or open it up for large talks.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Give your guests fresh air and natural views in total comfort. Our green terraces wrap around the main building with warm evening lights and sunset skies. They are great for welcome drinks, photo sessions, or open-air dinner under the stars.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Our resort kitchen is led by skilled chefs who create fresh menus for every event. From light finger foods to full plated dinners, we tailor every dish to your taste. Your guests will enjoy great food and attentive service throughout the meal.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Plans can change quickly during an event. Our on-site team is available 24 hours a day to help with every detail. We handle guest arrivals, travel rides, room bookings, and last-minute requests with ease.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Fast internet and modern tech power every event at our resort. We offer high-speed fiber Wi-Fi, HD video cameras for live streaming, and clear sound systems. Our on-site tech team helps make sure everything runs smoothly.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Our venue is ready for your personal touch. Our design team works with top florists, lighting specialists, and decor partners to bring your vision to life. We style each room to match your event theme and colors.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Our modern conference halls are built for clear focus and great events. Enjoy open views with no pillars, quiet soundproof walls, and window blinds for screens. You can divide the hall into four rooms or open it up for large talks.",
+          "selector": "p.text-stone-600.text-lg"
+        },
+        {
+          "text": "Give your guests fresh air and natural views in total comfort. Our green terraces wrap around the main building with warm evening lights and sunset skies. They are great for welcome drinks, photo sessions, or open-air dinner under the stars.",
+          "selector": "p.text-stone-600.text-lg"
+        },
+        {
+          "text": "Our resort kitchen is led by skilled chefs who create fresh menus for every event. From light finger foods to full plated dinners, we tailor every dish to your taste. Your guests will enjoy great food and attentive service throughout the meal.",
+          "selector": "p.text-stone-600.text-lg"
+        },
+        {
+          "text": "Plans can change quickly during an event. Our on-site team is available 24 hours a day to help with every detail. We handle guest arrivals, travel rides, room bookings, and last-minute requests with ease.",
+          "selector": "p.text-stone-600.text-lg"
+        },
+        {
+          "text": "Fast internet and modern tech power every event at our resort. We offer high-speed fiber Wi-Fi, HD video cameras for live streaming, and clear sound systems. Our on-site tech team helps make sure everything runs smoothly.",
+          "selector": "p.text-stone-600.text-lg"
+        },
+        {
+          "text": "Our venue is ready for your personal touch. Our design team works with top florists, lighting specialists, and decor partners to bring your vision to life. We style each room to match your event theme and colors.",
+          "selector": "p.text-stone-600.text-lg"
+        },
+        {
+          "text": "Schedule a guided tour of our facilities with our event team.",
+          "selector": "p.text-base.sm:text-lg"
+        },
+        {
+          "text": "A premium destination for weddings, celebrations, corporate events, and unforgettable gatherings.",
+          "selector": "p.text-sm.leading-relaxed"
+        },
+        {
+          "text": "© 2026 Murali Resort. All rights reserved.",
+          "selector": "p"
+        }
+      ],
+      "links": [
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        },
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        }
+      ],
+      "pageTitle": "Murali Resort | Premium Resort & Convention Center"
+    },
+    "interactiveTestResults": {
+      "mobileMenu": {
+        "opened": true,
+        "ariaExpanded": "true"
+      },
+      "mobileMenuEscapeCloses": true
+    }
+  },
+  {
+    "phase": "initial",
+    "page": {
+      "key": "facilities",
+      "path": "/facilities",
+      "name": "Facilities"
+    },
+    "viewport": {
+      "key": "tablet",
+      "width": 768,
+      "height": 1024,
+      "isMobile": false,
+      "hasTouch": true
+    },
+    "screenshot": "initial_facilities_tablet.png",
+    "consoleErrors": [],
+    "failedRequests": [],
+    "axeViolations": [],
+    "axePassesCount": 24,
+    "domEvaluation": {
+      "issues": [],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Facilities & Amenities",
+          "fontSize": "72px",
+          "fontWeight": "400",
+          "lineHeight": "75.6px"
+        },
+        {
+          "tag": "h2",
+          "text": "Conference Halls",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "36px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Outdoor Terraces",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "36px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Culinary Excellence",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "36px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "24/7 Concierge",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "36px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Seamless Tech",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "36px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Décor & Styling",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "36px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Conference Halls",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Outdoor Terraces",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Culinary Excellence",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "24/7 Concierge",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Seamless Tech",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Décor & Styling",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Key Features",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h2",
+          "text": "Seeourspacesinperson",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "48px"
+        },
+        {
+          "tag": "h3",
+          "text": "Explore",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Contact",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Ready to plan?",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        }
+      ],
+      "smallTargets": [],
+      "buttonStylesCount": 1,
+      "longAllCaps": [],
+      "paragraphs": [
+        {
+          "text": "Spaces that work as hard as they look, equipped with everything you need.",
+          "selector": "p.text-stone-600.text-base"
+        },
+        {
+          "text": "Our modern conference halls are built for clear focus and great events. Enjoy open views with no pillars, quiet soundproof walls, and window blinds for screens. You can divide the hall into four rooms or open it up for large talks.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Give your guests fresh air and natural views in total comfort. Our green terraces wrap around the main building with warm evening lights and sunset skies. They are great for welcome drinks, photo sessions, or open-air dinner under the stars.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Our resort kitchen is led by skilled chefs who create fresh menus for every event. From light finger foods to full plated dinners, we tailor every dish to your taste. Your guests will enjoy great food and attentive service throughout the meal.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Plans can change quickly during an event. Our on-site team is available 24 hours a day to help with every detail. We handle guest arrivals, travel rides, room bookings, and last-minute requests with ease.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Fast internet and modern tech power every event at our resort. We offer high-speed fiber Wi-Fi, HD video cameras for live streaming, and clear sound systems. Our on-site tech team helps make sure everything runs smoothly.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Our venue is ready for your personal touch. Our design team works with top florists, lighting specialists, and decor partners to bring your vision to life. We style each room to match your event theme and colors.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Our modern conference halls are built for clear focus and great events. Enjoy open views with no pillars, quiet soundproof walls, and window blinds for screens. You can divide the hall into four rooms or open it up for large talks.",
+          "selector": "p.text-stone-600.text-lg"
+        },
+        {
+          "text": "Give your guests fresh air and natural views in total comfort. Our green terraces wrap around the main building with warm evening lights and sunset skies. They are great for welcome drinks, photo sessions, or open-air dinner under the stars.",
+          "selector": "p.text-stone-600.text-lg"
+        },
+        {
+          "text": "Our resort kitchen is led by skilled chefs who create fresh menus for every event. From light finger foods to full plated dinners, we tailor every dish to your taste. Your guests will enjoy great food and attentive service throughout the meal.",
+          "selector": "p.text-stone-600.text-lg"
+        },
+        {
+          "text": "Plans can change quickly during an event. Our on-site team is available 24 hours a day to help with every detail. We handle guest arrivals, travel rides, room bookings, and last-minute requests with ease.",
+          "selector": "p.text-stone-600.text-lg"
+        },
+        {
+          "text": "Fast internet and modern tech power every event at our resort. We offer high-speed fiber Wi-Fi, HD video cameras for live streaming, and clear sound systems. Our on-site tech team helps make sure everything runs smoothly.",
+          "selector": "p.text-stone-600.text-lg"
+        },
+        {
+          "text": "Our venue is ready for your personal touch. Our design team works with top florists, lighting specialists, and decor partners to bring your vision to life. We style each room to match your event theme and colors.",
+          "selector": "p.text-stone-600.text-lg"
+        },
+        {
+          "text": "Schedule a guided tour of our facilities with our event team.",
+          "selector": "p.text-base.sm:text-lg"
+        },
+        {
+          "text": "A premium destination for weddings, celebrations, corporate events, and unforgettable gatherings.",
+          "selector": "p.text-sm.leading-relaxed"
+        },
+        {
+          "text": "© 2026 Murali Resort. All rights reserved.",
+          "selector": "p"
+        }
+      ],
+      "links": [
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        },
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        }
+      ],
+      "pageTitle": "Murali Resort | Premium Resort & Convention Center"
+    },
+    "interactiveTestResults": {
+      "mobileMenu": {
+        "opened": true,
+        "ariaExpanded": "true"
+      },
+      "mobileMenuEscapeCloses": true
+    }
+  },
+  {
+    "phase": "initial",
+    "page": {
+      "key": "gallery",
+      "path": "/gallery",
+      "name": "Gallery"
+    },
+    "viewport": {
+      "key": "desktop",
+      "width": 1440,
+      "height": 900,
+      "isMobile": false,
+      "hasTouch": false
+    },
+    "screenshot": "initial_gallery_desktop.png",
+    "consoleErrors": [],
+    "failedRequests": [],
+    "axeViolations": [],
+    "axePassesCount": 24,
+    "domEvaluation": {
+      "issues": [],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Visual Journey",
+          "fontSize": "72px",
+          "fontWeight": "400",
+          "lineHeight": "90px"
+        },
+        {
+          "tag": "h2",
+          "text": "PictureYourEventHere",
+          "fontSize": "60px",
+          "fontWeight": "400",
+          "lineHeight": "60px"
+        },
+        {
+          "tag": "h3",
+          "text": "Explore",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Contact",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Ready to plan?",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        }
+      ],
+      "smallTargets": [
+        {
+          "selector": "a.transition-colors.drop-shadow-sm",
+          "text": "Celebrations",
+          "width": 85,
+          "height": 20
+        },
+        {
+          "selector": "a.transition-colors.drop-shadow-sm",
+          "text": "Facilities",
+          "width": 59,
+          "height": 20
+        },
+        {
+          "selector": "a.transition-colors.drop-shadow-sm",
+          "text": "Gallery",
+          "width": 48,
+          "height": 20
+        }
+      ],
+      "buttonStylesCount": 2,
+      "longAllCaps": [],
+      "paragraphs": [
+        {
+          "text": "A glimpse into the extraordinary moments we've brought to life.",
+          "selector": "p.text-stone-300.text-base"
+        },
+        {
+          "text": "Our team is ready to help you create your own visual masterpiece.",
+          "selector": "p.text-base.sm:text-lg"
+        },
+        {
+          "text": "A premium destination for weddings, celebrations, corporate events, and unforgettable gatherings.",
+          "selector": "p.text-sm.leading-relaxed"
+        },
+        {
+          "text": "© 2026 Murali Resort. All rights reserved.",
+          "selector": "p"
+        }
+      ],
+      "links": [
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        },
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        }
+      ],
+      "pageTitle": "Murali Resort | Premium Resort & Convention Center"
+    },
+    "interactiveTestResults": {}
+  },
+  {
+    "phase": "initial",
+    "page": {
+      "key": "gallery",
+      "path": "/gallery",
+      "name": "Gallery"
+    },
+    "viewport": {
+      "key": "mobile",
+      "width": 390,
+      "height": 844,
+      "isMobile": true,
+      "hasTouch": true
+    },
+    "screenshot": "initial_gallery_mobile.png",
+    "consoleErrors": [],
+    "failedRequests": [],
+    "axeViolations": [],
+    "axePassesCount": 25,
+    "domEvaluation": {
+      "issues": [],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Visual Journey",
+          "fontSize": "36px",
+          "fontWeight": "400",
+          "lineHeight": "45px"
+        },
+        {
+          "tag": "h2",
+          "text": "PictureYourEventHere",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "36px"
+        },
+        {
+          "tag": "h3",
+          "text": "Explore",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Contact",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Ready to plan?",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        }
+      ],
+      "smallTargets": [],
+      "buttonStylesCount": 2,
+      "longAllCaps": [],
+      "paragraphs": [
+        {
+          "text": "A glimpse into the extraordinary moments we've brought to life.",
+          "selector": "p.text-stone-300.text-base"
+        },
+        {
+          "text": "Our team is ready to help you create your own visual masterpiece.",
+          "selector": "p.text-base.sm:text-lg"
+        },
+        {
+          "text": "A premium destination for weddings, celebrations, corporate events, and unforgettable gatherings.",
+          "selector": "p.text-sm.leading-relaxed"
+        },
+        {
+          "text": "© 2026 Murali Resort. All rights reserved.",
+          "selector": "p"
+        }
+      ],
+      "links": [
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        },
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        }
+      ],
+      "pageTitle": "Murali Resort | Premium Resort & Convention Center"
+    },
+    "interactiveTestResults": {
+      "mobileMenu": {
+        "opened": true,
+        "ariaExpanded": "true"
+      },
+      "mobileMenuEscapeCloses": true
+    }
+  },
+  {
+    "phase": "initial",
+    "page": {
+      "key": "gallery",
+      "path": "/gallery",
+      "name": "Gallery"
+    },
+    "viewport": {
+      "key": "tablet",
+      "width": 768,
+      "height": 1024,
+      "isMobile": false,
+      "hasTouch": true
+    },
+    "screenshot": "initial_gallery_tablet.png",
+    "consoleErrors": [],
+    "failedRequests": [],
+    "axeViolations": [],
+    "axePassesCount": 25,
+    "domEvaluation": {
+      "issues": [],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Visual Journey",
+          "fontSize": "72px",
+          "fontWeight": "400",
+          "lineHeight": "90px"
+        },
+        {
+          "tag": "h2",
+          "text": "PictureYourEventHere",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "lineHeight": "48px"
+        },
+        {
+          "tag": "h3",
+          "text": "Explore",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Contact",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Ready to plan?",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        }
+      ],
+      "smallTargets": [],
+      "buttonStylesCount": 2,
+      "longAllCaps": [],
+      "paragraphs": [
+        {
+          "text": "A glimpse into the extraordinary moments we've brought to life.",
+          "selector": "p.text-stone-300.text-base"
+        },
+        {
+          "text": "Our team is ready to help you create your own visual masterpiece.",
+          "selector": "p.text-base.sm:text-lg"
+        },
+        {
+          "text": "A premium destination for weddings, celebrations, corporate events, and unforgettable gatherings.",
+          "selector": "p.text-sm.leading-relaxed"
+        },
+        {
+          "text": "© 2026 Murali Resort. All rights reserved.",
+          "selector": "p"
+        }
+      ],
+      "links": [
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        },
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        }
+      ],
+      "pageTitle": "Murali Resort | Premium Resort & Convention Center"
+    },
+    "interactiveTestResults": {
+      "mobileMenu": {
+        "opened": true,
+        "ariaExpanded": "true"
+      },
+      "mobileMenuEscapeCloses": true
+    }
+  },
+  {
+    "phase": "initial",
+    "page": {
+      "key": "contact",
+      "path": "/contact",
+      "name": "Contact"
+    },
+    "viewport": {
+      "key": "desktop",
+      "width": 1440,
+      "height": 900,
+      "isMobile": false,
+      "hasTouch": false
+    },
+    "screenshot": "initial_contact_desktop.png",
+    "consoleErrors": [],
+    "failedRequests": [],
+    "axeViolations": [],
+    "axePassesCount": 30,
+    "domEvaluation": {
+      "issues": [],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "TheJourneyBeginsHere.",
+          "fontSize": "96px",
+          "fontWeight": "400",
+          "lineHeight": "100.8px"
+        },
+        {
+          "tag": "h2",
+          "text": "Murali Resort",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h2",
+          "text": "Contact Information",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "36px"
+        },
+        {
+          "tag": "h3",
+          "text": "Location",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "lineHeight": "16.5px"
+        },
+        {
+          "tag": "h3",
+          "text": "Direct Lines",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "lineHeight": "16.5px"
+        },
+        {
+          "tag": "h3",
+          "text": "WhatsApp",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "lineHeight": "16.5px"
+        },
+        {
+          "tag": "h3",
+          "text": "Email",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "lineHeight": "16.5px"
+        },
+        {
+          "tag": "h3",
+          "text": "Operating Hours",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "lineHeight": "16.5px"
+        },
+        {
+          "tag": "h3",
+          "text": "Explore",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Contact",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Ready to plan?",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        }
+      ],
+      "smallTargets": [
+        {
+          "selector": "a.transition-colors.drop-shadow-sm",
+          "text": "Celebrations",
+          "width": 85,
+          "height": 20
+        },
+        {
+          "selector": "a.transition-colors.drop-shadow-sm",
+          "text": "Facilities",
+          "width": 59,
+          "height": 20
+        },
+        {
+          "selector": "a.transition-colors.drop-shadow-sm",
+          "text": "Gallery",
+          "width": 47,
+          "height": 20
+        },
+        {
+          "selector": "div.leaflet-marker-icon.bg-transparent",
+          "text": "Murali Resort Location",
+          "width": 12,
+          "height": 12
+        },
+        {
+          "selector": "a.text-stone-500.text-xs",
+          "text": "+91 9502507999",
+          "width": 97,
+          "height": 15
+        }
+      ],
+      "buttonStylesCount": 4,
+      "longAllCaps": [],
+      "paragraphs": [
+        {
+          "text": "Murali Resort is seamlessly accessible. Discover the fastest route from your exact location straight to our grand entrance.",
+          "selector": "p.text-stone-300.text-base"
+        },
+        {
+          "text": "Survey No - 134, Poranki-Nidamanuru,Poranki, Vijayawada, AP 521137",
+          "selector": "p.text-stone-300.text-sm"
+        },
+        {
+          "text": "Whether you are ready to book or exploring bespoke options, our dedicated events team is here to assist you.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Survey No - 134, Poranki-NidamanuruPoranki, Vijayawada, AP 521137",
+          "selector": "p.text-stone-500.text-xs"
+        },
+        {
+          "text": "+91 9502507999+91 9440883636",
+          "selector": "p.text-stone-500.text-xs"
+        },
+        {
+          "text": "info@muraliresort.comevents@muraliresort.com",
+          "selector": "p.text-stone-500.text-xs"
+        },
+        {
+          "text": "Mon - Sun: 9:00 AM - 8:00 PM",
+          "selector": "p.text-stone-500.text-xs"
+        },
+        {
+          "text": "A premium destination for weddings, celebrations, corporate events, and unforgettable gatherings.",
+          "selector": "p.text-sm.leading-relaxed"
+        },
+        {
+          "text": "© 2026 Murali Resort. All rights reserved.",
+          "selector": "p"
+        }
+      ],
+      "links": [
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        },
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        }
+      ],
+      "pageTitle": "Murali Resort | Premium Resort & Convention Center"
+    },
+    "interactiveTestResults": {
+      "formPresent": true,
+      "submitButton": true
+    }
+  },
+  {
+    "phase": "initial",
+    "page": {
+      "key": "contact",
+      "path": "/contact",
+      "name": "Contact"
+    },
+    "viewport": {
+      "key": "mobile",
+      "width": 390,
+      "height": 844,
+      "isMobile": true,
+      "hasTouch": true
+    },
+    "screenshot": "initial_contact_mobile.png",
+    "consoleErrors": [],
+    "failedRequests": [],
+    "axeViolations": [],
+    "axePassesCount": 30,
+    "domEvaluation": {
+      "issues": [],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "TheJourneyBeginsHere.",
+          "fontSize": "36px",
+          "fontWeight": "400",
+          "lineHeight": "38.88px"
+        },
+        {
+          "tag": "h2",
+          "text": "Murali Resort",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h2",
+          "text": "Contact Information",
+          "fontSize": "24px",
+          "fontWeight": "400",
+          "lineHeight": "32px"
+        },
+        {
+          "tag": "h3",
+          "text": "Location",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "lineHeight": "16.5px"
+        },
+        {
+          "tag": "h3",
+          "text": "Direct Lines",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "lineHeight": "16.5px"
+        },
+        {
+          "tag": "h3",
+          "text": "WhatsApp",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "lineHeight": "16.5px"
+        },
+        {
+          "tag": "h3",
+          "text": "Email",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "lineHeight": "16.5px"
+        },
+        {
+          "tag": "h3",
+          "text": "Operating Hours",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "lineHeight": "16.5px"
+        },
+        {
+          "tag": "h3",
+          "text": "Explore",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Contact",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Ready to plan?",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        }
+      ],
+      "smallTargets": [
+        {
+          "selector": "div.leaflet-marker-icon.bg-transparent",
+          "text": "Murali Resort Location",
+          "width": 12,
+          "height": 12
+        },
+        {
+          "selector": "a.text-stone-500.text-xs",
+          "text": "+91 9502507999",
+          "width": 97,
+          "height": 15
+        }
+      ],
+      "buttonStylesCount": 4,
+      "longAllCaps": [],
+      "paragraphs": [
+        {
+          "text": "Murali Resort is seamlessly accessible. Discover the fastest route from your exact location straight to our grand entrance.",
+          "selector": "p.text-stone-300.text-base"
+        },
+        {
+          "text": "Survey No - 134, Poranki-Nidamanuru,Poranki, Vijayawada, AP 521137",
+          "selector": "p.text-stone-300.text-sm"
+        },
+        {
+          "text": "Whether you are ready to book or exploring bespoke options, our dedicated events team is here to assist you.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Survey No - 134, Poranki-NidamanuruPoranki, Vijayawada, AP 521137",
+          "selector": "p.text-stone-500.text-xs"
+        },
+        {
+          "text": "+91 9502507999+91 9440883636",
+          "selector": "p.text-stone-500.text-xs"
+        },
+        {
+          "text": "info@muraliresort.comevents@muraliresort.com",
+          "selector": "p.text-stone-500.text-xs"
+        },
+        {
+          "text": "Mon - Sun: 9:00 AM - 8:00 PM",
+          "selector": "p.text-stone-500.text-xs"
+        },
+        {
+          "text": "A premium destination for weddings, celebrations, corporate events, and unforgettable gatherings.",
+          "selector": "p.text-sm.leading-relaxed"
+        },
+        {
+          "text": "© 2026 Murali Resort. All rights reserved.",
+          "selector": "p"
+        }
+      ],
+      "links": [
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        },
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        }
+      ],
+      "pageTitle": "Murali Resort | Premium Resort & Convention Center"
+    },
+    "interactiveTestResults": {
+      "mobileMenu": {
+        "opened": true,
+        "ariaExpanded": "true"
+      },
+      "mobileMenuEscapeCloses": true,
+      "formPresent": true,
+      "submitButton": true
+    }
+  },
+  {
+    "phase": "initial",
+    "page": {
+      "key": "contact",
+      "path": "/contact",
+      "name": "Contact"
+    },
+    "viewport": {
+      "key": "tablet",
+      "width": 768,
+      "height": 1024,
+      "isMobile": false,
+      "hasTouch": true
+    },
+    "screenshot": "initial_contact_tablet.png",
+    "consoleErrors": [],
+    "failedRequests": [],
+    "axeViolations": [],
+    "axePassesCount": 30,
+    "domEvaluation": {
+      "issues": [],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "TheJourneyBeginsHere.",
+          "fontSize": "72px",
+          "fontWeight": "400",
+          "lineHeight": "75.6px"
+        },
+        {
+          "tag": "h2",
+          "text": "Murali Resort",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "lineHeight": "28px"
+        },
+        {
+          "tag": "h2",
+          "text": "Contact Information",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "lineHeight": "36px"
+        },
+        {
+          "tag": "h3",
+          "text": "Location",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "lineHeight": "16.5px"
+        },
+        {
+          "tag": "h3",
+          "text": "Direct Lines",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "lineHeight": "16.5px"
+        },
+        {
+          "tag": "h3",
+          "text": "WhatsApp",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "lineHeight": "16.5px"
+        },
+        {
+          "tag": "h3",
+          "text": "Email",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "lineHeight": "16.5px"
+        },
+        {
+          "tag": "h3",
+          "text": "Operating Hours",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "lineHeight": "16.5px"
+        },
+        {
+          "tag": "h3",
+          "text": "Explore",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Contact",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Ready to plan?",
+          "fontSize": "12px",
+          "fontWeight": "600",
+          "lineHeight": "16px"
+        }
+      ],
+      "smallTargets": [
+        {
+          "selector": "div.leaflet-marker-icon.bg-transparent",
+          "text": "Murali Resort Location",
+          "width": 12,
+          "height": 12
+        },
+        {
+          "selector": "a.text-stone-500.text-xs",
+          "text": "+91 9502507999",
+          "width": 97,
+          "height": 15
+        }
+      ],
+      "buttonStylesCount": 4,
+      "longAllCaps": [],
+      "paragraphs": [
+        {
+          "text": "Murali Resort is seamlessly accessible. Discover the fastest route from your exact location straight to our grand entrance.",
+          "selector": "p.text-stone-300.text-base"
+        },
+        {
+          "text": "Survey No - 134, Poranki-Nidamanuru,Poranki, Vijayawada, AP 521137",
+          "selector": "p.text-stone-300.text-sm"
+        },
+        {
+          "text": "Whether you are ready to book or exploring bespoke options, our dedicated events team is here to assist you.",
+          "selector": "p.text-stone-600.text-sm"
+        },
+        {
+          "text": "Survey No - 134, Poranki-NidamanuruPoranki, Vijayawada, AP 521137",
+          "selector": "p.text-stone-500.text-xs"
+        },
+        {
+          "text": "+91 9502507999+91 9440883636",
+          "selector": "p.text-stone-500.text-xs"
+        },
+        {
+          "text": "info@muraliresort.comevents@muraliresort.com",
+          "selector": "p.text-stone-500.text-xs"
+        },
+        {
+          "text": "Mon - Sun: 9:00 AM - 8:00 PM",
+          "selector": "p.text-stone-500.text-xs"
+        },
+        {
+          "text": "A premium destination for weddings, celebrations, corporate events, and unforgettable gatherings.",
+          "selector": "p.text-sm.leading-relaxed"
+        },
+        {
+          "text": "© 2026 Murali Resort. All rights reserved.",
+          "selector": "p"
+        }
+      ],
+      "links": [
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        },
+        {
+          "text": "Celebrations",
+          "href": "/celebrations",
+          "target": null,
+          "ariaLabel": null,
+          "hasOnClick": true
+        }
+      ],
+      "pageTitle": "Murali Resort | Premium Resort & Convention Center"
+    },
+    "interactiveTestResults": {
+      "mobileMenu": {
+        "opened": true,
+        "ariaExpanded": "true"
+      },
+      "mobileMenuEscapeCloses": true,
+      "formPresent": true,
+      "submitButton": true
+    }
+  }
+]

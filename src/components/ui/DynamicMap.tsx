@@ -10,8 +10,10 @@ const RESORT_COORDS: [number, number] = [16.496928751195867, 80.71897026622067];
 // Custom Premium Markers
 const resortIcon = new L.DivIcon({
   className: "bg-transparent border-none",
+  iconSize: [48, 48],
+  iconAnchor: [24, 48],
   html: `
-    <div class="relative flex items-center justify-center w-12 h-12 -ml-6 -mt-12" role="img" aria-label="Murali Resort Location">
+    <div class="relative flex items-center justify-center w-12 h-12" role="img" aria-label="Murali Resort Location">
       <span class="sr-only">Murali Resort Location</span>
       <div class="absolute inset-0 bg-accent/30 rounded-full animate-ping" aria-hidden="true"></div>
       <div class="relative w-8 h-8 bg-premium-dark border-2 border-accent rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(196,169,132,0.5)]" aria-hidden="true">
@@ -23,8 +25,10 @@ const resortIcon = new L.DivIcon({
 
 const userIcon = new L.DivIcon({
   className: "bg-transparent border-none",
+  iconSize: [32, 32],
+  iconAnchor: [16, 16],
   html: `
-    <div class="relative flex items-center justify-center w-8 h-8 -ml-4 -mt-4" role="img" aria-label="Your Current Location">
+    <div class="relative flex items-center justify-center w-8 h-8" role="img" aria-label="Your Current Location">
       <span class="sr-only">Your Current Location</span>
       <div class="w-4 h-4 bg-white border-2 border-premium-dark rounded-full shadow-lg" aria-hidden="true"></div>
     </div>

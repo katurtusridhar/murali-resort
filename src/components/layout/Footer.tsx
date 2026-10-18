@@ -21,7 +21,7 @@ export default function Footer({ transparent = false }: { transparent?: boolean 
         <div className="col-span-1">
           <h3 className="text-white uppercase tracking-wider text-xs font-semibold mb-4 sm:mb-6">Explore</h3>
           <ul className="space-y-3 sm:space-y-4 text-sm font-light">
-            <li><Link href="/celebrations" onClick={(e) => e.preventDefault()} className="hover:text-accent transition-colors inline-block py-1">Celebrations</Link></li>
+            <li><Link href="/home#moments" className="hover:text-accent transition-colors inline-block py-1">Celebrations</Link></li>
             <li><Link href="/facilities" className="hover:text-accent transition-colors inline-block py-1">Facilities</Link></li>
             <li><Link href="/gallery" className="hover:text-accent transition-colors inline-block py-1">Gallery</Link></li>
             <li><Link href="/contact" className="hover:text-accent transition-colors inline-block py-1">Contact Us</Link></li>

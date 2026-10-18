@@ -50,16 +50,19 @@ export default function TextReveal({ text, className = "", delay = 0, as = "h2" 
         {lines.map((line, lineIndex) => (
           <span key={lineIndex} className="flex flex-wrap w-full">
             {line.split(" ").map((word, wordIndex) => (
-              <span key={wordIndex} style={{ display: "inline-block", paddingRight: "0.25em", overflow: "hidden" }}>
-                {word.split("").map((char, charIndex) => (
-                  <motion.span
-                    key={charIndex}
-                    variants={child}
-                    style={{ display: "inline-block", originY: 1 }}
-                  >
-                    {char}
-                  </motion.span>
-                ))}
+              <span key={wordIndex} className="inline-block whitespace-nowrap">
+                <span style={{ display: "inline-block", overflow: "hidden" }}>
+                  {word.split("").map((char, charIndex) => (
+                    <motion.span
+                      key={charIndex}
+                      variants={child}
+                      style={{ display: "inline-block", originY: 1 }}
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
+                </span>
+                <span className="inline-block">&nbsp;</span>
               </span>
             ))}
           </span>

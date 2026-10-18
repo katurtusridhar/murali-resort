@@ -39,7 +39,7 @@ export default function Home5Header() {
   }, [mobileMenuOpen]);
 
   const navLinks = [
-    { name: "Celebrations", href: "/celebrations" },
+    { name: "Celebrations", href: "/home#moments" },
     { name: "Facilities", href: "/facilities" },
     { name: "Gallery", href: "/gallery" },
   ];
@@ -118,8 +118,7 @@ export default function Home5Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                onClick={link.href === "/celebrations" ? (e) => e.preventDefault() : undefined}
-                className="hover:text-[#c5a880] transition-colors drop-shadow"
+                className="py-2 inline-flex items-center min-h-[40px] hover:text-[#c5a880] transition-colors drop-shadow"
               >
                 {link.name}
               </Link>
@@ -143,8 +142,7 @@ export default function Home5Header() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  onClick={link.href === "/celebrations" ? (e) => e.preventDefault() : undefined}
-                  className="hover:text-stone-300 transition-colors drop-shadow-sm whitespace-nowrap"
+                  className="py-2 inline-flex items-center min-h-[40px] hover:text-stone-300 transition-colors drop-shadow-sm whitespace-nowrap"
                 >
                   {link.name}
                 </Link>
@@ -207,15 +205,10 @@ export default function Home5Header() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  onClick={(e) => {
-                    if (link.href === "/celebrations") {
-                      e.preventDefault();
-                    }
-                    setMobileMenuOpen(false);
-                  }}
+                  onClick={() => setMobileMenuOpen(false)}
                   className={clsx(
                     "py-3.5 border-b border-white/10 transition-colors",
-                    isActive ? "text-accent font-semibold" : "hover:text-white"
+                    isActive ? "text-[#F5EBE0] font-semibold underline underline-offset-8 decoration-[#c5a880]" : "hover:text-white"
                   )}
                 >
                   {link.name}
