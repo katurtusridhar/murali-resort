@@ -1219,6 +1219,7 @@ const CircularGallery: React.FC<CircularGalleryProps> = ({
           <li key={`${item.image}-${index}`}>
             <button
               type="button"
+              className="sr-only"
               ref={el => {
                 buttonsRef.current[index] = el;
               }}

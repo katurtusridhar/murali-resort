@@ -145,10 +145,8 @@ export default function Home5Spaces() {
                     aria-selected={isActive}
                     aria-controls={`panel-${space.id}`}
                     onClick={() => setActiveTab(space.id)}
-                    className={`flex items-center gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold transition-all duration-300 shrink-0 whitespace-nowrap ${
-                      isActive
-                        ? "bg-white text-[#14171A] shadow-md"
-                        : "text-[#525A62] hover:text-[#14171A] hover:bg-white/40"
+                    className={`btn-pill ${
+                      isActive ? "btn-pill-active" : "btn-pill-inactive"
                     }`}
                   >
                     <Icon size={14} className={isActive ? "text-[#8A622A]" : "text-[#525A62]"} />
@@ -163,7 +161,7 @@ export default function Home5Spaces() {
               href="/facilities"
               id="tab-more"
               aria-label="View all resort spaces and facilities"
-              className="flex items-center gap-1.5 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold text-[#525A62] hover:text-[#14171A] hover:bg-white/60 transition-all duration-300 group shrink-0 whitespace-nowrap"
+              className="btn-pill btn-pill-inactive group"
             >
               <span>View All Spaces</span>
               <ArrowUpRight size={13} className="text-[#8A622A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

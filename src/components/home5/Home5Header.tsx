@@ -154,7 +154,7 @@ export default function Home5Header() {
             {/* Enquire Now Button — crisp premium white */}
             <Link
               href="/contact"
-              className="btn-primary-light shrink-0 whitespace-nowrap !py-2 !px-5"
+              className="btn-primary-light shrink-0 whitespace-nowrap"
             >
               Enquire Now
             </Link>
@@ -164,14 +164,14 @@ export default function Home5Header() {
           <div className="lg:hidden flex items-center gap-2 sm:gap-3 pr-0.5 sm:pr-1 shrink-0">
             <Link
               href="/contact"
-              className="btn-primary-light shrink-0 whitespace-nowrap !py-1.5 sm:!py-2 !px-3.5 sm:!px-4"
+              className="btn-primary-light shrink-0 whitespace-nowrap"
             >
               <span>Enquire</span>
               <span className="hidden sm:inline"> Now</span>
             </Link>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-white hover:text-stone-300 transition-colors flex items-center justify-center min-w-[44px] min-h-[44px]"
+              className="btn-icon text-white hover:text-stone-300 transition-colors"
               aria-label="Toggle navigation menu"
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-nav-drawer"

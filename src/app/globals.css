@@ -121,7 +121,7 @@ body {
     outline-offset: 2px;
   }
 
-  /* Standardized Design System Buttons (Reduces button styles from 9 to 3 cohesive patterns) */
+  /* Standardized Design System Buttons (Reduces button styles from 8 to 4 cohesive patterns) */
   .btn-primary,
   .btn-primary-light,
   .btn-primary-dark {
@@ -129,11 +129,11 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.75rem;
+    padding: 0.625rem 1.5rem;
     border-radius: 9999px;
     font-weight: 600;
     font-size: var(--text-xs);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     min-height: 44px;
@@ -168,11 +168,11 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.75rem;
+    padding: 0.625rem 1.5rem;
     border-radius: 9999px;
     font-weight: 600;
     font-size: var(--text-xs);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     min-height: 44px;
@@ -203,20 +203,49 @@ body {
     color: #ffffff;
   }
 
+  /* Unified Segmented Pill Tab / Filter System (Natural casing to avoid long all-caps runs) */
   .btn-pill {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.625rem 1.25rem;
+    padding: 0.5rem 1.125rem;
     border-radius: 9999px;
     font-size: var(--text-xs);
     font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    letter-spacing: normal;
+    text-transform: none;
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     min-height: 44px;
+    white-space: nowrap;
     flex-shrink: 0;
+  }
+  .btn-pill-active {
+    background-color: #ffffff;
+    color: #14171a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  .btn-pill-inactive {
+    color: #525a62;
+    background-color: transparent;
+  }
+  .btn-pill-inactive:hover {
+    color: #14171a;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* 44px Circular Icon Button */
+  .btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 9999px;
+    padding: 0.5rem;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   /* Dynamic Theme Transition */

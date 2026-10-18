@@ -139,23 +139,23 @@ export default function Home5Reviews() {
         </div>
 
         {/* Filter Pills */}
-        <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 mb-10 relative z-20">
-          {filterCategories.map((cat) => {
-            const isActive = activeFilter === cat.id;
-            return (
-              <button
-                key={cat.id}
-                onClick={() => setActiveFilter(cat.id)}
-                className={`min-h-[44px] px-4 sm:px-5 py-2.5 rounded-full text-xs font-medium tracking-wide transition-all duration-200 inline-flex items-center justify-center ${
-                  isActive
-                    ? "bg-[#14171A] text-white shadow-sm"
-                    : "bg-white text-[#525A62] hover:text-[#14171A] border border-stone-200/80 hover:bg-stone-50"
-                }`}
-              >
-                {cat.label}
-              </button>
-            );
-          })}
+        <div className="w-full overflow-x-auto pb-3 -mb-3 sm:overflow-visible mb-10 relative z-20">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 p-1.5 bg-stone-200/80 rounded-full min-w-max">
+            {filterCategories.map((cat) => {
+              const isActive = activeFilter === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveFilter(cat.id)}
+                  className={`btn-pill ${
+                    isActive ? "btn-pill-active" : "btn-pill-inactive"
+                  }`}
+                >
+                  {cat.label}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         {/* Reviews Cards Grid */}
